@@ -105,6 +105,7 @@ public class Panel extends JPanel implements ActionListener {
 
         }
 
+
         //image = new ImageIcon("src/Sunflower.png").getImage();
         Graphics2D g2D = (Graphics2D) g;
         //g2D.drawImage(image, 100, 100, null);
