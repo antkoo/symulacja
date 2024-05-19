@@ -22,16 +22,6 @@ public class Peashooter extends Plant {
         image = new ImageIcon("src/Peashooter.png").getImage();
     }
 
-    /*
-    @Override
-    public void update() {
-        produceCycle++;
-        if (produceCycle >= CYCLE_DURATION) {
-            produceCycle = 0;
-            resourceManager.addSunPoints(25);
-        }
-    }
-    */
     @Override
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
@@ -43,9 +33,6 @@ public class Peashooter extends Plant {
                 i--;
             }
             projectile.paint(g);
-
-
-
         }
     }
 
