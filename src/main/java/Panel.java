@@ -12,8 +12,8 @@ public class Panel extends JPanel implements ActionListener {
     //public List<Zombie> Zombies = new ArrayList<>();
     int x, y;
     public static List<List<int[]>> SpawnSquares = new ArrayList<>();
-    private final ResourceManager resourceManager;
-    private GameTimer timer;
+    private ResourceManager resourceManager;
+    public static Timer theTimer;
     public static final int SQUARE_SIZE = 100;
     public static final int ROWS = 5;
     public static final int PLANT_COLUMNS = 5;
@@ -21,12 +21,12 @@ public class Panel extends JPanel implements ActionListener {
     public static final int COLUMNS = PLANT_COLUMNS + ZOMBIE_COLUMNS;
 
     JLabel sunPointsDisplay = new JLabel();
+
     JButton toSpawnSelector = new JButton("To Spawn Selector");
     JButton startSimulation = new JButton("Start Simulation");
     public Panel() {
         resourceManager = ResourceManager.getInstance();
-        timer = new GameTimer();
-        timer.addActionListener(this);
+        theTimer = new Timer(100, this);
         this.setSize(SQUARE_SIZE*COLUMNS,SQUARE_SIZE*(ROWS+1));
         this.setLayout(null);
         this.setVisible(true);
@@ -78,14 +78,14 @@ public class Panel extends JPanel implements ActionListener {
             System.out.println("hm");
         }
         if (e.getSource()==startSimulation) {
-            timer.start();
+            theTimer.start();
             resourceManager.addSunPoints(1000);
             initializeBoard();
+
             startSimulation.setEnabled(false);
 
         }
         repaint();
-
         sunPointsDisplay.setText("Sun Points: " + resourceManager.getSunPoints());
     }
 
