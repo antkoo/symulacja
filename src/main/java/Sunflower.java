@@ -15,7 +15,6 @@ public class Sunflower extends Plant {
         theTimer.addActionListener(this);
         resourceManager = ResourceManager.getInstance();
         this.produceCycle = 0;
-        BufferedImage bf = new BufferedImage(100, 100, BufferedImage.TYPE_INT_RGB);
         image = new ImageIcon("src/Sunflower.png").getImage();
 
     }

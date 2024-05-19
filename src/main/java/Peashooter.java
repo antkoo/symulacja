@@ -4,15 +4,13 @@ import java.awt.event.ActionEvent;
 
 public class Peashooter extends Plant {
     Image image;
-    private ResourceManager resourceManager;
-    private int produceCycle;
-    private static final int CYCLE_DURATION = 240;
+    private int shootCycle;
+    private static final int SHOOT_INTERVAL = 30;
 
     public Peashooter(int x, int y, int health) {
         super(x, y, health);
-        this.produceCycle = 0;
+        this.shootCycle = 0;
         image = new ImageIcon("src/Peashooter.png").getImage();
-
     }
 
     /*
@@ -38,6 +36,14 @@ public class Peashooter extends Plant {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        shootCycle++;
+        if (shootCycle >= SHOOT_INTERVAL) {
+            shootCycle = 0;
+            shoot();
+        }
+    }
+
+    public void shoot() {
 
     }
 }
