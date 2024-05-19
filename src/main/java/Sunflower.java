@@ -9,9 +9,12 @@ public class Sunflower extends Plant {
     private ResourceManager resourceManager;
     private int produceCycle;
     private static final int CYCLE_DURATION = 24;
+    private static final int HEALTH = 300;
+    private static final int COST = 50;
 
-    public Sunflower(int x, int y, int health) {
-        super(x, y, health);
+    public Sunflower(int x, int y) {
+        super(x, y);
+        this.health = HEALTH;
         theTimer.addActionListener(this);
         resourceManager = ResourceManager.getInstance();
         this.produceCycle = 0;
@@ -34,6 +37,15 @@ public class Sunflower extends Plant {
     public void takeDamage(int damage) {
 
     }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getCost() {
+        return COST;
+    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {

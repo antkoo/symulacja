@@ -5,18 +5,20 @@ import java.awt.event.ActionListener;
 
 public class Projectile implements ActionListener {
     public static Timer theTimer = Panel.theTimer;
-    private int x, y;
+    public int x, y;
     private int speed;
     private int damage;
+    private static final int SPEED = 20;
+    private static final int DAMAGE = 20;
     Image image;
 
-    public Projectile(int x, int y, int speed, int damage) {
+    public Projectile(int x, int y) {
         theTimer.addActionListener(this);
+        image = new ImageIcon("src/Projectile.png").getImage();
         this.x = x;
         this.y = y;
-        this.speed = speed;
-        this.damage = damage;
-        image = new ImageIcon("src/Projectile.png").getImage();
+        this.speed = SPEED;
+        this.damage = DAMAGE;
     }
 
     public void paint(Graphics g) {
@@ -28,8 +30,13 @@ public class Projectile implements ActionListener {
         return damage;
     }
 
+    public int getWidth() {
+        return image.getWidth(null);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         x += speed;
+
     }
 }

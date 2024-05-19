@@ -54,9 +54,9 @@ public class Panel extends JPanel implements ActionListener {
                 for (int[] square : squareType) {
                     if (x >= square[0] * SQUARE_SIZE && x <= (square[0] + 1) * SQUARE_SIZE && y >= square[1] * SQUARE_SIZE && y <= (square[1] + 1) * SQUARE_SIZE) {
                         if (j==0) {
-                            Plants.add(new Sunflower(x, y, 50));
+                            Plants.add(new Sunflower(x, y));
                         } else if (j==1) {
-                            Plants.add(new Peashooter(x, y, 50));
+                            Plants.add(new Peashooter(x, y));
                         } else if (j==2) {
                             //Entities.add(new Sunflower(x, y, 1));
                         } else if (j==3) {
@@ -95,7 +95,7 @@ public class Panel extends JPanel implements ActionListener {
         for (int i = 0; i < Plants.size(); i++) {
             Plant plant = Plants.get(i);
 
-            if (plant.health==0) {
+            if (plant.getHealth()==0) {
                 Plants.remove(i);
                 i--;
             }

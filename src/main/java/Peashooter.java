@@ -11,9 +11,12 @@ public class Peashooter extends Plant {
     Image image;
     private int shootCycle;
     private static final int SHOOT_INTERVAL = 30;
+    private static final int HEALTH = 200;
+    private static final int COST = 100;
 
-    public Peashooter(int x, int y, int health) {
-        super(x, y, health);
+    public Peashooter(int x, int y) {
+        super(x, y);
+        this.health = HEALTH;
         theTimer.addActionListener(this);
         this.shootCycle = 0;
         image = new ImageIcon("src/Peashooter.png").getImage();
@@ -35,11 +38,10 @@ public class Peashooter extends Plant {
         g2D.drawImage(image, x, y, null);
         for (int i = 0; i < Projectiles.size(); i++) {
             Projectile projectile = Projectiles.get(i);
-
-            /*if (projectile.health==0) {
+            if (projectile.x>=(Panel.COLUMNS*Panel.SQUARE_SIZE-projectile.getWidth())) {
                 Projectiles.remove(i);
                 i--;
-            }*/
+            }
             projectile.paint(g);
 
 
@@ -63,6 +65,15 @@ public class Peashooter extends Plant {
     }
 
     public void shoot() {
-        Projectiles.add(new Projectile(x, y, 50,20));
+        Projectiles.add(new Projectile(x+ image.getWidth(null), y));
     }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getCost() {
+        return COST;
+    }
+
 }
