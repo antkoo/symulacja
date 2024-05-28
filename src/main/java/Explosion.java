@@ -3,17 +3,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Projectile implements ActionListener {
+public class Explosion implements ActionListener {
     public static Timer theTimer = Panel.theTimer;
     public int x, y;
-    private static final int SPEED = 10;
-    private static final int DAMAGE = 20;
+    private static final int DAMAGE = 9999;
     Image image;
     private Rectangle imageBounds;
 
-    public Projectile(int x, int y) {
+    public Explosion(int x, int y) {
         theTimer.addActionListener(this);
-        image = new ImageIcon("src/Projectile.png").getImage();
+        image = new ImageIcon("src/Explosion.png").getImage();
         this.x = x;
         this.y = y;
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
@@ -38,7 +37,5 @@ public class Projectile implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        x += SPEED;
-        imageBounds.x=x;
     }
 }

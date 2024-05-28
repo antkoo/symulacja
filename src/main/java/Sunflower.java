@@ -19,23 +19,19 @@ public class Sunflower extends Plant {
         resourceManager = ResourceManager.getInstance();
         this.produceCycle = 0;
         image = new ImageIcon("src/Sunflower.png").getImage();
+        imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
 
     }
-
-    /*
-    @Override
-    public void update() {
-    }
-    */
     @Override
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
+        g2D.draw(imageBounds);
     }
 
     @Override
     public void takeDamage(int damage) {
-
+        health -= damage;
     }
 
     public int getHealth() {
@@ -54,5 +50,10 @@ public class Sunflower extends Plant {
             produceCycle = 0;
             resourceManager.addSunPoints(25);
         }
+    }
+
+    @Override
+    public Rectangle getBounds() {
+        return imageBounds;
     }
 }

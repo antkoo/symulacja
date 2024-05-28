@@ -2,30 +2,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class BasicZombie extends Zombie {
+public class Walnut extends Plant {
     public static Timer theTimer = Panel.theTimer;
-
     Image image;
-    private static final int HEALTH = 200;
-    private static final int SPEED = 2;
-    private static final int ATTACK_DAMAGE = 40;
+    private static final int HEALTH = 1500;
+    private static final int COST = 50;
 
-    public BasicZombie(int x, int y) {
+    public Walnut(int x, int y) {
         super(x, y);
-        
         this.health = HEALTH;
         theTimer.addActionListener(this);
-        image = new ImageIcon("src/BasicZombie.png").getImage();
+        image = new ImageIcon("src/Walnut.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
-    }
 
-    @Override
-    public int getHealth() {
-        return health;
-    }
-
-    public int getSpeed() {
-        return SPEED;
     }
     @Override
     public void paint(Graphics g) {
@@ -34,24 +23,27 @@ public class BasicZombie extends Zombie {
         g2D.draw(imageBounds);
     }
 
+    @Override
     public void takeDamage(int damage) {
         health -= damage;
     }
 
-    public int getAttackDamage() {
-        return ATTACK_DAMAGE;
+    public int getHealth() {
+        return health;
     }
 
-    @Override
-    public Rectangle getBounds() {
-        return imageBounds;
+    public int getCost() {
+        return COST;
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        x-=SPEED;
-        imageBounds.x=x;
+    }
+
+    @Override
+    public Rectangle getBounds() {
+        return imageBounds;
     }
 }

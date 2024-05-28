@@ -137,7 +137,7 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
                 SpawnSquares.get(selectedButton).remove(foundIndex[1]);
                 repaint();
             }
-            for (List<int[]> squareType : SpawnSquares) {
+            /*for (List<int[]> squareType : SpawnSquares) {
                 for (int[] square : squareType) {
                     for (int i = 0; i<square.length; i++) {
                         System.out.print(square[i]+" "+ i + "  ");
@@ -145,7 +145,7 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
                     System.out.println();
                 }
                 System.out.println();
-            }
+            }*/
         }
     }
 

@@ -2,20 +2,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-public class BasicZombie extends Zombie {
+public class BucketheadZombie extends Zombie {
     public static Timer theTimer = Panel.theTimer;
 
     Image image;
-    private static final int HEALTH = 200;
-    private static final int SPEED = 2;
+    private static final int HEALTH = 500;
+    private static final int SPEED = 1;
     private static final int ATTACK_DAMAGE = 40;
 
-    public BasicZombie(int x, int y) {
+    public BucketheadZombie(int x, int y) {
         super(x, y);
         
         this.health = HEALTH;
         theTimer.addActionListener(this);
-        image = new ImageIcon("src/BasicZombie.png").getImage();
+        image = new ImageIcon("src/BucketheadZombie.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
 
@@ -50,7 +50,6 @@ public class BasicZombie extends Zombie {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         x-=SPEED;
         imageBounds.x=x;
     }
