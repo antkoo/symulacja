@@ -164,10 +164,11 @@ public class Panel extends JPanel implements ActionListener {
             }
 
             sunPointsDisplay.setText("Sun Points: " + resourceManager.getSunPoints());
+            repaint();
             CollisionManager.checkCollisions(Projectiles,Zombies);
             CollisionManager.checkAttacks(Plants,Zombies);
         }
-        repaint();
+
     }
 
     @Override
@@ -176,6 +177,10 @@ public class Panel extends JPanel implements ActionListener {
         for (int i = 0; i < Plants.size(); i++) {
             Plant plant = Plants.get(i);
             if (plant.getHealth()<=0) {
+                if (plant.getType()==2) {
+                    CherryBomb cherryBomb = (CherryBomb) plant; //downcasting to access CherryBomb-exclusive function
+                    cherryBomb.explode();
+                }
                 Plants.remove(i);
                 System.out.println("KILLED");
                 i--;
@@ -190,6 +195,5 @@ public class Panel extends JPanel implements ActionListener {
             }
             zombie.paint(g);
         }
-        Graphics2D g2D = (Graphics2D) g;
     }
 }

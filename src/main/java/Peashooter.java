@@ -24,6 +24,11 @@ public class Peashooter extends Plant {
     }
 
     @Override
+    public int getType() {
+        return 1;
+    }
+
+    @Override
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);

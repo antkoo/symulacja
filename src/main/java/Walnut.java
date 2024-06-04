@@ -16,6 +16,12 @@ public class Walnut extends Plant {
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
 
     }
+
+    @Override
+    public int getType() {
+        return 3;
+    }
+
     @Override
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;

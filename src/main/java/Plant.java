@@ -4,6 +4,7 @@ public abstract class Plant extends Entity {
         super(x, y);
     }
 
+    public abstract int getType();
 
     public abstract int getCost();
     public abstract int getHealth();

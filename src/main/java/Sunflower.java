@@ -22,6 +22,12 @@ public class Sunflower extends Plant {
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
 
     }
+
+    @Override
+    public int getType() {
+        return 0;
+    }
+
     @Override
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;

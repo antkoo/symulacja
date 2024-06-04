@@ -7,7 +7,7 @@ public class CherryBomb extends Plant {
     public static Timer theTimer = Panel.theTimer;
     Image image;
     boolean alive;
-    public static Explosion explosion;
+    public Explosion explosion;
     private ResourceManager resourceManager;
     public List<Explosion> Explosions;
     public List<Zombie> Zombies;
@@ -18,7 +18,7 @@ public class CherryBomb extends Plant {
 
     public CherryBomb(int x, int y) {
         super(x, y);
-        alive = true;
+        this.alive = true;
         this.health = HEALTH;
         Explosions = Panel.Explosions;
         Zombies = Panel.Zombies;
@@ -29,26 +29,32 @@ public class CherryBomb extends Plant {
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
 
     }
+
+    @Override
+    public int getType() {
+        return 2;
+    }
+
     @Override
     public void paint(Graphics g) {
 
         Graphics2D g2D = (Graphics2D) g;
-        if (health==0) explode();
+        if (this.health==0) explode();
         g2D.drawImage(image, x, y, null);
         g2D.draw(imageBounds);
-        if (explosion != null) {
-            explosion.paint(g);
-            CollisionManager.checkExplosionDeaths(explosion, Zombies);
-            explosion = null;
+        if (this.explosion != null) {
+            this.explosion.paint(g);
+            CollisionManager.checkExplosionDeaths(this.explosion, Zombies);
+            this.explosion = null;
             this.health = 0;
-            alive = false;
+            this.alive = false;
         }
     }
 
 
     @Override
     public void takeDamage(int damage) {
-        health -= damage;
+        this.health -= damage;
     }
 
     public int getHealth() {
@@ -61,15 +67,19 @@ public class CherryBomb extends Plant {
 
     public void explode() {
 
-        explosion = new Explosion(x-Panel.SQUARE_SIZE, y-Panel.SQUARE_SIZE);
+        this.explosion = new Explosion(x-Panel.SQUARE_SIZE, y-Panel.SQUARE_SIZE);
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (alive) explodeCycle++;
-        if (explodeCycle >= EXPLODE_TIME) {
-            explodeCycle = 0;
+        if (this.health==0) {
+            explode();
+            this.explodeCycle = 0;
+        }
+        if (this.alive) explodeCycle++;
+        if (this.explodeCycle >= EXPLODE_TIME) {
+            this.explodeCycle = 0;
             explode();
         }
 
