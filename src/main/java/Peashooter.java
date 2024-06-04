@@ -51,10 +51,10 @@ public class Peashooter extends Plant {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        shootCycle++;
-        if (shootCycle >= SHOOT_INTERVAL) {
-            shootCycle = 0;
+        //System.out.println("hmm");
+        this.shootCycle++;
+        if (this.shootCycle >= SHOOT_INTERVAL) {
+            this.shootCycle = 0;
             shoot();
         }
     }

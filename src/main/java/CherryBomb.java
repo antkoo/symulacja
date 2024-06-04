@@ -73,7 +73,7 @@ public class CherryBomb extends Plant {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (this.health==0) {
+        if (this.health<=0) {
             explode();
             this.explodeCycle = 0;
         }
