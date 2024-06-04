@@ -73,26 +73,26 @@ public class Panel extends JPanel implements ActionListener {
             if (x >= square[0] * SQUARE_SIZE && x <= (square[0] + 1) * SQUARE_SIZE && y >= square[1] * SQUARE_SIZE && y <= (square[1] + 1) * SQUARE_SIZE) {
                 if (chosen==0) {
                     Plants.add(new Sunflower(x, y));
-                    if (!resourceManager.spendSunPoints(Plants.getLast().getCost())) {
-                        Plants.removeLast();
+                    if (!resourceManager.spendSunPoints(Plants.get(Plants.size()-1).getCost())) {
+                        Plants.remove(Plants.size()-1);
                         spawnRandomPlant();
                     }
                 } else if (chosen==1) {
                     Plants.add(new Peashooter(x, y));
-                    if (!resourceManager.spendSunPoints(Plants.getLast().getCost())) {
-                        Plants.removeLast();
+                    if (!resourceManager.spendSunPoints(Plants.get(Plants.size()-1).getCost())) {
+                        Plants.remove(Plants.size()-1);
                         spawnRandomPlant();
                     }
                 } else if (chosen==2) {
                     Plants.add(new CherryBomb(x, y));
-                    if (!resourceManager.spendSunPoints(Plants.getLast().getCost())) {
-                        Plants.removeLast();
+                    if (!resourceManager.spendSunPoints(Plants.get(Plants.size()-1).getCost())) {
+                        Plants.remove(Plants.size()-1);
                         spawnRandomPlant();
                     }
                 } else {
                     Plants.add(new Walnut(x, y));
-                    if (!resourceManager.spendSunPoints(Plants.getLast().getCost())) {
-                        Plants.removeLast();
+                    if (!resourceManager.spendSunPoints(Plants.get(Plants.size()-1).getCost())) {
+                        Plants.remove(Plants.size()-1);
                         spawnRandomPlant();
                     }
                 }
