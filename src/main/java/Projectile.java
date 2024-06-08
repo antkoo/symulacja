@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class Projectile implements ActionListener {
     public static Timer theTimer = Panel.theTimer;
     public int x, y;
+    private boolean alive;
     private static final int SPEED = 10;
     private static final int DAMAGE = 20;
     Image image;
@@ -13,10 +14,10 @@ public class Projectile implements ActionListener {
 
     public Projectile(int x, int y) {
         theTimer.addActionListener(this);
-        image = new ImageIcon("src/Projectile.png").getImage();
+        this.image = new ImageIcon("src/Projectile.png").getImage();
         this.x = x;
         this.y = y;
-        imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
+        this.imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
 
     public void paint(Graphics g) {
@@ -38,7 +39,7 @@ public class Projectile implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        x += SPEED;
-        imageBounds.x=x;
+        this.x += SPEED;
+        this.imageBounds.x=x;
     }
 }
