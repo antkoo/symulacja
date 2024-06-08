@@ -1,12 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Peashooter extends Plant {
     public List<Projectile> Projectiles;
     public static Timer theTimer = Panel.theTimer;
-
+    public List<Zombie> Zombies;
     Image image;
     private int shootCycle;
     private static final int SHOOT_INTERVAL = 15;
@@ -15,10 +16,11 @@ public class Peashooter extends Plant {
 
     public Peashooter(int x, int y) {
         super(x, y);
-        Projectiles = Panel.Projectiles;
         this.health = HEALTH;
         theTimer.addActionListener(this);
         this.shootCycle = 0;
+        Zombies = Panel.Zombies;
+        this.Projectiles = new ArrayList<>();
         image = new ImageIcon("src/Peashooter.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
@@ -33,15 +35,22 @@ public class Peashooter extends Plant {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
         g2D.draw(imageBounds);
-        for (int i = 0; i < Projectiles.size(); i++) {
-            Projectile projectile = Projectiles.get(i);
-            //System.out.println(Projectiles.size());
-            if (projectile.x>=(Panel.COLUMNS*Panel.SQUARE_SIZE-projectile.getWidth())) {
-                Projectiles.remove(i);
-                i--;
+        if (this.Projectiles!=null)
+            for (int i = 0; i < this.Projectiles.size(); i++) {
+                Projectile projectile = this.Projectiles.get(i);
+                if (projectile!=null) {
+                    System.out.println("hmm");
+                    if (CollisionManager.checkProjectileHit(projectile, Zombies)){
+                        this.Projectiles.remove(i);
+                        i--;
+                    }
+                    if (projectile.x>=(Panel.COLUMNS*Panel.SQUARE_SIZE-projectile.getWidth())) {
+                        this.Projectiles.remove(i);
+                        i--;
+                    }
+                    projectile.paint(g);
+                }
             }
-            projectile.paint(g);
-        }
     }
 
     @Override
@@ -60,7 +69,7 @@ public class Peashooter extends Plant {
     }
 
     public void shoot() {
-        Projectiles.add(new Projectile(x+ image.getWidth(null), y));
+        this.Projectiles.add(new Projectile(x+ image.getWidth(null), y));
     }
 
     public int getHealth() {

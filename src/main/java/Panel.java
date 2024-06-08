@@ -10,18 +10,18 @@ public class Panel extends JPanel implements ActionListener {
 
     public static List<Plant> Plants = new ArrayList<>();
     public static List<Zombie> Zombies = new ArrayList<>();
-    public static List<Projectile> Projectiles = new ArrayList<>();
-    public static List<Explosion> Explosions = new ArrayList<>();
     int x, y, plantSpawnCycle, zombieSpawnCycle;
     double chance;
     public static List<List<int[]>> SpawnSquares = new ArrayList<>();
-    private ResourceManager resourceManager;
+    private final ResourceManager resourceManager;
     public static Timer theTimer;
     public static final int DELAY = 30;
     public static final int START_ZOMBIE_AMOUNT = 10;
     public static final int PLANT_SPAWN_INTERVAL = 1;
     public static final int ZOMBIE_SPAWN_INTERVAL = 6;
     public static final int START_SUN_POINTS = 1000;
+    public static final int BASIC_ZOMBIE_SPAWN_CHANCE = 70;
+    public static final int BUCKETHEAD_ZOMBIE_SPAWN_CHANCE = 30;
     public static final int SUNFLOWER_SPAWN_CHANCE = 45;
     public static final int PEASHOOTER_SPAWN_CHANCE = 25;
     public static final int CHERRY_BOMB_SPAWN_CHANCE = 10;
@@ -114,13 +114,19 @@ public class Panel extends JPanel implements ActionListener {
     public void spawnRandomZombie() {
         x = ThreadLocalRandom.current().nextInt((COLUMNS-1)*SQUARE_SIZE, (COLUMNS) * SQUARE_SIZE);
         y = ThreadLocalRandom.current().nextInt(SQUARE_SIZE, ROWS * SQUARE_SIZE);
-        Zombies.add(new BasicZombie(x, y));
+
+        chance = ThreadLocalRandom.current().nextDouble(0,BASIC_ZOMBIE_SPAWN_CHANCE+BUCKETHEAD_ZOMBIE_SPAWN_CHANCE);
+        if (chance<BASIC_ZOMBIE_SPAWN_CHANCE) {
+            Zombies.add(new BasicZombie(x, y));
+        } else {
+            Zombies.add(new BucketheadZombie(x, y));
+        }
+
     }
 
     public void gameStart() {
         Zombies.clear();
         Plants.clear();
-        Projectiles.clear();
         resourceManager.spendSunPoints(resourceManager.getSunPoints());
         theTimer.start();
         resourceManager.addSunPoints(START_SUN_POINTS);
@@ -154,7 +160,6 @@ public class Panel extends JPanel implements ActionListener {
             }
             if (allEmpty) {
                 JOptionPane.showMessageDialog(null, "ALL SPAWN SQUARES EMPTY","ERROR", JOptionPane.ERROR_MESSAGE);
-                //System.out.println("ALL SPAWN SQUARES EMPTY");
             } else {
                 gameStart();
             }
@@ -207,7 +212,6 @@ public class Panel extends JPanel implements ActionListener {
 
             sunPointsDisplay.setText("Sun Points: " + resourceManager.getSunPoints());
             repaint();
-            CollisionManager.checkCollisions(Projectiles,Zombies);
             CollisionManager.checkAttacks(Plants,Zombies);
         }
 

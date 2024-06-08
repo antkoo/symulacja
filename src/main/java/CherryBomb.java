@@ -20,7 +20,6 @@ public class CherryBomb extends Plant {
         super(x, y);
         this.alive = true;
         this.health = HEALTH;
-        Explosions = Panel.Explosions;
         Zombies = Panel.Zombies;
         theTimer.addActionListener(this);
         resourceManager = ResourceManager.getInstance();

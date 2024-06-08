@@ -13,22 +13,19 @@ public class CollisionManager {
             }
         }
     }
-    public static void checkCollisions(List<Projectile> projectiles, List<Zombie> zombies) {
-        for (int i = 0; i < projectiles.size(); i++) {
-            Projectile projectile = projectiles.get(i);
-            for (int j = 0; j < zombies.size(); j++) {
-                Zombie zombie = zombies.get(j);
-                if (projectile.getBounds().intersects(zombie.getBounds())) {
-                    zombie.takeDamage(projectile.getDamage());
-                    projectiles.remove(i);
-                    break;
-                }
+
+
+    public static boolean checkProjectileHit(Projectile projectile, List<Zombie> zombies) {
+        for (Zombie zombie : zombies) {
+            if (projectile.getBounds().intersects(zombie.getBounds())) {
+                zombie.takeDamage(projectile.getDamage());
+                return true;
             }
         }
+        return false;
     }
     public static void checkExplosionDeaths(Explosion explosion, List<Zombie> zombies) {
-        for (int j = 0; j < zombies.size(); j++) {
-            Zombie zombie = zombies.get(j);
+        for (Zombie zombie : zombies) {
             if (explosion.getBounds().intersects(zombie.getBounds())) {
                 zombie.takeDamage(explosion.getDamage());
             }

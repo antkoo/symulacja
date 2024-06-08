@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 public class Projectile implements ActionListener {
     public static Timer theTimer = Panel.theTimer;
     public int x, y;
-    private boolean alive;
     private static final int SPEED = 10;
     private static final int DAMAGE = 20;
     Image image;
