@@ -39,7 +39,6 @@ public class Peashooter extends Plant {
             for (int i = 0; i < this.Projectiles.size(); i++) {
                 Projectile projectile = this.Projectiles.get(i);
                 if (projectile!=null) {
-                    System.out.println("hmm");
                     if (CollisionManager.checkProjectileHit(projectile, Zombies)){
                         this.Projectiles.remove(i);
                         i--;
@@ -60,7 +59,6 @@ public class Peashooter extends Plant {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //System.out.println("hmm");
         this.shootCycle++;
         if (this.shootCycle >= SHOOT_INTERVAL) {
             this.shootCycle = 0;

@@ -50,16 +50,14 @@ public class Panel extends JPanel implements ActionListener {
         startSimulation.setBounds(3*SQUARE_SIZE, SQUARE_SIZE/3, 2*SQUARE_SIZE, SQUARE_SIZE/3);
         startSimulation.setFocusable(false);
         startSimulation.addActionListener(this);
-        pauseSimulation.setBounds(3*SQUARE_SIZE, SQUARE_SIZE/3, 2*SQUARE_SIZE, SQUARE_SIZE/3);
+        pauseSimulation.setBounds(5*SQUARE_SIZE, SQUARE_SIZE/3, 2*SQUARE_SIZE, SQUARE_SIZE/3);
         pauseSimulation.setFocusable(false);
         pauseSimulation.addActionListener(this);
-        pauseSimulation.setVisible(false);
-        pauseSimulation.setEnabled(false);
-        sunPointsDisplay.setBounds(5*SQUARE_SIZE,SQUARE_SIZE/3,2*SQUARE_SIZE,SQUARE_SIZE/3);
+        //sunPointsDisplay.setBounds(5*SQUARE_SIZE,SQUARE_SIZE/3,2*SQUARE_SIZE,SQUARE_SIZE/3);
         this.add(toSpawnSelector);
         this.add(startSimulation);
         this.add(pauseSimulation);
-        this.add(sunPointsDisplay);
+        //this.add(sunPointsDisplay);
     }
 
     public void spawnRandomPlant() {
@@ -114,7 +112,6 @@ public class Panel extends JPanel implements ActionListener {
     public void spawnRandomZombie() {
         x = ThreadLocalRandom.current().nextInt((COLUMNS-1)*SQUARE_SIZE, (COLUMNS) * SQUARE_SIZE);
         y = ThreadLocalRandom.current().nextInt(SQUARE_SIZE, ROWS * SQUARE_SIZE);
-
         chance = ThreadLocalRandom.current().nextDouble(0,BASIC_ZOMBIE_SPAWN_CHANCE+BUCKETHEAD_ZOMBIE_SPAWN_CHANCE);
         if (chance<BASIC_ZOMBIE_SPAWN_CHANCE) {
             Zombies.add(new BasicZombie(x, y));
@@ -131,17 +128,15 @@ public class Panel extends JPanel implements ActionListener {
         theTimer.start();
         resourceManager.addSunPoints(START_SUN_POINTS);
         plantSpawnCycle = 0;
+        zombieSpawnCycle = 0;
         while (resourceManager.getSunPoints()>0) {
             spawnRandomPlant();
         }
         for (int i = 0; i<START_ZOMBIE_AMOUNT; i++) {
             spawnRandomZombie();
         }
-        startSimulation.setEnabled(false);
-        startSimulation.setVisible(false);
-        pauseSimulation.setVisible(true);
-        pauseSimulation.setEnabled(true);
         toSpawnSelector.setEnabled(false);
+        startSimulation.setText("Restart Simulation");
         repaint();
     }
 
@@ -159,10 +154,11 @@ public class Panel extends JPanel implements ActionListener {
                 }
             }
             if (allEmpty) {
-                JOptionPane.showMessageDialog(null, "ALL SPAWN SQUARES EMPTY","ERROR", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "ALL SPAWN SQUARES EMPTY", "ERROR", JOptionPane.ERROR_MESSAGE);
             } else {
                 gameStart();
             }
+
         }
         if (e.getSource()==pauseSimulation) {
             if (theTimer.isRunning()) {
@@ -190,10 +186,6 @@ public class Panel extends JPanel implements ActionListener {
                 if (zombie.x<=0) {
                     System.out.println("GAME OVER");
                     theTimer.stop();
-                    pauseSimulation.setVisible(false);
-                    pauseSimulation.setEnabled(false);
-                    startSimulation.setVisible(true);
-                    startSimulation.setEnabled(true);
                     toSpawnSelector.setEnabled(true);
                     break;
                 }
@@ -202,15 +194,11 @@ public class Panel extends JPanel implements ActionListener {
             if(Zombies.isEmpty() && theTimer.isRunning()) {
                 System.out.println("WINNER");
                 theTimer.stop();
-                pauseSimulation.setVisible(false);
-                pauseSimulation.setEnabled(false);
                 startSimulation.setText("Restart Simulation");
-                startSimulation.setVisible(true);
-                startSimulation.setEnabled(true);
                 toSpawnSelector.setEnabled(true);
             }
 
-            sunPointsDisplay.setText("Sun Points: " + resourceManager.getSunPoints());
+            //sunPointsDisplay.setText("Sun Points: " + resourceManager.getSunPoints());
             repaint();
             CollisionManager.checkAttacks(Plants,Zombies);
         }
