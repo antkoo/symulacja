@@ -32,7 +32,6 @@ public class Sunflower extends Plant {
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
-        g2D.draw(imageBounds);
     }
 
     @Override

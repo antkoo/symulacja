@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -10,32 +11,38 @@ public class Panel extends JPanel implements ActionListener {
 
     public static List<Plant> Plants = new ArrayList<>();
     public static List<Zombie> Zombies = new ArrayList<>();
-    int x, y, plantSpawnCycle, zombieSpawnCycle;
+    int x, y, plantSpawnCycle, zombieSpawnCycle, sum, timeElapsed;
     double chance;
     public static List<List<int[]>> SpawnSquares = new ArrayList<>();
     private final ResourceManager resourceManager;
     public static Timer theTimer;
-    public static final int DELAY = 30;
-    public static final int START_ZOMBIE_AMOUNT = 10;
-    public static final int PLANT_SPAWN_INTERVAL = 1;
-    public static final int ZOMBIE_SPAWN_INTERVAL = 6;
-    public static final int START_SUN_POINTS = 1000;
-    public static final int BASIC_ZOMBIE_SPAWN_CHANCE = 70;
-    public static final int BUCKETHEAD_ZOMBIE_SPAWN_CHANCE = 30;
-    public static final int SUNFLOWER_SPAWN_CHANCE = 45;
-    public static final int PEASHOOTER_SPAWN_CHANCE = 25;
-    public static final int CHERRY_BOMB_SPAWN_CHANCE = 10;
-    public static final int WALNUT_SPAWN_CHANCE = 20;
+    public static int DELAY = 30;
+    public static int START_ZOMBIE_AMOUNT = 10;
+    public static int PLANT_SPAWN_INTERVAL = 1;
+    public static int ZOMBIE_SPAWN_INTERVAL = 6;
+    public static int START_SUN_POINTS = 900;
+    public static int BASIC_ZOMBIE_SPAWN_CHANCE = 70;
+    public static int BUCKETHEAD_ZOMBIE_SPAWN_CHANCE = 30;
+    public static int SUNFLOWER_SPAWN_CHANCE = 45;
+    public static int PEASHOOTER_SPAWN_CHANCE = 25;
+    public static int CHERRY_BOMB_SPAWN_CHANCE = 10;
+    public static int WALNUT_SPAWN_CHANCE = 20;
 
     public static final int SQUARE_SIZE = 100;
     public static final int ROWS = 5;
     public static final int PLANT_COLUMNS = 5;
     public static final int ZOMBIE_COLUMNS = 4;
     public static final int COLUMNS = PLANT_COLUMNS + ZOMBIE_COLUMNS;
-    JLabel sunPointsDisplay = new JLabel();
+    JLabel label;
+    JPanel panel, outsidePanel;
     JButton toSpawnSelector = new JButton("To Spawn Selector");
     JButton startSimulation = new JButton("Start Simulation");
     JButton pauseSimulation = new JButton("Pause Simulation");
+    JButton toSettingsChange = new JButton("To Settings Change");
+    public static String[] strings = {"Amount of Basic Zombies", "Amount of Buckethead Zombies", "Amount of Sunflowers", "Amount of Peashooters", "Amount of Cherry Bombs",
+            "Amount of Walnuts", "Amount of Peas", "Amount of Sun Points", "Time Elapsed"};
+    List<JLabel> labels = new ArrayList<>();
+    List<JPanel> panels = new ArrayList<>();
     public Panel() {
         resourceManager = ResourceManager.getInstance();
         theTimer = new Timer(DELAY, this);
@@ -44,24 +51,125 @@ public class Panel extends JPanel implements ActionListener {
         this.setVisible(true);
         this.setBackground(new Color(0x4f7942));
 
-        toSpawnSelector.setBounds(SQUARE_SIZE, SQUARE_SIZE/3, 2*SQUARE_SIZE, SQUARE_SIZE/3);
+        toSpawnSelector.setBounds(0, 0, 2*SQUARE_SIZE, SQUARE_SIZE/4);
         toSpawnSelector.setFocusable(false);
         toSpawnSelector.addActionListener(this);
-        startSimulation.setBounds(3*SQUARE_SIZE, SQUARE_SIZE/3, 2*SQUARE_SIZE, SQUARE_SIZE/3);
+        startSimulation.setBounds(0, SQUARE_SIZE/4, 2*SQUARE_SIZE, SQUARE_SIZE/4);
         startSimulation.setFocusable(false);
         startSimulation.addActionListener(this);
-        pauseSimulation.setBounds(5*SQUARE_SIZE, SQUARE_SIZE/3, 2*SQUARE_SIZE, SQUARE_SIZE/3);
+        pauseSimulation.setBounds(0, SQUARE_SIZE*2/4, 2*SQUARE_SIZE, SQUARE_SIZE/4);
         pauseSimulation.setFocusable(false);
         pauseSimulation.addActionListener(this);
-        //sunPointsDisplay.setBounds(5*SQUARE_SIZE,SQUARE_SIZE/3,2*SQUARE_SIZE,SQUARE_SIZE/3);
+        pauseSimulation.setEnabled(false);
+        toSettingsChange.setBounds(0, SQUARE_SIZE*3/4, 2*SQUARE_SIZE, SQUARE_SIZE/4);
+        toSettingsChange.setFocusable(false);
+        toSettingsChange.addActionListener(this);
         this.add(toSpawnSelector);
         this.add(startSimulation);
         this.add(pauseSimulation);
-        //this.add(sunPointsDisplay);
+        this.add(toSettingsChange);
+
+        outsidePanel = new JPanel();
+        outsidePanel.setLayout(new FlowLayout());
+        outsidePanel.setBounds(2*SQUARE_SIZE, 0, 7*SQUARE_SIZE, SQUARE_SIZE);
+
+        for (int i=0; i<9; i++) {
+            label = new JLabel();
+            panel = new JPanel();
+            panel.setPreferredSize(new Dimension((int) ((Panel.SQUARE_SIZE) * 2.1f), Panel.SQUARE_SIZE / 3));
+            sum = counterUpdater(i);
+            label.setText(strings[i] + sum);
+            labels.add(label);
+            panel.add(label);
+            panels.add(panel);
+            outsidePanel.add(panel);
+        }
+        this.add(outsidePanel);
+    }
+
+    public int counterUpdater(int i) {
+        sum = 0;
+        switch (i) {
+            case 0:
+                if (!Zombies.isEmpty()) {
+                    for (Zombie zombie : Zombies) {
+                        if (zombie.getType() == 0) {
+                            sum++;
+                        }
+                    }
+                }
+                break;
+            case 1:
+                if (!Zombies.isEmpty()) {
+                    for (Zombie zombie : Zombies) {
+                        if (zombie.getType() == 1) {
+                            sum++;
+                        }
+                    }
+                }
+                break;
+            case 2:
+                if (!Plants.isEmpty()) {
+                    for (Plant plant : Plants) {
+                        if (plant.getType() == 0) {
+                            sum++;
+                        }
+                    }
+                }
+                break;
+            case 3:
+                if (!Plants.isEmpty()) {
+                    for (Plant plant : Plants) {
+                        if (plant.getType() == 1) {
+                            sum++;
+                        }
+                    }
+                }
+                break;
+            case 4:
+                if (!Plants.isEmpty()) {
+                    for (Plant plant : Plants) {
+                        if (plant.getType() == 2) {
+                            sum++;
+                        }
+                    }
+                }
+                break;
+            case 5:
+                if (!Plants.isEmpty()) {
+                    for (Plant plant : Plants) {
+                        if (plant.getType() == 3) {
+                            sum++;
+                        }
+                    }
+                }
+                break;
+            case 6:
+                if (!Plants.isEmpty()) {
+                    for (Plant plant : Plants) {
+                        if (plant.getType() == 1) {
+                            Peashooter peashooter = (Peashooter) plant; //downcasting to access Peashooter-exclusive function
+                            if (!peashooter.Projectiles.isEmpty()) {
+                                sum += peashooter.Projectiles.size();
+                            }
+                        }
+                    }
+                }
+                break;
+            case 7:
+                sum = resourceManager.getSunPoints();
+                break;
+            case 8:
+                if (theTimer.isRunning()) {
+                    sum = timeElapsed;
+                }
+                break;
+        }
+        return sum;
     }
 
     public void spawnRandomPlant() {
-        x = ThreadLocalRandom.current().nextInt(0,(PLANT_COLUMNS-1)*SQUARE_SIZE);
+        x = ThreadLocalRandom.current().nextInt(0,PLANT_COLUMNS*SQUARE_SIZE);
         y = ThreadLocalRandom.current().nextInt(SQUARE_SIZE,ROWS*SQUARE_SIZE);
         chance = ThreadLocalRandom.current().nextDouble(0,SUNFLOWER_SPAWN_CHANCE+PEASHOOTER_SPAWN_CHANCE+CHERRY_BOMB_SPAWN_CHANCE+WALNUT_SPAWN_CHANCE);
         int chosen;
@@ -122,6 +230,8 @@ public class Panel extends JPanel implements ActionListener {
     }
 
     public void gameStart() {
+        timeElapsed = 0;
+        pauseSimulation.setEnabled(true);
         Zombies.clear();
         Plants.clear();
         resourceManager.spendSunPoints(resourceManager.getSunPoints());
@@ -142,8 +252,12 @@ public class Panel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if (e.getSource()==toSpawnSelector) {
             new SpawnSelector();
+        }
+        if (e.getSource()==toSettingsChange) {
+            new SettingsChange();
         }
         if (e.getSource()==startSimulation) {
             boolean allEmpty = true;
@@ -184,7 +298,7 @@ public class Panel extends JPanel implements ActionListener {
             }
             for(Zombie zombie : Zombies) {
                 if (zombie.x<=0) {
-                    System.out.println("GAME OVER");
+                    JOptionPane.showMessageDialog(null, "GAME OVER", "YOU LOSE", JOptionPane.ERROR_MESSAGE);
                     theTimer.stop();
                     toSpawnSelector.setEnabled(true);
                     break;
@@ -192,17 +306,32 @@ public class Panel extends JPanel implements ActionListener {
             }
 
             if(Zombies.isEmpty() && theTimer.isRunning()) {
-                System.out.println("WINNER");
+                JOptionPane.showMessageDialog(null, "YOU WIN", "YOU WIN", JOptionPane.INFORMATION_MESSAGE);
                 theTimer.stop();
                 startSimulation.setText("Restart Simulation");
                 toSpawnSelector.setEnabled(true);
             }
 
-            //sunPointsDisplay.setText("Sun Points: " + resourceManager.getSunPoints());
             repaint();
             CollisionManager.checkAttacks(Plants,Zombies);
         }
+        for (int i = 0; i<11; i++) {
+            if (!SettingsChange.labels.isEmpty()) {
+                SettingsChange.labels.get(i).setText(SettingsChange.strings[i] + " = " + SettingsChange.values[i]);
+                try {
+                    Field field = this.getClass().getDeclaredField(SettingsChange.strings[i]);
+                    field.set(this, SettingsChange.values[i]);
+                } catch (Exception ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
 
+        }
+        timeElapsed+=theTimer.getDelay();
+        for (int i=0; i<9; i++) {
+            labels.get(i).setText(strings[i] + ": " + counterUpdater(i));
+        }
+        theTimer.setDelay(DELAY);
     }
 
     @Override
@@ -216,7 +345,6 @@ public class Panel extends JPanel implements ActionListener {
                     cherryBomb.explode();
                 }
                 Plants.remove(i);
-                System.out.println("KILLED");
                 i--;
             }
             plant.paint(g);

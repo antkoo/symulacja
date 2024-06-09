@@ -8,4 +8,5 @@ public abstract class Zombie extends Entity {
 
     public abstract int getAttackDamage();
     public abstract int getSpeed();
+    public abstract int getType();
 }

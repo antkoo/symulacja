@@ -34,18 +34,14 @@ public class Peashooter extends Plant {
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
-        g2D.draw(imageBounds);
         if (this.Projectiles!=null)
             for (int i = 0; i < this.Projectiles.size(); i++) {
                 Projectile projectile = this.Projectiles.get(i);
                 if (projectile!=null) {
-                    if (CollisionManager.checkProjectileHit(projectile, Zombies)){
+                    if (CollisionManager.checkProjectileHit(projectile, Zombies) || projectile.x>=(Panel.COLUMNS*Panel.SQUARE_SIZE-projectile.getWidth())){
                         this.Projectiles.remove(i);
                         i--;
-                    }
-                    if (projectile.x>=(Panel.COLUMNS*Panel.SQUARE_SIZE-projectile.getWidth())) {
-                        this.Projectiles.remove(i);
-                        i--;
+
                     }
                     projectile.paint(g);
                 }

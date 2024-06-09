@@ -9,7 +9,7 @@ public class Projectile implements ActionListener {
     private static final int SPEED = 10;
     private static final int DAMAGE = 20;
     Image image;
-    private Rectangle imageBounds;
+    private final Rectangle imageBounds;
 
     public Projectile(int x, int y) {
         theTimer.addActionListener(this);

@@ -36,6 +36,7 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         SpawnSquares.add(PeashooterSpawnSquares);
         SpawnSquares.add(CherryBombSpawnSquares);
         SpawnSquares.add(WalnutSpawnSquares);
+        this.setTitle("Plants Spawn Squares Selector");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setResizable(false);
         this.setSize(Panel.SQUARE_SIZE*Panel.COLUMNS, Panel.SQUARE_SIZE*(Panel.ROWS+1));
@@ -64,18 +65,6 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
             buttonList.get(i).setBackground(new Color(0x4f7942));
         }
         this.addMouseListener(this);
-
-
-        for (List<int[]> squareType : SpawnSquares) {
-            for (int[] square : squareType) {
-                for (int i = 0; i<square.length; i++) {
-                    System.out.print(square[i]+" "+ i + "  ");
-                }
-                System.out.println();
-            }
-            System.out.println();
-        }
-
     }
 
     public void paint(Graphics g) {
@@ -126,7 +115,7 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
     public void mouseClicked(MouseEvent e) {
         int x = e.getX() / Panel.SQUARE_SIZE;
         int y = e.getY() / Panel.SQUARE_SIZE;
-        if(x<Panel.PLANT_COLUMNS && x>=0 && y<Panel.ROWS+1 && y>=1) {
+        if(x<=Panel.PLANT_COLUMNS && x>=0 && y<=Panel.ROWS+1 && y>=1) {
             int[] coordinates = new int[]{x,y};
             int[] foundIndex = findArrayIndex(SpawnSquares,coordinates);
             if (Arrays.equals(foundIndex, new int[]{-1, -1})) {

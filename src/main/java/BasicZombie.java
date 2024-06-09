@@ -27,11 +27,16 @@ public class BasicZombie extends Zombie {
     public int getSpeed() {
         return SPEED;
     }
+
+    @Override
+    public int getType() {
+        return 0;
+    }
+
     @Override
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
-        g2D.draw(imageBounds);
     }
 
     public void takeDamage(int damage) {

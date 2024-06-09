@@ -40,7 +40,6 @@ public class CherryBomb extends Plant {
         Graphics2D g2D = (Graphics2D) g;
         if (this.health==0) explode();
         g2D.drawImage(image, x, y, null);
-        g2D.draw(imageBounds);
         if (this.explosion != null) {
             this.explosion.paint(g);
             CollisionManager.checkExplosionDeaths(this.explosion, Zombies);

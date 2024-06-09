@@ -8,7 +8,7 @@ public class Explosion implements ActionListener {
     public int x, y;
     private static final int DAMAGE = 9999;
     Image image;
-    private Rectangle imageBounds;
+    private final Rectangle imageBounds;
 
     public Explosion(int x, int y) {
         theTimer.addActionListener(this);
