@@ -10,11 +10,11 @@ public class Walnut extends Plant {
 
     public Walnut(int x, int y) {
         super(x, y);
+        //set starting values
         this.health = HEALTH;
-        theTimer.addActionListener(this);
+        theTimer.addActionListener(this);//make this entity listen to the timer
         image = new ImageIcon("src/Walnut.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
-
     }
 
     @Override
@@ -44,7 +44,6 @@ public class Walnut extends Plant {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
     }
 
     @Override

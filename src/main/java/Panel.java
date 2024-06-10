@@ -16,11 +16,11 @@ public class Panel extends JPanel implements ActionListener {
     public static List<List<int[]>> SpawnSquares = new ArrayList<>();
     private final ResourceManager resourceManager;
     public static Timer theTimer;
-    public static int DELAY = 30;
+    public static int DELAY = 50;
     public static int START_ZOMBIE_AMOUNT = 10;
-    public static int PLANT_SPAWN_INTERVAL = 1;
+    public static int PLANT_SPAWN_INTERVAL = 3;
     public static int ZOMBIE_SPAWN_INTERVAL = 6;
-    public static int START_SUN_POINTS = 900;
+    public static int START_SUN_POINTS = 500;
     public static int BASIC_ZOMBIE_SPAWN_CHANCE = 70;
     public static int BUCKETHEAD_ZOMBIE_SPAWN_CHANCE = 30;
     public static int SUNFLOWER_SPAWN_CHANCE = 45;
@@ -34,6 +34,14 @@ public class Panel extends JPanel implements ActionListener {
     public static final int ZOMBIE_COLUMNS = 4;
     public static final int COLUMNS = PLANT_COLUMNS + ZOMBIE_COLUMNS;
     JLabel label;
+    JLabel welcome1 = new JLabel();
+    JLabel welcome2 = new JLabel();
+    JLabel welcome3 = new JLabel();
+    JLabel welcome4 = new JLabel();
+    JLabel welcome5 = new JLabel();
+    List<JLabel> welcomes = new ArrayList<>();
+
+
     JPanel panel, outsidePanel;
     JButton toSpawnSelector = new JButton("To Spawn Selector");
     JButton startSimulation = new JButton("Start Simulation");
@@ -68,23 +76,55 @@ public class Panel extends JPanel implements ActionListener {
         this.add(startSimulation);
         this.add(pauseSimulation);
         this.add(toSettingsChange);
-
+        for (int i = 0; i<5; i++) {
+            JLabel welcome;
+            switch (i) {
+                case 0:
+                    welcome = welcome1;
+                    welcome.setText("Welcome to the Plants vs Zombies-themed simulation. ");
+                    break;
+                case 1:
+                    welcome = welcome2;
+                    welcome.setText("In order to begin the simulation, you need to choose on which squares ");
+                    break;
+                case 2:
+                    welcome = welcome3;
+                    welcome.setText("can the different types of plants spawn on by using the \"To Spawn Selector\" button. ");
+                    break;
+                case 3:
+                    welcome = welcome4;
+                    welcome.setText("To change different settings within the simulation, use the \"To Settings Change\" button. ");
+                    break;
+                default:
+                    welcome = welcome5;
+                    welcome.setText("To start the simulation, click the \"Start Simulation\" button.");
+                    break;
+            }
+            welcome.setBounds(0,(int) (Panel.SQUARE_SIZE+ (i * 0.5f * Panel.SQUARE_SIZE)), 9*Panel.SQUARE_SIZE, (int) (0.75f*Panel.SQUARE_SIZE));
+            welcome.setHorizontalAlignment(JLabel.CENTER);
+            welcome.setFont(new Font("Serif", Font.ITALIC, 24));
+            welcomes.add(welcome);
+            this.add(welcome);
+        }
         outsidePanel = new JPanel();
         outsidePanel.setLayout(new FlowLayout());
         outsidePanel.setBounds(2*SQUARE_SIZE, 0, 7*SQUARE_SIZE, SQUARE_SIZE);
-
+        outsidePanel.setBackground(new Color(0x4f7942));
         for (int i=0; i<9; i++) {
             label = new JLabel();
             panel = new JPanel();
             panel.setPreferredSize(new Dimension((int) ((Panel.SQUARE_SIZE) * 2.1f), Panel.SQUARE_SIZE / 3));
             sum = counterUpdater(i);
-            label.setText(strings[i] + sum);
+            label.setText(strings[i] + ": " +sum);
+            panel.setBackground(new Color(0x4f7942));
             labels.add(label);
             panel.add(label);
             panels.add(panel);
             outsidePanel.add(panel);
         }
         this.add(outsidePanel);
+
+
     }
 
     public int counterUpdater(int i) {
@@ -230,6 +270,9 @@ public class Panel extends JPanel implements ActionListener {
     }
 
     public void gameStart() {
+        for (JLabel welcome : welcomes) {
+            welcome.setVisible(false);
+        }
         timeElapsed = 0;
         pauseSimulation.setEnabled(true);
         Zombies.clear();

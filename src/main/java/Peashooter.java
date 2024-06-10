@@ -16,11 +16,12 @@ public class Peashooter extends Plant {
 
     public Peashooter(int x, int y) {
         super(x, y);
+        //set starting values
         this.health = HEALTH;
-        theTimer.addActionListener(this);
         this.shootCycle = 0;
-        Zombies = Panel.Zombies;
-        this.Projectiles = new ArrayList<>();
+        theTimer.addActionListener(this); //make this entity listen to the timer
+        Zombies = Panel.Zombies;//use the same list of zombies across every class
+        this.Projectiles = new ArrayList<>(); //create a separate list of projectiles for each Peashooter
         image = new ImageIcon("src/Peashooter.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
@@ -34,6 +35,7 @@ public class Peashooter extends Plant {
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
+        //for each projectile of this entity, check if it hit a zombie and if so, remove it
         if (this.Projectiles!=null)
             for (int i = 0; i < this.Projectiles.size(); i++) {
                 Projectile projectile = this.Projectiles.get(i);
@@ -41,8 +43,8 @@ public class Peashooter extends Plant {
                     if (CollisionManager.checkProjectileHit(projectile, Zombies) || projectile.x>=(Panel.COLUMNS*Panel.SQUARE_SIZE-projectile.getWidth())){
                         this.Projectiles.remove(i);
                         i--;
-
                     }
+                    //if it didn't hit, paint it
                     projectile.paint(g);
                 }
             }
@@ -55,6 +57,7 @@ public class Peashooter extends Plant {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //make it shoot each SHOOT_INTERVAL amount of ticks
         this.shootCycle++;
         if (this.shootCycle >= SHOOT_INTERVAL) {
             this.shootCycle = 0;
@@ -63,7 +66,7 @@ public class Peashooter extends Plant {
     }
 
     public void shoot() {
-        this.Projectiles.add(new Projectile(x+ image.getWidth(null), y));
+        this.Projectiles.add(new Projectile(x+image.getWidth(null), y));
     }
 
     public int getHealth() {

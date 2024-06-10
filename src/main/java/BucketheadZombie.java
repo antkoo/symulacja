@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 
 public class BucketheadZombie extends Zombie {
     public static Timer theTimer = Panel.theTimer;
-
     Image image;
     private static final int HEALTH = 500;
     private static final int SPEED = 1;
@@ -12,9 +11,9 @@ public class BucketheadZombie extends Zombie {
 
     public BucketheadZombie(int x, int y) {
         super(x, y);
-        
+        //set starting values
         this.health = HEALTH;
-        theTimer.addActionListener(this);
+        theTimer.addActionListener(this);//make this entity listen to the timer
         image = new ImageIcon("src/BucketheadZombie.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
@@ -55,7 +54,7 @@ public class BucketheadZombie extends Zombie {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        x-=SPEED;
-        imageBounds.x=x;
+        x-=SPEED;//every tick, this zombie moves left SPEED amount of pixels
+        imageBounds.x=x;//update imageBounds, so that the collisions register properly
     }
 }
