@@ -8,7 +8,6 @@ public class CherryBomb extends Plant {
     Image image;
     boolean alive;
     public Explosion explosion;
-    public List<Explosion> Explosions;
     public List<Zombie> Zombies;
     private int explodeCycle;
     private static final int EXPLODE_TIME = 20;
@@ -57,7 +56,7 @@ public class CherryBomb extends Plant {
         return health;
     }
 
-    public int getCost() {
+    public static int getCost() {
         return COST;
     }
 

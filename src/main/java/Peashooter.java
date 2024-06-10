@@ -35,7 +35,7 @@ public class Peashooter extends Plant {
     public void paint(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
-        //for each projectile of this entity, check if it hit a zombie and if so, remove it
+        //for each projectile of this entity, check if it hit a zombie or reached the end of the board and if so, remove it
         if (this.Projectiles!=null)
             for (int i = 0; i < this.Projectiles.size(); i++) {
                 Projectile projectile = this.Projectiles.get(i);
@@ -73,7 +73,7 @@ public class Peashooter extends Plant {
         return health;
     }
 
-    public int getCost() {
+    public static int getCost() {
         return COST;
     }
 

@@ -1,11 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.List;
-
 public class Board extends JFrame {
     public Board() {
         this.setTitle("Plants vs Zombies simulation");

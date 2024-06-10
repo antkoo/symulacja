@@ -9,14 +9,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SpawnSelector extends JFrame implements ActionListener, MouseListener {
-
     //0 - sunflower
     //1 - peashooter
     //2 - cherry bomb
     //3 - walnut
 
     int selectedButton;
-
+    //define buttons
     JRadioButton sunflowerButton;
     JRadioButton peashooterButton;
     JRadioButton cherryBombButton;
@@ -29,13 +28,10 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
 
     public List<List<int[]>> SpawnSquares = Panel.SpawnSquares;
 
-
+    public static Timer theTimer = Panel.theTimer;
 
     public SpawnSelector() {
-        SpawnSquares.add(SunflowerSpawnSquares);
-        SpawnSquares.add(PeashooterSpawnSquares);
-        SpawnSquares.add(CherryBombSpawnSquares);
-        SpawnSquares.add(WalnutSpawnSquares);
+        //default configuration
         this.setTitle("Plants Spawn Squares Selector");
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setResizable(false);
@@ -43,7 +39,13 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         this.setVisible(true);
         this.getContentPane().setBackground(new Color(0x4f7942));
         this.setLayout(new FlowLayout());
-
+        theTimer.addActionListener(this); //make this entity listen to the timer
+        //add each plants' spawn square list to the main list of lists
+        SpawnSquares.add(SunflowerSpawnSquares);
+        SpawnSquares.add(PeashooterSpawnSquares);
+        SpawnSquares.add(CherryBombSpawnSquares);
+        SpawnSquares.add(WalnutSpawnSquares);
+        //add radio buttons (so that you can choose only one)
         List<JRadioButton> buttonList = new ArrayList<>();
 
         sunflowerButton = new JRadioButton("Sunflower");
@@ -56,25 +58,27 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         buttonList.add(walnutButton);
 
         ButtonGroup group = new ButtonGroup();
-        sunflowerButton.setSelected(true);
+        sunflowerButton.setSelected(true);//default is sunflower
 
-        for (int i = 0; i<buttonList.size(); i++) {
-            group.add(buttonList.get(i));
-            buttonList.get(i).addActionListener(this);
-            this.add(buttonList.get(i));
-            buttonList.get(i).setBackground(new Color(0x4f7942));
+        for (JRadioButton jRadioButton : buttonList) {
+            group.add(jRadioButton);
+            jRadioButton.addActionListener(this);
+            this.add(jRadioButton);
+            jRadioButton.setBackground(new Color(0x4f7942));
         }
-        this.addMouseListener(this);
+        this.addMouseListener(this);//make it possible to find, where user clicked
     }
 
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
+        //draw every square possible
         for (int i = 0; i<Panel.PLANT_COLUMNS; i++) {
             for (int j = 1; j<Panel.ROWS+1; j++) {
                 g2D.drawRect(Panel.SQUARE_SIZE*i, Panel.SQUARE_SIZE*j, Panel.SQUARE_SIZE, Panel.SQUARE_SIZE);
             }
         }
+        //draw squares of currently chosen plant
         g2D.setPaint(Color.BLUE);
         for (int[] square : SpawnSquares.get(selectedButton)) {
             g2D.drawRect(Panel.SQUARE_SIZE*square[0], Panel.SQUARE_SIZE*square[1], Panel.SQUARE_SIZE, Panel.SQUARE_SIZE);
@@ -83,6 +87,7 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //change selectedButton on each button click
         if (e.getSource()==sunflowerButton) {
             selectedButton = 0;
         }
@@ -95,11 +100,17 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         if (e.getSource()==walnutButton) {
             selectedButton = 3;
         }
+        //cannot change spawn squares mid-simulation
+        if (theTimer.isRunning()) {
+            this.setVisible(false);
+            this.dispose();
+        }
         repaint();
     }
 
 
     public static int[] findArrayIndex(List<List<int[]>> listOfLists, int[] targetArray) {
+        //a helpful function to find a list in a list of lists
         for (int i = 0; i < listOfLists.size(); i++) {
             List<int[]> innerList = listOfLists.get(i);
             for (int j = 0; j < innerList.size(); j++) {
@@ -113,28 +124,20 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        //find where user clicked
         int x = e.getX() / Panel.SQUARE_SIZE;
         int y = e.getY() / Panel.SQUARE_SIZE;
-        if(x<=Panel.PLANT_COLUMNS && x>=0 && y<=Panel.ROWS+1 && y>=1) {
+        if(x<=Panel.PLANT_COLUMNS && x>=0 && y<=Panel.ROWS+1 && y>=1) {//check if click happened by the squares
             int[] coordinates = new int[]{x,y};
             int[] foundIndex = findArrayIndex(SpawnSquares,coordinates);
             if (Arrays.equals(foundIndex, new int[]{-1, -1})) {
-                SpawnSquares.get(selectedButton).add(coordinates);
+                SpawnSquares.get(selectedButton).add(coordinates);//add spawn square of selected plant (because no plant was there before)
                 repaint();
             }
             else if (foundIndex[0]==selectedButton) {
-                SpawnSquares.get(selectedButton).remove(foundIndex[1]);
+                SpawnSquares.get(selectedButton).remove(foundIndex[1]);//remove spawn square of selected plant (because it was added before)
                 repaint();
             }
-            /*for (List<int[]> squareType : SpawnSquares) {
-                for (int[] square : squareType) {
-                    for (int i = 0; i<square.length; i++) {
-                        System.out.print(square[i]+" "+ i + "  ");
-                    }
-                    System.out.println();
-                }
-                System.out.println();
-            }*/
         }
     }
 

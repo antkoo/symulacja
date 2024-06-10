@@ -11,10 +11,11 @@ public class Explosion implements ActionListener {
     private final Rectangle imageBounds;
 
     public Explosion(int x, int y) {
-        theTimer.addActionListener(this);
-        image = new ImageIcon("src/Explosion.png").getImage();
+        //set starting values
         this.x = x;
         this.y = y;
+        theTimer.addActionListener(this); //make this entity listen to the timer
+        image = new ImageIcon("src/Explosion.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
 
@@ -22,13 +23,8 @@ public class Explosion implements ActionListener {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
     }
-
     public int getDamage() {
         return DAMAGE;
-    }
-
-    public int getWidth() {
-        return image.getWidth(null);
     }
 
     public Rectangle getBounds() {

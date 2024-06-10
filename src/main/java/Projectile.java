@@ -12,10 +12,11 @@ public class Projectile implements ActionListener {
     private final Rectangle imageBounds;
 
     public Projectile(int x, int y) {
-        theTimer.addActionListener(this);
-        this.image = new ImageIcon("src/Projectile.png").getImage();
+        //set starting values
         this.x = x;
         this.y = y;
+        theTimer.addActionListener(this); //make this entity listen to the timer
+        this.image = new ImageIcon("src/Projectile.png").getImage();
         this.imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
 
@@ -38,7 +39,7 @@ public class Projectile implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        this.x += SPEED;
-        this.imageBounds.x=x;
+        this.x += SPEED;//move right towards zombies
+        this.imageBounds.x=x;//update imageBounds for correct collision register
     }
 }

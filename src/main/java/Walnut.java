@@ -37,7 +37,7 @@ public class Walnut extends Plant {
         return health;
     }
 
-    public int getCost() {
+    public static int getCost() {
         return COST;
     }
 

@@ -1,18 +1,9 @@
 public class ResourceManager {
-    private static ResourceManager instance;
     private int sunPoints;
 
     public ResourceManager() {
         this.sunPoints = 0;
     }
-    public static ResourceManager getInstance() {
-        if (instance == null) {
-            instance = new ResourceManager();
-        }
-        return instance;
-    }
-
-
     public void addSunPoints(int points) {
         this.sunPoints += points;
     }
@@ -24,8 +15,8 @@ public class ResourceManager {
     public boolean spendSunPoints(int points) {
         if (sunPoints >= points) {
             sunPoints -= points;
-            return true;
+            return true;//points were spent
         }
-        return false;
+        return false;//there wasn't enough points
     }
 }
