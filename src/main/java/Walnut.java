@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 public class Walnut extends Plant {
     public static Timer theTimer = Panel.theTimer;
     Image image;
-    private static final int HEALTH = 1500;
+    private static final int HEALTH = 3500;
     private static final int COST = 50;
 
     public Walnut(int x, int y) {
@@ -23,7 +23,7 @@ public class Walnut extends Plant {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paintComponent(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
     }

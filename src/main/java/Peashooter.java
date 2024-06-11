@@ -32,7 +32,7 @@ public class Peashooter extends Plant {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paintComponent(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
         //for each projectile of this entity, check if it hit a zombie or reached the end of the board and if so, remove it
@@ -45,7 +45,7 @@ public class Peashooter extends Plant {
                         i--;
                     }
                     //if it didn't hit, paint it
-                    projectile.paint(g);
+                    projectile.paintComponent(g);
                 }
             }
     }

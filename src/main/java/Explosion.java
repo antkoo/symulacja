@@ -19,7 +19,7 @@ public class Explosion implements ActionListener {
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
 
-    public void paint(Graphics g) {
+    public void paintComponent(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
     }

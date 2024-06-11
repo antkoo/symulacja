@@ -19,9 +19,9 @@ public class Panel extends JPanel implements ActionListener {
     //default amounts; can be changed
     public static int DELAY = 50;
     public static int START_ZOMBIE_AMOUNT = 10;
-    public static int PLANT_SPAWN_INTERVAL = 3;
-    public static int ZOMBIE_SPAWN_INTERVAL = 6;
-    public static int START_SUN_POINTS = 500;
+    public static int PLANT_SPAWN_INTERVAL = 2;
+    public static int ZOMBIE_SPAWN_INTERVAL = 16;
+    public static int START_SUN_POINTS = 900;
     public static int BASIC_ZOMBIE_SPAWN_CHANCE = 70;
     public static int BUCKETHEAD_ZOMBIE_SPAWN_CHANCE = 30;
     public static int SUNFLOWER_SPAWN_CHANCE = 45;
@@ -145,6 +145,7 @@ public class Panel extends JPanel implements ActionListener {
             if (plant.getType() == 0) {
                 Sunflower sunflower = (Sunflower) plant; //downcasting to access Sunflower-exclusive function
                 sunflower.produceCycle = -9999;
+                sunflower.alive=false;
             }
         }
         //removing any plants left from previous simulation
@@ -380,6 +381,7 @@ public class Panel extends JPanel implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Plants lost...", "Zombies for the win!!", JOptionPane.ERROR_MESSAGE);
                     theTimer.stop();
                     toSpawnSelector.setEnabled(true);
+                    pauseSimulation.setEnabled(false);
                     break;
                 }
             }
@@ -389,6 +391,7 @@ public class Panel extends JPanel implements ActionListener {
                 theTimer.stop();
                 startSimulation.setText("Restart Simulation");
                 toSpawnSelector.setEnabled(true);
+                pauseSimulation.setEnabled(false);
             }
 
             repaint();
@@ -423,11 +426,15 @@ public class Panel extends JPanel implements ActionListener {
                 if (plant.getType()==2) {//check if any cherrybombs are dead and explode them
                     CherryBomb cherryBomb = (CherryBomb) plant; //downcasting to access CherryBomb-exclusive function
                     cherryBomb.explode();
+                } else if (plant.getType() == 0) {//make sure sunflowers don't produce sun points after death
+                    Sunflower sunflower = (Sunflower) plant; //downcasting to access Sunflower-exclusive function
+                    sunflower.produceCycle = -9999;
+                    sunflower.alive=false;
                 }
                 Plants.remove(i);//remove plants, that are dead
                 i--;
             }
-            plant.paint(g);//paint the ones, that are alive
+            plant.paintComponent(g);//paintComponent the ones, that are alive
         }
         for (int i = 0; i < Zombies.size(); i++) {
             Zombie zombie = Zombies.get(i);
@@ -435,7 +442,7 @@ public class Panel extends JPanel implements ActionListener {
                 Zombies.remove(i);//remove zombies, that are dead
                 i--;
             }
-            zombie.paint(g);//paint the ones, that are alive
+            zombie.paintComponent(g);//paintComponent the ones, that are alive
         }
     }
 }

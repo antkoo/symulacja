@@ -32,13 +32,13 @@ public class CherryBomb extends Plant {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paintComponent(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         if (this.health==0) explode(); //when it dies, explode, no matter if explodeCycle reached EXPLODE_TIME
         g2D.drawImage(image, x, y, null);
         //if explosion exists, it exploded, so it needs to check, what the explosion killed and remove the explosion and the CherryBomb
         if (this.explosion != null) {
-            this.explosion.paint(g);
+            this.explosion.paintComponent(g);
             CollisionManager.checkExplosionDeaths(this.explosion, Zombies);
             this.explosion = null;
             //making sure CherryBomb dies, so that it doesn't explode more than once

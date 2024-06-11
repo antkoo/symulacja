@@ -11,7 +11,7 @@ public abstract class Entity implements ActionListener {
     }
 
     public abstract int getHealth();
-    public abstract void paint(Graphics g);
+    public abstract void paintComponent(Graphics g);
     public abstract void takeDamage(int damage);
     public abstract Rectangle getBounds();
 }

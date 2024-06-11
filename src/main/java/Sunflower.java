@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 
 public class Sunflower extends Plant {
     public static Timer theTimer = Panel.theTimer;
+    public boolean alive;
     Image image;
     public static ResourceManager resourceManager;
     protected int produceCycle;
@@ -19,6 +20,7 @@ public class Sunflower extends Plant {
         //set starting values
         this.health = HEALTH;
         this.produceCycle = 0;
+        this.alive=true;
         image = new ImageIcon("src/Sunflower.png").getImage();
         imageBounds = new Rectangle(x, y, image.getWidth(null), image.getHeight(null));
     }
@@ -29,7 +31,7 @@ public class Sunflower extends Plant {
     }
 
     @Override
-    public void paint(Graphics g) {
+    public void paintComponent(Graphics g) {
         Graphics2D g2D = (Graphics2D) g;
         g2D.drawImage(image, x, y, null);
     }
