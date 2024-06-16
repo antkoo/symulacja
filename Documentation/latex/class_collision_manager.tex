@@ -1,0 +1,80 @@
+\doxysection{Collision\+Manager Class Reference}
+\hypertarget{class_collision_manager}{}\label{class_collision_manager}\index{CollisionManager@{CollisionManager}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_collision_manager_ae3d400eadac955baa9df2f79e8834961}{check\+Attacks}} (List$<$ \mbox{\hyperlink{class_plant}{Plant}} $>$ plants, List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$ zombies)
+\item 
+static boolean \mbox{\hyperlink{class_collision_manager_aa7c7fbe1ec55ddaf81c37ec987d1de9c}{check\+Projectile\+Hit}} (\mbox{\hyperlink{class_projectile}{Projectile}} projectile, List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$ zombies)
+\item 
+static void \mbox{\hyperlink{class_collision_manager_a8a3fe6fbe417b81fcfa5ab72c689fdb1}{check\+Explosion\+Deaths}} (\mbox{\hyperlink{class_explosion}{Explosion}} explosion, List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$ zombies)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It has all functions connected with checking, whether different entities hit each other. 
+
+Definition at line \mbox{\hyperlink{_collision_manager_8java_source_l00005}{5}} of file \mbox{\hyperlink{_collision_manager_8java_source}{Collision\+Manager.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_collision_manager_ae3d400eadac955baa9df2f79e8834961}\index{CollisionManager@{CollisionManager}!checkAttacks@{checkAttacks}}
+\index{checkAttacks@{checkAttacks}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{checkAttacks()}{checkAttacks()}}
+{\footnotesize\ttfamily \label{class_collision_manager_ae3d400eadac955baa9df2f79e8834961} 
+static void Collision\+Manager.\+check\+Attacks (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_plant}{Plant}} $>$}]{plants}{, }\item[{List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$}]{zombies}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks, whether a zombie attacked any plant 
+\begin{DoxyParams}{Parameters}
+{\em plants} & list of plants alive \\
+\hline
+{\em zombies} & list of zombies alive \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_collision_manager_8java_source_l00011}{11}} of file \mbox{\hyperlink{_collision_manager_8java_source}{Collision\+Manager.\+java}}.
+
+\Hypertarget{class_collision_manager_a8a3fe6fbe417b81fcfa5ab72c689fdb1}\index{CollisionManager@{CollisionManager}!checkExplosionDeaths@{checkExplosionDeaths}}
+\index{checkExplosionDeaths@{checkExplosionDeaths}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{checkExplosionDeaths()}{checkExplosionDeaths()}}
+{\footnotesize\ttfamily \label{class_collision_manager_a8a3fe6fbe417b81fcfa5ab72c689fdb1} 
+static void Collision\+Manager.\+check\+Explosion\+Deaths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_explosion}{Explosion}}}]{explosion}{, }\item[{List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$}]{zombies}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks, whether an explosion hit a zombie. 
+\begin{DoxyParams}{Parameters}
+{\em explosion} & an explosion to check \\
+\hline
+{\em zombies} & list of zombies alive \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_collision_manager_8java_source_l00045}{45}} of file \mbox{\hyperlink{_collision_manager_8java_source}{Collision\+Manager.\+java}}.
+
+\Hypertarget{class_collision_manager_aa7c7fbe1ec55ddaf81c37ec987d1de9c}\index{CollisionManager@{CollisionManager}!checkProjectileHit@{checkProjectileHit}}
+\index{checkProjectileHit@{checkProjectileHit}!CollisionManager@{CollisionManager}}
+\doxysubsubsection{\texorpdfstring{checkProjectileHit()}{checkProjectileHit()}}
+{\footnotesize\ttfamily \label{class_collision_manager_aa7c7fbe1ec55ddaf81c37ec987d1de9c} 
+static boolean Collision\+Manager.\+check\+Projectile\+Hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projectile}{Projectile}}}]{projectile}{, }\item[{List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$}]{zombies}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks, whether a projectile hit a zombie. 
+\begin{DoxyParams}{Parameters}
+{\em projectile} & a projectile to check \\
+\hline
+{\em zombies} & list of zombies alive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+if the projectile hit anything 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_collision_manager_8java_source_l00029}{29}} of file \mbox{\hyperlink{_collision_manager_8java_source}{Collision\+Manager.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_collision_manager_8java}{Collision\+Manager.\+java}}\end{DoxyCompactItemize}

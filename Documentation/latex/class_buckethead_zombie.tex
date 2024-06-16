@@ -1,0 +1,233 @@
+\doxysection{Buckethead\+Zombie Class Reference}
+\hypertarget{class_buckethead_zombie}{}\label{class_buckethead_zombie}\index{BucketheadZombie@{BucketheadZombie}}
+Inheritance diagram for Buckethead\+Zombie\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_buckethead_zombie}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_buckethead_zombie_acaaffac9c9d5b8a1bf65f3ff80d42982}{Buckethead\+Zombie}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\item 
+int \mbox{\hyperlink{class_buckethead_zombie_a5f36848db5fe49365e1b4583d639bec9}{get\+Health}} ()
+\item 
+int \mbox{\hyperlink{class_buckethead_zombie_a7c8b8c162e682a82c3f15303f8635786}{get\+Speed}} ()
+\item 
+int \mbox{\hyperlink{class_buckethead_zombie_ad2b003a4d2b28251810012734c646dfc}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_buckethead_zombie_a1e21d18a300c879680cb6bcd5027ef58}{paint\+Component}} (Graphics g)
+\item 
+void \mbox{\hyperlink{class_buckethead_zombie_a16bc6ca710a36eb58abb57708c0dc921}{take\+Damage}} (int damage)
+\item 
+int \mbox{\hyperlink{class_buckethead_zombie_aa91ed66fe20c240725b0fa4a7be87779}{get\+Attack\+Damage}} ()
+\item 
+Rectangle \mbox{\hyperlink{class_buckethead_zombie_a06e96ff3bdd333ed8e4d75eb47c6752e}{get\+Bounds}} ()
+\item 
+void \mbox{\hyperlink{class_buckethead_zombie_a504a31e7cd66f5ba65b96a1a6f0001de}{action\+Performed}} (Action\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_zombie}{Zombie}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zombie_a0612f27084c0794d63200245280d27f7}{Zombie}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{Entity}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}
+\item 
+int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}
+\item 
+int \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}
+\item 
+Rectangle \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{image\+Bounds}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static Timer \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{the\+Timer}} = Panel.\+the\+Timer
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A stronger, but slower type of zombie. 
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00007}{7}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_buckethead_zombie_acaaffac9c9d5b8a1bf65f3ff80d42982}\index{BucketheadZombie@{BucketheadZombie}!BucketheadZombie@{BucketheadZombie}}
+\index{BucketheadZombie@{BucketheadZombie}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{BucketheadZombie()}{BucketheadZombie()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_acaaffac9c9d5b8a1bf65f3ff80d42982} 
+Buckethead\+Zombie.\+Buckethead\+Zombie (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00018}{18}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_buckethead_zombie_a504a31e7cd66f5ba65b96a1a6f0001de}\index{BucketheadZombie@{BucketheadZombie}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_a504a31e7cd66f5ba65b96a1a6f0001de} 
+void Buckethead\+Zombie.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e}{}\end{DoxyParamCaption})}
+
+Every {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} tick, this function is called. Used for updating position, health, image on screen etc. 
+\begin{DoxyParams}{Parameters}
+{\em e} & tick of {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00065}{65}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+\Hypertarget{class_buckethead_zombie_aa91ed66fe20c240725b0fa4a7be87779}\index{BucketheadZombie@{BucketheadZombie}!getAttackDamage@{getAttackDamage}}
+\index{getAttackDamage@{getAttackDamage}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{getAttackDamage()}{getAttackDamage()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_aa91ed66fe20c240725b0fa4a7be87779} 
+int Buckethead\+Zombie.\+get\+Attack\+Damage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the attack damage of a zombie entity. \begin{DoxyReturn}{Returns}
+attack damage of a zombie entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_zombie_a60edbebbfd22946a7a1964678e915201}{Zombie}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00054}{54}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+\Hypertarget{class_buckethead_zombie_a06e96ff3bdd333ed8e4d75eb47c6752e}\index{BucketheadZombie@{BucketheadZombie}!getBounds@{getBounds}}
+\index{getBounds@{getBounds}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{getBounds()}{getBounds()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_a06e96ff3bdd333ed8e4d75eb47c6752e} 
+Rectangle Buckethead\+Zombie.\+get\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the entity\textquotesingle{}s hitbox \begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s hitbox 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00059}{59}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+\Hypertarget{class_buckethead_zombie_a5f36848db5fe49365e1b4583d639bec9}\index{BucketheadZombie@{BucketheadZombie}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_a5f36848db5fe49365e1b4583d639bec9} 
+int Buckethead\+Zombie.\+get\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the amount of health of an entity. \begin{DoxyReturn}{Returns}
+health amount 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00028}{28}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+\Hypertarget{class_buckethead_zombie_a7c8b8c162e682a82c3f15303f8635786}\index{BucketheadZombie@{BucketheadZombie}!getSpeed@{getSpeed}}
+\index{getSpeed@{getSpeed}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{getSpeed()}{getSpeed()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_a7c8b8c162e682a82c3f15303f8635786} 
+int Buckethead\+Zombie.\+get\+Speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the speed of a zombie entity. \begin{DoxyReturn}{Returns}
+speed of a zombie entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_zombie_a8fb6321c78fe29fff59101a2d4116a38}{Zombie}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00033}{33}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+\Hypertarget{class_buckethead_zombie_ad2b003a4d2b28251810012734c646dfc}\index{BucketheadZombie@{BucketheadZombie}!getType@{getType}}
+\index{getType@{getType}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_ad2b003a4d2b28251810012734c646dfc} 
+int Buckethead\+Zombie.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the type value of a zombie entity. \begin{DoxyReturn}{Returns}
+type value of a zombie entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_zombie_ad56e99f27d55818c646ec53e84b5bb8b}{Zombie}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00038}{38}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+\Hypertarget{class_buckethead_zombie_a1e21d18a300c879680cb6bcd5027ef58}\index{BucketheadZombie@{BucketheadZombie}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_a1e21d18a300c879680cb6bcd5027ef58} 
+void Buckethead\+Zombie.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Paints the entity on screen. 
+\begin{DoxyParams}{Parameters}
+{\em g} & required to paint on screen \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00043}{43}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+\Hypertarget{class_buckethead_zombie_a16bc6ca710a36eb58abb57708c0dc921}\index{BucketheadZombie@{BucketheadZombie}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!BucketheadZombie@{BucketheadZombie}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{class_buckethead_zombie_a16bc6ca710a36eb58abb57708c0dc921} 
+void Buckethead\+Zombie.\+take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{}\end{DoxyParamCaption})}
+
+Remove a specified amount of health from an entity. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & amount of damage dealt \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_buckethead_zombie_8java_source_l00049}{49}} of file \mbox{\hyperlink{_buckethead_zombie_8java_source}{Buckethead\+Zombie.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_buckethead_zombie_8java}{Buckethead\+Zombie.\+java}}\end{DoxyCompactItemize}

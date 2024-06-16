@@ -1,0 +1,255 @@
+\doxysection{Peashooter Class Reference}
+\hypertarget{class_peashooter}{}\label{class_peashooter}\index{Peashooter@{Peashooter}}
+Inheritance diagram for Peashooter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_peashooter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_peashooter_ae9f7a9e56ea5ee5a8869ae04663aad95}{Peashooter}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\item 
+int \mbox{\hyperlink{class_peashooter_ac562af4de5b3ce242b8c406e16e67f54}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_peashooter_a3c455016dc2545fcdc3ee873240ea6bd}{paint\+Component}} (Graphics g)
+\item 
+void \mbox{\hyperlink{class_peashooter_a4675f3834ec069d2cdd7ac590964dcff}{take\+Damage}} (int damage)
+\item 
+void \mbox{\hyperlink{class_peashooter_aa06502f9e0dca16a634c2f47bdd5b5db}{action\+Performed}} (Action\+Event e)
+\item 
+void \mbox{\hyperlink{class_peashooter_a6835e5a0b063bf7703bc9587b282259e}{shoot}} ()
+\item 
+int \mbox{\hyperlink{class_peashooter_aaf9c2d81a7d35ae28d78aaf490607d21}{get\+Health}} ()
+\item 
+Rectangle \mbox{\hyperlink{class_peashooter_a439292d5537ee89dd68dcf56d56d6973}{get\+Bounds}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plant_ab21b9a8331235c68d2a5efff1fa1a6f8}{Plant}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{Entity}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_peashooter_a0a85ce6597aa93ea6d5878c32d1cf054}{get\+Cost}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_projectile}{Projectile}} $>$ \mbox{\hyperlink{class_peashooter_ab3abc2552ff0522faee4aa773404db85}{Projectiles}}
+\item 
+List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$ \mbox{\hyperlink{class_peashooter_aa013cf126a19ec678119c8094c74a8f0}{Zombies}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}
+\item 
+int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}
+\item 
+int \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}
+\item 
+Rectangle \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{image\+Bounds}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static Timer \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{the\+Timer}} = Panel.\+the\+Timer
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A plant, that shoots {\ttfamily \doxylink{class_projectile}{Projectile}}s every certain amount of time, that deal damage on impact. 
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00009}{9}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_peashooter_ae9f7a9e56ea5ee5a8869ae04663aad95}\index{Peashooter@{Peashooter}!Peashooter@{Peashooter}}
+\index{Peashooter@{Peashooter}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{Peashooter()}{Peashooter()}}
+{\footnotesize\ttfamily \label{class_peashooter_ae9f7a9e56ea5ee5a8869ae04663aad95} 
+Peashooter.\+Peashooter (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Constructor of a plant 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00028}{28}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_peashooter_aa06502f9e0dca16a634c2f47bdd5b5db}\index{Peashooter@{Peashooter}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily \label{class_peashooter_aa06502f9e0dca16a634c2f47bdd5b5db} 
+void Peashooter.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e}{}\end{DoxyParamCaption})}
+
+Every {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} tick, this function is called. Used for updating position, health, image on screen etc. 
+\begin{DoxyParams}{Parameters}
+{\em e} & tick of {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00070}{70}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_a439292d5537ee89dd68dcf56d56d6973}\index{Peashooter@{Peashooter}!getBounds@{getBounds}}
+\index{getBounds@{getBounds}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{getBounds()}{getBounds()}}
+{\footnotesize\ttfamily \label{class_peashooter_a439292d5537ee89dd68dcf56d56d6973} 
+Rectangle Peashooter.\+get\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the entity\textquotesingle{}s hitbox \begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s hitbox 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00096}{96}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_a0a85ce6597aa93ea6d5878c32d1cf054}\index{Peashooter@{Peashooter}!getCost@{getCost}}
+\index{getCost@{getCost}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily \label{class_peashooter_a0a85ce6597aa93ea6d5878c32d1cf054} 
+static int Peashooter.\+get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns cost of the plant in Sun Points. \begin{DoxyReturn}{Returns}
+cost of the plant in Sun Points 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00092}{92}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_aaf9c2d81a7d35ae28d78aaf490607d21}\index{Peashooter@{Peashooter}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily \label{class_peashooter_aaf9c2d81a7d35ae28d78aaf490607d21} 
+int Peashooter.\+get\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the amount of health of an entity. \begin{DoxyReturn}{Returns}
+health amount 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00085}{85}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_ac562af4de5b3ce242b8c406e16e67f54}\index{Peashooter@{Peashooter}!getType@{getType}}
+\index{getType@{getType}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_peashooter_ac562af4de5b3ce242b8c406e16e67f54} 
+int Peashooter.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the type value defined by each entity. \begin{DoxyReturn}{Returns}
+type of entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a2461649f13a0789e233e55abd5799271}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00041}{41}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_a3c455016dc2545fcdc3ee873240ea6bd}\index{Peashooter@{Peashooter}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily \label{class_peashooter_a3c455016dc2545fcdc3ee873240ea6bd} 
+void Peashooter.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Paints the entity on screen. 
+\begin{DoxyParams}{Parameters}
+{\em g} & required to paint on screen \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00046}{46}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_a6835e5a0b063bf7703bc9587b282259e}\index{Peashooter@{Peashooter}!shoot@{shoot}}
+\index{shoot@{shoot}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily \label{class_peashooter_a6835e5a0b063bf7703bc9587b282259e} 
+void Peashooter.\+shoot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Shoot a {\ttfamily \doxylink{class_projectile}{Projectile}} by creating a new instance of it in the {\ttfamily \doxylink{class_peashooter_ab3abc2552ff0522faee4aa773404db85}{Peashooter\#\+Projectiles}} list. 
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00081}{81}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_a4675f3834ec069d2cdd7ac590964dcff}\index{Peashooter@{Peashooter}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{class_peashooter_a4675f3834ec069d2cdd7ac590964dcff} 
+void Peashooter.\+take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{}\end{DoxyParamCaption})}
+
+Remove a specified amount of health from an entity. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & amount of damage dealt \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00065}{65}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_peashooter_ab3abc2552ff0522faee4aa773404db85}\index{Peashooter@{Peashooter}!Projectiles@{Projectiles}}
+\index{Projectiles@{Projectiles}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{Projectiles}{Projectiles}}
+{\footnotesize\ttfamily \label{class_peashooter_ab3abc2552ff0522faee4aa773404db85} 
+List$<$\mbox{\hyperlink{class_projectile}{Projectile}}$>$ Peashooter.\+Projectiles}
+
+List of all of this {\ttfamily \doxylink{class_peashooter}{Peashooter}}\textquotesingle{}s {\ttfamily \doxylink{class_projectile}{Projectile}}s. 
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00013}{13}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+\Hypertarget{class_peashooter_aa013cf126a19ec678119c8094c74a8f0}\index{Peashooter@{Peashooter}!Zombies@{Zombies}}
+\index{Zombies@{Zombies}!Peashooter@{Peashooter}}
+\doxysubsubsection{\texorpdfstring{Zombies}{Zombies}}
+{\footnotesize\ttfamily \label{class_peashooter_aa013cf126a19ec678119c8094c74a8f0} 
+List$<$\mbox{\hyperlink{class_zombie}{Zombie}}$>$ Peashooter.\+Zombies}
+
+Copy of {\ttfamily \doxylink{class_panel_a12df5e54935d92481a37f346847ac169}{Panel\#\+Zombies}} used in {\ttfamily \doxylink{class_collision_manager_a8a3fe6fbe417b81fcfa5ab72c689fdb1}{Collision\+Manager\#check\+Explosion\+Deaths}}. 
+
+Definition at line \mbox{\hyperlink{_peashooter_8java_source_l00017}{17}} of file \mbox{\hyperlink{_peashooter_8java_source}{Peashooter.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_peashooter_8java}{Peashooter.\+java}}\end{DoxyCompactItemize}

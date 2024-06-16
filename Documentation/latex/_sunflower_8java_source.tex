@@ -1,0 +1,73 @@
+\doxysection{Sunflower.\+java}
+\hypertarget{_sunflower_8java_source}{}\label{_sunflower_8java_source}\index{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Sunflower.java@{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Sunflower.java}}
+\mbox{\hyperlink{_sunflower_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00001}00001\ \textcolor{keyword}{import}\ javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00008}\mbox{\hyperlink{class_sunflower}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sunflower}{Sunflower}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{class_plant}{Plant}}\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00012}\mbox{\hyperlink{class_sunflower_a4f49e7ec646aa36504df882bd12f39fe}{00012}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{class_sunflower_a4f49e7ec646aa36504df882bd12f39fe}{alive}};}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00013}00013\ \ \ \ \ Image\ image;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00017}\mbox{\hyperlink{class_sunflower_a59d985395986d0c2c17b00e09d901c7b}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_resource_manager}{ResourceManager}}\ \mbox{\hyperlink{class_sunflower_a59d985395986d0c2c17b00e09d901c7b}{resourceManager}};}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00021}\mbox{\hyperlink{class_sunflower_ae01fbc487740102ca46a525cdcb367ee}{00021}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sunflower_ae01fbc487740102ca46a525cdcb367ee}{produceCycle}};}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ CYCLE\_DURATION\ =\ 24;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ HEALTH\ =\ 300;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ COST\ =\ 50;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ PRODUCE\_AMOUNT\ =\ 25;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00031}\mbox{\hyperlink{class_sunflower_ac6a66a56912919611edcd2f4c8c062c9}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_sunflower_ac6a66a56912919611edcd2f4c8c062c9}{Sunflower}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ super(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}});}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{theTimer}}.addActionListener(\textcolor{keyword}{this});\ \textcolor{comment}{//make\ this\ entity\ listen\ to\ the\ timer}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sunflower_a59d985395986d0c2c17b00e09d901c7b}{resourceManager}}\ =\ \mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_a7dd188157b47c089996b769299bdcd37}{resourceManager}};\ \textcolor{comment}{//get\ a\ copy\ of\ the\ same\ ResourceManager,\ as\ other\ entities}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//set\ starting\ values}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ this.health\ =\ HEALTH;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ this.produceCycle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ this.alive=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ image\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}src/Sunflower.png"{}}).getImage();}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}}\ =\ \textcolor{keyword}{new}\ Rectangle(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ image.getWidth(\textcolor{keyword}{null}),\ image.getHeight(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00043}00043\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00044}\mbox{\hyperlink{class_sunflower_aa1673bc5c9c3bb41a2f7b3d0f847bacf}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sunflower_aa1673bc5c9c3bb41a2f7b3d0f847bacf}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00048}00048\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00049}\mbox{\hyperlink{class_sunflower_ac2b6409b4879c40cf8aca08a99a7af6a}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sunflower_ac2b6409b4879c40cf8aca08a99a7af6a}{paintComponent}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ Graphics2D\ g2D\ =\ (Graphics2D)\ g;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ g2D.drawImage(image,\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00054}00054\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00055}\mbox{\hyperlink{class_sunflower_aca7d098e93001df17faf34e44d57829d}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sunflower_aca7d098e93001df17faf34e44d57829d}{takeDamage}}(\textcolor{keywordtype}{int}\ damage)\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}\ -\/=\ damage;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00059}00059\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00060}\mbox{\hyperlink{class_sunflower_a8432b2f48e1997eb3e6d020acccc3756}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sunflower_a8432b2f48e1997eb3e6d020acccc3756}{getHealth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}};}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00067}\mbox{\hyperlink{class_sunflower_a7ebb5350c124865f6b68cf60f86ea1ad}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_sunflower_a7ebb5350c124865f6b68cf60f86ea1ad}{getCost}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ COST;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00072}00072\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00073}\mbox{\hyperlink{class_sunflower_ade0d86ccc52271b9d326d85b77f5437d}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sunflower_ade0d86ccc52271b9d326d85b77f5437d}{actionPerformed}}(ActionEvent\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//make\ it\ produce\ PRODUCE\_AMOUNT\ of\ sun\ points\ each\ CYCLE\_DURATION\ amount\ of\ ticks}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_sunflower_ae01fbc487740102ca46a525cdcb367ee}{produceCycle}}>=0)\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ this.produceCycle++;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.produceCycle\ >=\ CYCLE\_DURATION)\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ this.produceCycle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_sunflower_a59d985395986d0c2c17b00e09d901c7b}{resourceManager}}.\mbox{\hyperlink{class_resource_manager_aee0162dcd316d542e1002495a185c46b}{addSunPoints}}(PRODUCE\_AMOUNT);}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00084}00084\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00085}\mbox{\hyperlink{class_sunflower_a79f82a0e7f2d37f10efa8cd1bb077294}{00085}}\ \ \ \ \ \textcolor{keyword}{public}\ Rectangle\ \mbox{\hyperlink{class_sunflower_a79f82a0e7f2d37f10efa8cd1bb077294}{getBounds}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}};}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_sunflower_8java_source_l00088}00088\ \}}
+
+\end{DoxyCode}

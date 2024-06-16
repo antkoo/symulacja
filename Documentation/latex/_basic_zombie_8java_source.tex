@@ -1,0 +1,68 @@
+\doxysection{Basic\+Zombie.\+java}
+\hypertarget{_basic_zombie_8java_source}{}\label{_basic_zombie_8java_source}\index{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/BasicZombie.java@{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/BasicZombie.java}}
+\mbox{\hyperlink{_basic_zombie_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00001}00001\ \textcolor{keyword}{import}\ javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00008}\mbox{\hyperlink{class_basic_zombie}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_basic_zombie}{BasicZombie}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{class_zombie}{Zombie}}\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00009}00009\ \ \ \ \ Image\ image;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ HEALTH\ =\ 200;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ SPEED\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ ATTACK\_DAMAGE\ =\ 40;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00019}\mbox{\hyperlink{class_basic_zombie_adcf0c9607e996416fa41e2546adf6c3a}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_basic_zombie_adcf0c9607e996416fa41e2546adf6c3a}{BasicZombie}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00020}00020\ \ \ \ \ \ \ \ \ super(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}});}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//set\ starting\ values}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ this.health\ =\ HEALTH;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{theTimer}}.addActionListener(\textcolor{keyword}{this});\textcolor{comment}{//make\ this\ entity\ listen\ to\ the\ timer}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ image\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}src/BasicZombie.png"{}}).getImage();}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}}\ =\ \textcolor{keyword}{new}\ Rectangle(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ image.getWidth(\textcolor{keyword}{null}),\ image.getHeight(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00028}00028\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00029}\mbox{\hyperlink{class_basic_zombie_a2517964e47038f6220b1c398f6b949e3}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_basic_zombie_a2517964e47038f6220b1c398f6b949e3}{getHealth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}};}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00033}00033\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00034}\mbox{\hyperlink{class_basic_zombie_a4fa863768033407eef4016ec5e52f515}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_basic_zombie_a4fa863768033407eef4016ec5e52f515}{getSpeed}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SPEED;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00038}00038\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00039}\mbox{\hyperlink{class_basic_zombie_a570d3d56a09264035216d9bdd0cdb3f7}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_basic_zombie_a570d3d56a09264035216d9bdd0cdb3f7}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00043}00043\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00044}\mbox{\hyperlink{class_basic_zombie_a7c40965a8f1b73b6e509059baa19e9f3}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_basic_zombie_a7c40965a8f1b73b6e509059baa19e9f3}{paintComponent}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ Graphics2D\ g2D\ =\ (Graphics2D)\ g;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ g2D.drawImage(image,\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00049}00049\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00050}\mbox{\hyperlink{class_basic_zombie_a52139dc94132cc1813efc044dc23979c}{00050}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_basic_zombie_a52139dc94132cc1813efc044dc23979c}{takeDamage}}(\textcolor{keywordtype}{int}\ damage)\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}\ -\/=\ damage;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00054}00054\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00055}\mbox{\hyperlink{class_basic_zombie_a961d14dcad2546443d7305f148065b00}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_basic_zombie_a961d14dcad2546443d7305f148065b00}{getAttackDamage}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ATTACK\_DAMAGE;}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00059}00059\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00060}\mbox{\hyperlink{class_basic_zombie_a0d109ade904bf437e7e9078412192924}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ Rectangle\ \mbox{\hyperlink{class_basic_zombie_a0d109ade904bf437e7e9078412192924}{getBounds}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}};}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00065}00065\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00066}\mbox{\hyperlink{class_basic_zombie_ae7c75d86f6acc89f8334651ba4965bd1}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_basic_zombie_ae7c75d86f6acc89f8334651ba4965bd1}{actionPerformed}}(ActionEvent\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}-\/=SPEED;\textcolor{comment}{//every\ tick,\ this\ zombie\ moves\ left\ SPEED\ amount\ of\ pixels}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}}.x=\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}};\textcolor{comment}{//update\ imageBounds,\ so\ that\ the\ collisions\ register\ properly}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_basic_zombie_8java_source_l00070}00070\ \}}
+
+\end{DoxyCode}

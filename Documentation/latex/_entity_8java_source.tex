@@ -1,0 +1,32 @@
+\doxysection{Entity.\+java}
+\hypertarget{_entity_8java_source}{}\label{_entity_8java_source}\index{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Entity.java@{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Entity.java}}
+\mbox{\hyperlink{_entity_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00001}00001\ \textcolor{keyword}{import}\ javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.awt.event.ActionListener;}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00009}\mbox{\hyperlink{class_entity}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_entity}{Entity}}\ \textcolor{keyword}{implements}\ ActionListener\ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00013}\mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{00013}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00017}\mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{00017}}\ \ \ \ \ \textcolor{keyword}{protected}\ Rectangle\ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00021}\mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{00021}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{static}\ Timer\ \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{theTimer}}\ =\ \mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{theTimer}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00027}\mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{Entity}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})\ \{}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ this.x\ =\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ this.y\ =\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}};}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00036}\mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{getHealth}}();}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00042}\mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{paintComponent}}(Graphics\ g);}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00048}\mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{takeDamage}}(\textcolor{keywordtype}{int}\ damage);}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00054}\mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ Rectangle\ \mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{getBounds}}();}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00060}\mbox{\hyperlink{class_entity_a2461649f13a0789e233e55abd5799271}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_a2461649f13a0789e233e55abd5799271}{getType}}();}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00066}\mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{actionPerformed}}(ActionEvent\ e);}
+\DoxyCodeLine{\Hypertarget{_entity_8java_source_l00067}00067\ \}}
+
+\end{DoxyCode}

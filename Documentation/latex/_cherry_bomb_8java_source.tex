@@ -1,0 +1,91 @@
+\doxysection{Cherry\+Bomb.\+java}
+\hypertarget{_cherry_bomb_8java_source}{}\label{_cherry_bomb_8java_source}\index{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/CherryBomb.java@{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/CherryBomb.java}}
+\mbox{\hyperlink{_cherry_bomb_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00001}00001\ \textcolor{keyword}{import}\ javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00010}\mbox{\hyperlink{class_cherry_bomb}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cherry_bomb}{CherryBomb}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{class_plant}{Plant}}\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00011}00011\ \ \ \ \ Image\ image;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{boolean}\ alive;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_explosion}{Explosion}}\ explosion;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00017}\mbox{\hyperlink{class_cherry_bomb_a12345143d40cf1acc3f3e0ac202484ef}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Zombie>\ \mbox{\hyperlink{class_cherry_bomb_a12345143d40cf1acc3f3e0ac202484ef}{Zombies}};}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ explodeCycle;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ EXPLODE\_TIME\ =\ 20;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ HEALTH\ =\ 70;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ COST\ =\ 150;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00027}\mbox{\hyperlink{class_cherry_bomb_a6b9fe9732cf87fe8404da975ef5fdb45}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_cherry_bomb_a6b9fe9732cf87fe8404da975ef5fdb45}{CherryBomb}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ super(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}});}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//set\ starting\ values}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ this.alive\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ this.health\ =\ HEALTH;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ this.explodeCycle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cherry_bomb_a12345143d40cf1acc3f3e0ac202484ef}{Zombies}}\ =\ \mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_a12df5e54935d92481a37f346847ac169}{Zombies}};\ \textcolor{comment}{//use\ the\ same\ list\ of\ zombies\ across\ every\ class}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{theTimer}}.addActionListener(\textcolor{keyword}{this});\ \textcolor{comment}{//make\ this\ entity\ listen\ to\ the\ timer}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ image\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}src/CherryBomb.png"{}}).getImage();}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}}\ =\ \textcolor{keyword}{new}\ Rectangle(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ image.getWidth(\textcolor{keyword}{null}),\ image.getHeight(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00039}00039\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00040}\mbox{\hyperlink{class_cherry_bomb_a1638c5d946a709e42353d1bccd6cc404}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cherry_bomb_a1638c5d946a709e42353d1bccd6cc404}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00044}00044\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00045}\mbox{\hyperlink{class_cherry_bomb_a93c83c0cc21fa45539f738e6f8d823ea}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cherry_bomb_a93c83c0cc21fa45539f738e6f8d823ea}{paintComponent}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ Graphics2D\ g2D\ =\ (Graphics2D)\ g;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.\mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}==0)\ \mbox{\hyperlink{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3}{explode}}();\ \textcolor{comment}{//when\ it\ dies,\ explode,\ no\ matter\ if\ explodeCycle\ reached\ EXPLODE\_TIME}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ g2D.drawImage(image,\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ explosion\ exists,\ it\ exploded,\ so\ it\ needs\ to\ check,\ what\ the\ explosion\ killed\ and\ remove\ the\ explosion\ and\ the\ CherryBomb}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.explosion\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ this.explosion.\mbox{\hyperlink{class_explosion_a4baaebe6efeed24b1993f2b135bcc24d}{paintComponent}}(g);}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_collision_manager}{CollisionManager}}.\mbox{\hyperlink{class_collision_manager_a8a3fe6fbe417b81fcfa5ab72c689fdb1}{checkExplosionDeaths}}(this.explosion,\ \mbox{\hyperlink{class_cherry_bomb_a12345143d40cf1acc3f3e0ac202484ef}{Zombies}});}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ this.explosion\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//making\ sure\ CherryBomb\ dies,\ so\ that\ it\ doesn't\ explode\ more\ than\ once}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ this.health\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ this.alive\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00060}00060\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00061}\mbox{\hyperlink{class_cherry_bomb_ace78aa9b3663464bd9bf635d8d4e1ec5}{00061}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cherry_bomb_ace78aa9b3663464bd9bf635d8d4e1ec5}{takeDamage}}(\textcolor{keywordtype}{int}\ damage)\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ this.health\ -\/=\ damage;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00065}00065\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00066}\mbox{\hyperlink{class_cherry_bomb_a28e9b2655fd796685249d487f991a09f}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cherry_bomb_a28e9b2655fd796685249d487f991a09f}{getHealth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}};}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00074}\mbox{\hyperlink{class_cherry_bomb_ae3be3a3ad1cbc9e5ec53a51251ed4d6e}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cherry_bomb_ae3be3a3ad1cbc9e5ec53a51251ed4d6e}{getCost}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ COST;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00081}\mbox{\hyperlink{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3}{explode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ this.explosion\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_explosion}{Explosion}}(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}-\/\mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_ab7bd7bccf94055cb66e8c63b32e32f3e}{SQUARE\_SIZE}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}-\/\mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_ab7bd7bccf94055cb66e8c63b32e32f3e}{SQUARE\_SIZE}});}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00085}00085\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00086}\mbox{\hyperlink{class_cherry_bomb_a7fe6abf97baea6eae379f04f83219685}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_cherry_bomb_a7fe6abf97baea6eae379f04f83219685}{actionPerformed}}(ActionEvent\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ it\ dies,\ make\ it\ explode\ regardless\ of\ explodeCycle}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.\mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}<=0)\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3}{explode}}();}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ this.explodeCycle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//make\ it\ explode\ after\ EXPLODE\_TIME\ amount\ of\ ticks}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.alive)\ this.explodeCycle++;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.explodeCycle\ >=\ EXPLODE\_TIME)\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ this.explodeCycle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3}{explode}}();}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00100}00100\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00101}\mbox{\hyperlink{class_cherry_bomb_a97c8ccf865505ded6f590d2ceeeda112}{00101}}\ \ \ \ \ \textcolor{keyword}{public}\ Rectangle\ \mbox{\hyperlink{class_cherry_bomb_a97c8ccf865505ded6f590d2ceeeda112}{getBounds}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}};}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cherry_bomb_8java_source_l00104}00104\ \}}
+
+\end{DoxyCode}

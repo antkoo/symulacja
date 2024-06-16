@@ -1,0 +1,85 @@
+\doxysection{Peashooter.\+java}
+\hypertarget{_peashooter_8java_source}{}\label{_peashooter_8java_source}\index{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Peashooter.java@{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Peashooter.java}}
+\mbox{\hyperlink{_peashooter_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00001}00001\ \textcolor{keyword}{import}\ javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00009}\mbox{\hyperlink{class_peashooter}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_peashooter}{Peashooter}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{class_plant}{Plant}}\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00013}\mbox{\hyperlink{class_peashooter_ab3abc2552ff0522faee4aa773404db85}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Projectile>\ \mbox{\hyperlink{class_peashooter_ab3abc2552ff0522faee4aa773404db85}{Projectiles}};}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00017}\mbox{\hyperlink{class_peashooter_aa013cf126a19ec678119c8094c74a8f0}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Zombie>\ \mbox{\hyperlink{class_peashooter_aa013cf126a19ec678119c8094c74a8f0}{Zombies}};}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00018}00018\ \ \ \ \ Image\ image;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ shootCycle;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ SHOOT\_INTERVAL\ =\ 15;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ HEALTH\ =\ 200;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ COST\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00028}\mbox{\hyperlink{class_peashooter_ae9f7a9e56ea5ee5a8869ae04663aad95}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_peashooter_ae9f7a9e56ea5ee5a8869ae04663aad95}{Peashooter}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ super(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}});}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//set\ starting\ values}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ this.health\ =\ HEALTH;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ this.shootCycle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{theTimer}}.addActionListener(\textcolor{keyword}{this});\ \textcolor{comment}{//make\ this\ entity\ listen\ to\ the\ timer}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_peashooter_aa013cf126a19ec678119c8094c74a8f0}{Zombies}}\ =\ \mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_a12df5e54935d92481a37f346847ac169}{Zombies}};\textcolor{comment}{//use\ the\ same\ list\ of\ zombies\ across\ every\ class}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ this.Projectiles\ =\ \textcolor{keyword}{new}\ ArrayList<>();\ \textcolor{comment}{//create\ a\ separate\ list\ of\ projectiles\ for\ each\ Peashooter}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ image\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}src/Peashooter.png"{}}).getImage();}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}}\ =\ \textcolor{keyword}{new}\ Rectangle(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ image.getWidth(\textcolor{keyword}{null}),\ image.getHeight(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00040}00040\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00041}\mbox{\hyperlink{class_peashooter_ac562af4de5b3ce242b8c406e16e67f54}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_peashooter_ac562af4de5b3ce242b8c406e16e67f54}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00045}00045\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00046}\mbox{\hyperlink{class_peashooter_a3c455016dc2545fcdc3ee873240ea6bd}{00046}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peashooter_a3c455016dc2545fcdc3ee873240ea6bd}{paintComponent}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ Graphics2D\ g2D\ =\ (Graphics2D)\ g;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ g2D.drawImage(image,\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//for\ each\ projectile\ of\ this\ entity,\ check\ if\ it\ hit\ a\ zombie\ or\ reached\ the\ end\ of\ the\ board\ and\ if\ so,\ remove\ it}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.Projectiles!=\textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.Projectiles.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_projectile}{Projectile}}\ projectile\ =\ this.Projectiles.get(i);}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (projectile!=\textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_collision_manager}{CollisionManager}}.\mbox{\hyperlink{class_collision_manager_aa7c7fbe1ec55ddaf81c37ec987d1de9c}{checkProjectileHit}}(projectile,\ \mbox{\hyperlink{class_peashooter_aa013cf126a19ec678119c8094c74a8f0}{Zombies}})\ ||\ projectile.\mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}}>=(\mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_a313349b7c6d6cdc601e9091618360386}{COLUMNS}}*\mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_ab7bd7bccf94055cb66e8c63b32e32f3e}{SQUARE\_SIZE}}-\/projectile.\mbox{\hyperlink{class_projectile_a2f3ec9c833fbe91e458c9281e0c90369}{getWidth}}()))\{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Projectiles.remove(i);}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ it\ didn't\ hit,\ paint\ it}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ projectile.\mbox{\hyperlink{class_projectile_a9b0025a5bd43c78635bf70ba03d0922a}{paintComponent}}(g);}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00064}00064\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00065}\mbox{\hyperlink{class_peashooter_a4675f3834ec069d2cdd7ac590964dcff}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peashooter_a4675f3834ec069d2cdd7ac590964dcff}{takeDamage}}(\textcolor{keywordtype}{int}\ damage)\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}\ -\/=\ damage;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00069}00069\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00070}\mbox{\hyperlink{class_peashooter_aa06502f9e0dca16a634c2f47bdd5b5db}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peashooter_aa06502f9e0dca16a634c2f47bdd5b5db}{actionPerformed}}(ActionEvent\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//make\ it\ shoot\ each\ SHOOT\_INTERVAL\ amount\ of\ ticks}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ this.shootCycle++;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.shootCycle\ >=\ SHOOT\_INTERVAL)\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ this.shootCycle\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_peashooter_a6835e5a0b063bf7703bc9587b282259e}{shoot}}();}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00081}\mbox{\hyperlink{class_peashooter_a6835e5a0b063bf7703bc9587b282259e}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_peashooter_a6835e5a0b063bf7703bc9587b282259e}{shoot}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ this.Projectiles.add(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_projectile}{Projectile}}(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}+image.getWidth(\textcolor{keyword}{null}),\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}));}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00083}00083\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00084}00084\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00085}\mbox{\hyperlink{class_peashooter_aaf9c2d81a7d35ae28d78aaf490607d21}{00085}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_peashooter_aaf9c2d81a7d35ae28d78aaf490607d21}{getHealth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}};}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00092}\mbox{\hyperlink{class_peashooter_a0a85ce6597aa93ea6d5878c32d1cf054}{00092}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_peashooter_a0a85ce6597aa93ea6d5878c32d1cf054}{getCost}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ COST;}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00095}00095\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00096}\mbox{\hyperlink{class_peashooter_a439292d5537ee89dd68dcf56d56d6973}{00096}}\ \ \ \ \ \textcolor{keyword}{public}\ Rectangle\ \mbox{\hyperlink{class_peashooter_a439292d5537ee89dd68dcf56d56d6973}{getBounds}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}};}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00098}00098\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_peashooter_8java_source_l00100}00100\ \}}
+
+\end{DoxyCode}

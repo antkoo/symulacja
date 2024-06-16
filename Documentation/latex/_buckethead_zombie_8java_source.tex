@@ -1,0 +1,67 @@
+\doxysection{Buckethead\+Zombie.\+java}
+\hypertarget{_buckethead_zombie_8java_source}{}\label{_buckethead_zombie_8java_source}\index{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/BucketheadZombie.java@{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/BucketheadZombie.java}}
+\mbox{\hyperlink{_buckethead_zombie_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00001}00001\ \textcolor{keyword}{import}\ javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00007}\mbox{\hyperlink{class_buckethead_zombie}{00007}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_buckethead_zombie}{BucketheadZombie}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{class_zombie}{Zombie}}\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00008}00008\ \ \ \ \ Image\ image;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ HEALTH\ =\ 500;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ SPEED\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ ATTACK\_DAMAGE\ =\ 40;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00018}\mbox{\hyperlink{class_buckethead_zombie_acaaffac9c9d5b8a1bf65f3ff80d42982}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_buckethead_zombie_acaaffac9c9d5b8a1bf65f3ff80d42982}{BucketheadZombie}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00019}00019\ \ \ \ \ \ \ \ \ super(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}});}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//set\ starting\ values}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00021}00021\ \ \ \ \ \ \ \ \ this.health\ =\ HEALTH;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{theTimer}}.addActionListener(\textcolor{keyword}{this});\textcolor{comment}{//make\ this\ entity\ listen\ to\ the\ timer}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ image\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}src/BucketheadZombie.png"{}}).getImage();}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}}\ =\ \textcolor{keyword}{new}\ Rectangle(\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ image.getWidth(\textcolor{keyword}{null}),\ image.getHeight(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00027}00027\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00028}\mbox{\hyperlink{class_buckethead_zombie_a5f36848db5fe49365e1b4583d639bec9}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_buckethead_zombie_a5f36848db5fe49365e1b4583d639bec9}{getHealth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}};}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00032}00032\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00033}\mbox{\hyperlink{class_buckethead_zombie_a7c8b8c162e682a82c3f15303f8635786}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_buckethead_zombie_a7c8b8c162e682a82c3f15303f8635786}{getSpeed}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SPEED;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00037}00037\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00038}\mbox{\hyperlink{class_buckethead_zombie_ad2b003a4d2b28251810012734c646dfc}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_buckethead_zombie_ad2b003a4d2b28251810012734c646dfc}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00042}00042\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00043}\mbox{\hyperlink{class_buckethead_zombie_a1e21d18a300c879680cb6bcd5027ef58}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_buckethead_zombie_a1e21d18a300c879680cb6bcd5027ef58}{paintComponent}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ Graphics2D\ g2D\ =\ (Graphics2D)\ g;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ g2D.drawImage(image,\ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}},\ \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00048}00048\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00049}\mbox{\hyperlink{class_buckethead_zombie_a16bc6ca710a36eb58abb57708c0dc921}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_buckethead_zombie_a16bc6ca710a36eb58abb57708c0dc921}{takeDamage}}(\textcolor{keywordtype}{int}\ damage)\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}\ -\/=\ damage;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00053}00053\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00054}\mbox{\hyperlink{class_buckethead_zombie_aa91ed66fe20c240725b0fa4a7be87779}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_buckethead_zombie_aa91ed66fe20c240725b0fa4a7be87779}{getAttackDamage}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ATTACK\_DAMAGE;}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00058}00058\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00059}\mbox{\hyperlink{class_buckethead_zombie_a06e96ff3bdd333ed8e4d75eb47c6752e}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ Rectangle\ \mbox{\hyperlink{class_buckethead_zombie_a06e96ff3bdd333ed8e4d75eb47c6752e}{getBounds}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}};}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00064}00064\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00065}\mbox{\hyperlink{class_buckethead_zombie_a504a31e7cd66f5ba65b96a1a6f0001de}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_buckethead_zombie_a504a31e7cd66f5ba65b96a1a6f0001de}{actionPerformed}}(ActionEvent\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}-\/=SPEED;\textcolor{comment}{//every\ tick,\ this\ zombie\ moves\ left\ SPEED\ amount\ of\ pixels}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{imageBounds}}.x=\mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}};\textcolor{comment}{//update\ imageBounds,\ so\ that\ the\ collisions\ register\ properly}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_buckethead_zombie_8java_source_l00069}00069\ \}}
+
+\end{DoxyCode}

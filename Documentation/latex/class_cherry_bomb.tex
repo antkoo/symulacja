@@ -1,0 +1,243 @@
+\doxysection{Cherry\+Bomb Class Reference}
+\hypertarget{class_cherry_bomb}{}\label{class_cherry_bomb}\index{CherryBomb@{CherryBomb}}
+Inheritance diagram for Cherry\+Bomb\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_cherry_bomb}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cherry_bomb_a6b9fe9732cf87fe8404da975ef5fdb45}{Cherry\+Bomb}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\item 
+int \mbox{\hyperlink{class_cherry_bomb_a1638c5d946a709e42353d1bccd6cc404}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_cherry_bomb_a93c83c0cc21fa45539f738e6f8d823ea}{paint\+Component}} (Graphics g)
+\item 
+void \mbox{\hyperlink{class_cherry_bomb_ace78aa9b3663464bd9bf635d8d4e1ec5}{take\+Damage}} (int damage)
+\item 
+int \mbox{\hyperlink{class_cherry_bomb_a28e9b2655fd796685249d487f991a09f}{get\+Health}} ()
+\item 
+void \mbox{\hyperlink{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3}{explode}} ()
+\item 
+void \mbox{\hyperlink{class_cherry_bomb_a7fe6abf97baea6eae379f04f83219685}{action\+Performed}} (Action\+Event e)
+\item 
+Rectangle \mbox{\hyperlink{class_cherry_bomb_a97c8ccf865505ded6f590d2ceeeda112}{get\+Bounds}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plant_ab21b9a8331235c68d2a5efff1fa1a6f8}{Plant}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{Entity}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_cherry_bomb_ae3be3a3ad1cbc9e5ec53a51251ed4d6e}{get\+Cost}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_zombie}{Zombie}} $>$ \mbox{\hyperlink{class_cherry_bomb_a12345143d40cf1acc3f3e0ac202484ef}{Zombies}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}
+\item 
+int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}
+\item 
+int \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}
+\item 
+Rectangle \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{image\+Bounds}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static Timer \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{the\+Timer}} = Panel.\+the\+Timer
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A plant, that explodes in a 3x3 square radius after death or certain amount of time. 
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00010}{10}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cherry_bomb_a6b9fe9732cf87fe8404da975ef5fdb45}\index{CherryBomb@{CherryBomb}!CherryBomb@{CherryBomb}}
+\index{CherryBomb@{CherryBomb}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{CherryBomb()}{CherryBomb()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a6b9fe9732cf87fe8404da975ef5fdb45} 
+Cherry\+Bomb.\+Cherry\+Bomb (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Constructor of a plant 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00027}{27}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cherry_bomb_a7fe6abf97baea6eae379f04f83219685}\index{CherryBomb@{CherryBomb}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a7fe6abf97baea6eae379f04f83219685} 
+void Cherry\+Bomb.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e}{}\end{DoxyParamCaption})}
+
+Every {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} tick, this function is called. Used for updating position, health, image on screen etc. 
+\begin{DoxyParams}{Parameters}
+{\em e} & tick of {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00086}{86}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+\Hypertarget{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3}\index{CherryBomb@{CherryBomb}!explode@{explode}}
+\index{explode@{explode}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{explode()}{explode()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a45386b5a87b874c3d9c82de637a0edd3} 
+void Cherry\+Bomb.\+explode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Explode by creating an {\ttfamily \doxylink{class_explosion}{Explosion}}. 
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00081}{81}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+\Hypertarget{class_cherry_bomb_a97c8ccf865505ded6f590d2ceeeda112}\index{CherryBomb@{CherryBomb}!getBounds@{getBounds}}
+\index{getBounds@{getBounds}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{getBounds()}{getBounds()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a97c8ccf865505ded6f590d2ceeeda112} 
+Rectangle Cherry\+Bomb.\+get\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the entity\textquotesingle{}s hitbox \begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s hitbox 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00101}{101}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+\Hypertarget{class_cherry_bomb_ae3be3a3ad1cbc9e5ec53a51251ed4d6e}\index{CherryBomb@{CherryBomb}!getCost@{getCost}}
+\index{getCost@{getCost}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_ae3be3a3ad1cbc9e5ec53a51251ed4d6e} 
+static int Cherry\+Bomb.\+get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns cost of the plant in Sun Points. \begin{DoxyReturn}{Returns}
+cost of the plant in Sun Points 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00074}{74}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+\Hypertarget{class_cherry_bomb_a28e9b2655fd796685249d487f991a09f}\index{CherryBomb@{CherryBomb}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a28e9b2655fd796685249d487f991a09f} 
+int Cherry\+Bomb.\+get\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the amount of health of an entity. \begin{DoxyReturn}{Returns}
+health amount 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00066}{66}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+\Hypertarget{class_cherry_bomb_a1638c5d946a709e42353d1bccd6cc404}\index{CherryBomb@{CherryBomb}!getType@{getType}}
+\index{getType@{getType}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a1638c5d946a709e42353d1bccd6cc404} 
+int Cherry\+Bomb.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the type value defined by each entity. \begin{DoxyReturn}{Returns}
+type of entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a2461649f13a0789e233e55abd5799271}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00040}{40}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+\Hypertarget{class_cherry_bomb_a93c83c0cc21fa45539f738e6f8d823ea}\index{CherryBomb@{CherryBomb}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a93c83c0cc21fa45539f738e6f8d823ea} 
+void Cherry\+Bomb.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Paints the entity on screen. 
+\begin{DoxyParams}{Parameters}
+{\em g} & required to paint on screen \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00045}{45}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+\Hypertarget{class_cherry_bomb_ace78aa9b3663464bd9bf635d8d4e1ec5}\index{CherryBomb@{CherryBomb}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_ace78aa9b3663464bd9bf635d8d4e1ec5} 
+void Cherry\+Bomb.\+take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{}\end{DoxyParamCaption})}
+
+Remove a specified amount of health from an entity. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & amount of damage dealt \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00061}{61}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cherry_bomb_a12345143d40cf1acc3f3e0ac202484ef}\index{CherryBomb@{CherryBomb}!Zombies@{Zombies}}
+\index{Zombies@{Zombies}!CherryBomb@{CherryBomb}}
+\doxysubsubsection{\texorpdfstring{Zombies}{Zombies}}
+{\footnotesize\ttfamily \label{class_cherry_bomb_a12345143d40cf1acc3f3e0ac202484ef} 
+List$<$\mbox{\hyperlink{class_zombie}{Zombie}}$>$ Cherry\+Bomb.\+Zombies}
+
+Copy of {\ttfamily \doxylink{class_panel_a12df5e54935d92481a37f346847ac169}{Panel\#\+Zombies}} used in {\ttfamily \doxylink{class_collision_manager_a8a3fe6fbe417b81fcfa5ab72c689fdb1}{Collision\+Manager\#check\+Explosion\+Deaths}}. 
+
+Definition at line \mbox{\hyperlink{_cherry_bomb_8java_source_l00017}{17}} of file \mbox{\hyperlink{_cherry_bomb_8java_source}{Cherry\+Bomb.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_cherry_bomb_8java}{Cherry\+Bomb.\+java}}\end{DoxyCompactItemize}

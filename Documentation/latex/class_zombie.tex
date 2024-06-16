@@ -1,0 +1,129 @@
+\doxysection{Zombie Class Reference}
+\hypertarget{class_zombie}{}\label{class_zombie}\index{Zombie@{Zombie}}
+Inheritance diagram for Zombie\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_zombie}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zombie_a0612f27084c0794d63200245280d27f7}{Zombie}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\item 
+abstract int \mbox{\hyperlink{class_zombie_a60edbebbfd22946a7a1964678e915201}{get\+Attack\+Damage}} ()
+\item 
+abstract int \mbox{\hyperlink{class_zombie_a8fb6321c78fe29fff59101a2d4116a38}{get\+Speed}} ()
+\item 
+abstract int \mbox{\hyperlink{class_zombie_ad56e99f27d55818c646ec53e84b5bb8b}{get\+Type}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{Entity}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\item 
+abstract int \mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{get\+Health}} ()
+\item 
+abstract void \mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{paint\+Component}} (Graphics g)
+\item 
+abstract void \mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{take\+Damage}} (int damage)
+\item 
+abstract Rectangle \mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{get\+Bounds}} ()
+\item 
+abstract void \mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{action\+Performed}} (Action\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}
+\item 
+int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}
+\item 
+int \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}
+\item 
+Rectangle \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{image\+Bounds}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static Timer \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{the\+Timer}} = Panel.\+the\+Timer
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base of all zombie-\/type entities. 
+
+Definition at line \mbox{\hyperlink{_zombie_8java_source_l00004}{4}} of file \mbox{\hyperlink{_zombie_8java_source}{Zombie.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_zombie_a0612f27084c0794d63200245280d27f7}\index{Zombie@{Zombie}!Zombie@{Zombie}}
+\index{Zombie@{Zombie}!Zombie@{Zombie}}
+\doxysubsubsection{\texorpdfstring{Zombie()}{Zombie()}}
+{\footnotesize\ttfamily \label{class_zombie_a0612f27084c0794d63200245280d27f7} 
+Zombie.\+Zombie (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_zombie_8java_source_l00010}{10}} of file \mbox{\hyperlink{_zombie_8java_source}{Zombie.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_zombie_a60edbebbfd22946a7a1964678e915201}\index{Zombie@{Zombie}!getAttackDamage@{getAttackDamage}}
+\index{getAttackDamage@{getAttackDamage}!Zombie@{Zombie}}
+\doxysubsubsection{\texorpdfstring{getAttackDamage()}{getAttackDamage()}}
+{\footnotesize\ttfamily \label{class_zombie_a60edbebbfd22946a7a1964678e915201} 
+abstract int Zombie.\+get\+Attack\+Damage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Returns the attack damage of a zombie entity. \begin{DoxyReturn}{Returns}
+attack damage of a zombie entity 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a961d14dcad2546443d7305f148065b00}{Basic\+Zombie}}, and \mbox{\hyperlink{class_buckethead_zombie_aa91ed66fe20c240725b0fa4a7be87779}{Buckethead\+Zombie}}.
+
+\Hypertarget{class_zombie_a8fb6321c78fe29fff59101a2d4116a38}\index{Zombie@{Zombie}!getSpeed@{getSpeed}}
+\index{getSpeed@{getSpeed}!Zombie@{Zombie}}
+\doxysubsubsection{\texorpdfstring{getSpeed()}{getSpeed()}}
+{\footnotesize\ttfamily \label{class_zombie_a8fb6321c78fe29fff59101a2d4116a38} 
+abstract int Zombie.\+get\+Speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Returns the speed of a zombie entity. \begin{DoxyReturn}{Returns}
+speed of a zombie entity 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a4fa863768033407eef4016ec5e52f515}{Basic\+Zombie}}, and \mbox{\hyperlink{class_buckethead_zombie_a7c8b8c162e682a82c3f15303f8635786}{Buckethead\+Zombie}}.
+
+\Hypertarget{class_zombie_ad56e99f27d55818c646ec53e84b5bb8b}\index{Zombie@{Zombie}!getType@{getType}}
+\index{getType@{getType}!Zombie@{Zombie}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_zombie_ad56e99f27d55818c646ec53e84b5bb8b} 
+abstract int Zombie.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Returns the type value of a zombie entity. \begin{DoxyReturn}{Returns}
+type value of a zombie entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a2461649f13a0789e233e55abd5799271}{Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a570d3d56a09264035216d9bdd0cdb3f7}{Basic\+Zombie}}, and \mbox{\hyperlink{class_buckethead_zombie_ad2b003a4d2b28251810012734c646dfc}{Buckethead\+Zombie}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_zombie_8java}{Zombie.\+java}}\end{DoxyCompactItemize}

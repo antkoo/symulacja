@@ -1,0 +1,46 @@
+\doxysection{Projectile.\+java}
+\hypertarget{_projectile_8java_source}{}\label{_projectile_8java_source}\index{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Projectile.java@{C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Projectile.java}}
+\mbox{\hyperlink{_projectile_8java}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00001}00001\ \textcolor{keyword}{import}\ javax.swing.*;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.awt.*;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.awt.event.ActionEvent;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.awt.event.ActionListener;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00009}\mbox{\hyperlink{class_projectile}{00009}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_projectile}{Projectile}}\ \textcolor{keyword}{implements}\ ActionListener\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00013}\mbox{\hyperlink{class_projectile_a9be7fa3601a13c463658df6d5aadd505}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Timer\ \mbox{\hyperlink{class_projectile_a9be7fa3601a13c463658df6d5aadd505}{theTimer}}\ =\ \mbox{\hyperlink{class_panel}{Panel}}.\mbox{\hyperlink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{theTimer}};}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00017}\mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}},\ \mbox{\hyperlink{class_projectile_aec220e63af7a3aeae4528d17e536ad30}{y}};}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ SPEED\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ DAMAGE\ =\ 20;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00020}00020\ \ \ \ \ Image\ image;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ Rectangle\ imageBounds;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00028}\mbox{\hyperlink{class_projectile_a645ddc1b2e42eee622b3ac5c1dfbbd8a}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_projectile_a645ddc1b2e42eee622b3ac5c1dfbbd8a}{Projectile}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_projectile_aec220e63af7a3aeae4528d17e536ad30}{y}})\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//set\ starting\ values}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ this.x\ =\ \mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}};}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ this.y\ =\ \mbox{\hyperlink{class_projectile_aec220e63af7a3aeae4528d17e536ad30}{y}};}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_projectile_a9be7fa3601a13c463658df6d5aadd505}{theTimer}}.addActionListener(\textcolor{keyword}{this});\ \textcolor{comment}{//make\ this\ entity\ listen\ to\ the\ timer}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ this.image\ =\ \textcolor{keyword}{new}\ ImageIcon(\textcolor{stringliteral}{"{}src/Projectile.png"{}}).getImage();}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ this.imageBounds\ =\ \textcolor{keyword}{new}\ Rectangle(\mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}},\ \mbox{\hyperlink{class_projectile_aec220e63af7a3aeae4528d17e536ad30}{y}},\ image.getWidth(\textcolor{keyword}{null}),\ image.getHeight(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00040}\mbox{\hyperlink{class_projectile_a9b0025a5bd43c78635bf70ba03d0922a}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_projectile_a9b0025a5bd43c78635bf70ba03d0922a}{paintComponent}}(Graphics\ g)\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ Graphics2D\ g2D\ =\ (Graphics2D)\ g;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ g2D.drawImage(image,\ \mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}},\ \mbox{\hyperlink{class_projectile_aec220e63af7a3aeae4528d17e536ad30}{y}},\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00048}\mbox{\hyperlink{class_projectile_a9a4fcc8412ffc1a866a64d74a22f08be}{00048}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_projectile_a9a4fcc8412ffc1a866a64d74a22f08be}{getDamage}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DAMAGE;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00055}\mbox{\hyperlink{class_projectile_a2f3ec9c833fbe91e458c9281e0c90369}{00055}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_projectile_a2f3ec9c833fbe91e458c9281e0c90369}{getWidth}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ image.getWidth(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00062}\mbox{\hyperlink{class_projectile_a224aeff9624ea80f5f61038c7a6eb9fa}{00062}}\ \ \ \ \ \textcolor{keyword}{public}\ Rectangle\ \mbox{\hyperlink{class_projectile_a224aeff9624ea80f5f61038c7a6eb9fa}{getBounds}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ imageBounds;}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00069}00069\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00070}\mbox{\hyperlink{class_projectile_a43a66183a570674c1fb67f89a0b797dd}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_projectile_a43a66183a570674c1fb67f89a0b797dd}{actionPerformed}}(ActionEvent\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ this.x\ +=\ SPEED;\textcolor{comment}{//move\ right\ towards\ zombies}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ this.imageBounds.x=\mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}};\textcolor{comment}{//update\ imageBounds\ for\ correct\ collision\ register}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_projectile_8java_source_l00074}00074\ \}}
+
+\end{DoxyCode}

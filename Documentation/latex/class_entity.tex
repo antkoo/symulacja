@@ -1,0 +1,213 @@
+\doxysection{Entity Class Reference}
+\hypertarget{class_entity}{}\label{class_entity}\index{Entity@{Entity}}
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.916667cm]{class_entity}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{Entity}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\item 
+abstract int \mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{get\+Health}} ()
+\item 
+abstract void \mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{paint\+Component}} (Graphics g)
+\item 
+abstract void \mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{take\+Damage}} (int damage)
+\item 
+abstract Rectangle \mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{get\+Bounds}} ()
+\item 
+abstract int \mbox{\hyperlink{class_entity_a2461649f13a0789e233e55abd5799271}{get\+Type}} ()
+\item 
+abstract void \mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{action\+Performed}} (Action\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}
+\item 
+int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}
+\item 
+int \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}
+\item 
+Rectangle \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{image\+Bounds}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Timer \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{the\+Timer}} = Panel.\+the\+Timer
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base of almost all painted objects. 
+
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00009}{9}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily \label{class_entity_a66802f87c22fa71dc9b99afe9fd18d08} 
+Entity.\+Entity (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00027}{27}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_entity_a7962018da8f6ea320c8f5ac7020744b5}\index{Entity@{Entity}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily \label{class_entity_a7962018da8f6ea320c8f5ac7020744b5} 
+abstract void Entity.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Every {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} tick, this function is called. Used for updating position, health, image on screen etc. 
+\begin{DoxyParams}{Parameters}
+{\em e} & tick of {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_ae7c75d86f6acc89f8334651ba4965bd1}{Basic\+Zombie}}, \mbox{\hyperlink{class_buckethead_zombie_a504a31e7cd66f5ba65b96a1a6f0001de}{Buckethead\+Zombie}}, \mbox{\hyperlink{class_cherry_bomb_a7fe6abf97baea6eae379f04f83219685}{Cherry\+Bomb}}, \mbox{\hyperlink{class_peashooter_aa06502f9e0dca16a634c2f47bdd5b5db}{Peashooter}}, \mbox{\hyperlink{class_sunflower_ade0d86ccc52271b9d326d85b77f5437d}{Sunflower}}, and \mbox{\hyperlink{class_walnut_a6868502c5e321bf7a0a72f9a710a0af1}{Walnut}}.
+
+\Hypertarget{class_entity_a20d631d8c311d7b369dfaeea935b82ad}\index{Entity@{Entity}!getBounds@{getBounds}}
+\index{getBounds@{getBounds}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getBounds()}{getBounds()}}
+{\footnotesize\ttfamily \label{class_entity_a20d631d8c311d7b369dfaeea935b82ad} 
+abstract Rectangle Entity.\+get\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Returns the entity\textquotesingle{}s hitbox \begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s hitbox 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a0d109ade904bf437e7e9078412192924}{Basic\+Zombie}}, \mbox{\hyperlink{class_buckethead_zombie_a06e96ff3bdd333ed8e4d75eb47c6752e}{Buckethead\+Zombie}}, \mbox{\hyperlink{class_cherry_bomb_a97c8ccf865505ded6f590d2ceeeda112}{Cherry\+Bomb}}, \mbox{\hyperlink{class_peashooter_a439292d5537ee89dd68dcf56d56d6973}{Peashooter}}, \mbox{\hyperlink{class_sunflower_a79f82a0e7f2d37f10efa8cd1bb077294}{Sunflower}}, and \mbox{\hyperlink{class_walnut_a635748befc3226635237d2ccecb64915}{Walnut}}.
+
+\Hypertarget{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}\index{Entity@{Entity}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily \label{class_entity_a24a51e28d0405bdefe3fadd82cbdee72} 
+abstract int Entity.\+get\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Returns the amount of health of an entity. \begin{DoxyReturn}{Returns}
+health amount 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a2517964e47038f6220b1c398f6b949e3}{Basic\+Zombie}}, \mbox{\hyperlink{class_buckethead_zombie_a5f36848db5fe49365e1b4583d639bec9}{Buckethead\+Zombie}}, \mbox{\hyperlink{class_cherry_bomb_a28e9b2655fd796685249d487f991a09f}{Cherry\+Bomb}}, \mbox{\hyperlink{class_peashooter_aaf9c2d81a7d35ae28d78aaf490607d21}{Peashooter}}, \mbox{\hyperlink{class_sunflower_a8432b2f48e1997eb3e6d020acccc3756}{Sunflower}}, and \mbox{\hyperlink{class_walnut_a7e9ca950449c1f61eb4cf396f615a3ef}{Walnut}}.
+
+\Hypertarget{class_entity_a2461649f13a0789e233e55abd5799271}\index{Entity@{Entity}!getType@{getType}}
+\index{getType@{getType}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_entity_a2461649f13a0789e233e55abd5799271} 
+abstract int Entity.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Returns the type value defined by each entity. \begin{DoxyReturn}{Returns}
+type of entity 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a570d3d56a09264035216d9bdd0cdb3f7}{Basic\+Zombie}}, \mbox{\hyperlink{class_buckethead_zombie_ad2b003a4d2b28251810012734c646dfc}{Buckethead\+Zombie}}, \mbox{\hyperlink{class_cherry_bomb_a1638c5d946a709e42353d1bccd6cc404}{Cherry\+Bomb}}, \mbox{\hyperlink{class_peashooter_ac562af4de5b3ce242b8c406e16e67f54}{Peashooter}}, \mbox{\hyperlink{class_sunflower_aa1673bc5c9c3bb41a2f7b3d0f847bacf}{Sunflower}}, \mbox{\hyperlink{class_walnut_ad21609ce1b5db7f1d1ec0ee32e91a947}{Walnut}}, and \mbox{\hyperlink{class_zombie_ad56e99f27d55818c646ec53e84b5bb8b}{Zombie}}.
+
+\Hypertarget{class_entity_a629f4e873bef1bb7953457c8a380df2f}\index{Entity@{Entity}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily \label{class_entity_a629f4e873bef1bb7953457c8a380df2f} 
+abstract void Entity.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Paints the entity on screen. 
+\begin{DoxyParams}{Parameters}
+{\em g} & required to paint on screen \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a7c40965a8f1b73b6e509059baa19e9f3}{Basic\+Zombie}}, \mbox{\hyperlink{class_buckethead_zombie_a1e21d18a300c879680cb6bcd5027ef58}{Buckethead\+Zombie}}, \mbox{\hyperlink{class_cherry_bomb_a93c83c0cc21fa45539f738e6f8d823ea}{Cherry\+Bomb}}, \mbox{\hyperlink{class_peashooter_a3c455016dc2545fcdc3ee873240ea6bd}{Peashooter}}, \mbox{\hyperlink{class_sunflower_ac2b6409b4879c40cf8aca08a99a7af6a}{Sunflower}}, and \mbox{\hyperlink{class_walnut_a28f0b62f99b0ee6719c325f78744778c}{Walnut}}.
+
+\Hypertarget{class_entity_a38623c608e6c66da8f9675e290db3eac}\index{Entity@{Entity}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{class_entity_a38623c608e6c66da8f9675e290db3eac} 
+abstract void Entity.\+take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Remove a specified amount of health from an entity. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & amount of damage dealt \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_basic_zombie_a52139dc94132cc1813efc044dc23979c}{Basic\+Zombie}}, \mbox{\hyperlink{class_buckethead_zombie_a16bc6ca710a36eb58abb57708c0dc921}{Buckethead\+Zombie}}, \mbox{\hyperlink{class_cherry_bomb_ace78aa9b3663464bd9bf635d8d4e1ec5}{Cherry\+Bomb}}, \mbox{\hyperlink{class_peashooter_a4675f3834ec069d2cdd7ac590964dcff}{Peashooter}}, \mbox{\hyperlink{class_sunflower_aca7d098e93001df17faf34e44d57829d}{Sunflower}}, and \mbox{\hyperlink{class_walnut_a8e6c3764de62ff3eca9173b9b9bc2673}{Walnut}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_entity_a3266b12ed1544243473894f95a75022b}\index{Entity@{Entity}!health@{health}}
+\index{health@{health}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily \label{class_entity_a3266b12ed1544243473894f95a75022b} 
+int Entity.\+health\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00013}{13}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+
+\Hypertarget{class_entity_a7a164afb46f787af18a7232670d9e79a}\index{Entity@{Entity}!imageBounds@{imageBounds}}
+\index{imageBounds@{imageBounds}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{imageBounds}{imageBounds}}
+{\footnotesize\ttfamily \label{class_entity_a7a164afb46f787af18a7232670d9e79a} 
+Rectangle Entity.\+image\+Bounds\hspace{0.3cm}{\ttfamily [protected]}}
+
+a standardized size of entity\textquotesingle{}s hitbox 
+
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00017}{17}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+
+\Hypertarget{class_entity_a49013a77916c6513bf2f408dd403fdf2}\index{Entity@{Entity}!theTimer@{theTimer}}
+\index{theTimer@{theTimer}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{theTimer}{theTimer}}
+{\footnotesize\ttfamily \label{class_entity_a49013a77916c6513bf2f408dd403fdf2} 
+Timer Entity.\+the\+Timer = Panel.\+the\+Timer\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Copy of the base timer, located in {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}}. 
+
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00021}{21}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+
+\Hypertarget{class_entity_aa39c4768e05f02574512d2b681ec029a}\index{Entity@{Entity}!x@{x}}
+\index{x@{x}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{class_entity_aa39c4768e05f02574512d2b681ec029a} 
+int Entity.\+x\hspace{0.3cm}{\ttfamily [protected]}}
+
+identifying values of an entity 
+
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00013}{13}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+
+\Hypertarget{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}\index{Entity@{Entity}!y@{y}}
+\index{y@{y}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1} 
+int Entity.\+y\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_entity_8java_source_l00013}{13}} of file \mbox{\hyperlink{_entity_8java_source}{Entity.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_entity_8java}{Entity.\+java}}\end{DoxyCompactItemize}

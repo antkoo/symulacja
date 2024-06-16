@@ -1,0 +1,261 @@
+\doxysection{Sunflower Class Reference}
+\hypertarget{class_sunflower}{}\label{class_sunflower}\index{Sunflower@{Sunflower}}
+Inheritance diagram for Sunflower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_sunflower}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sunflower_ac6a66a56912919611edcd2f4c8c062c9}{Sunflower}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\item 
+int \mbox{\hyperlink{class_sunflower_aa1673bc5c9c3bb41a2f7b3d0f847bacf}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_sunflower_ac2b6409b4879c40cf8aca08a99a7af6a}{paint\+Component}} (Graphics g)
+\item 
+void \mbox{\hyperlink{class_sunflower_aca7d098e93001df17faf34e44d57829d}{take\+Damage}} (int damage)
+\item 
+int \mbox{\hyperlink{class_sunflower_a8432b2f48e1997eb3e6d020acccc3756}{get\+Health}} ()
+\item 
+void \mbox{\hyperlink{class_sunflower_ade0d86ccc52271b9d326d85b77f5437d}{action\+Performed}} (Action\+Event e)
+\item 
+Rectangle \mbox{\hyperlink{class_sunflower_a79f82a0e7f2d37f10efa8cd1bb077294}{get\+Bounds}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_plant_ab21b9a8331235c68d2a5efff1fa1a6f8}{Plant}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a66802f87c22fa71dc9b99afe9fd18d08}{Entity}} (int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}, int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_sunflower_a7ebb5350c124865f6b68cf60f86ea1ad}{get\+Cost}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{class_sunflower_a4f49e7ec646aa36504df882bd12f39fe}{alive}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} \mbox{\hyperlink{class_sunflower_a59d985395986d0c2c17b00e09d901c7b}{resource\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sunflower_ae01fbc487740102ca46a525cdcb367ee}{produce\+Cycle}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_entity_aa39c4768e05f02574512d2b681ec029a}{x}}
+\item 
+int \mbox{\hyperlink{class_entity_aaa2cb923873eea3cf7eb8d1cc7bcb8c1}{y}}
+\item 
+int \mbox{\hyperlink{class_entity_a3266b12ed1544243473894f95a75022b}{health}}
+\item 
+Rectangle \mbox{\hyperlink{class_entity_a7a164afb46f787af18a7232670d9e79a}{image\+Bounds}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static Timer \mbox{\hyperlink{class_entity_a49013a77916c6513bf2f408dd403fdf2}{the\+Timer}} = Panel.\+the\+Timer
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A plant, that generates Sun Points. 
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00008}{8}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sunflower_ac6a66a56912919611edcd2f4c8c062c9}\index{Sunflower@{Sunflower}!Sunflower@{Sunflower}}
+\index{Sunflower@{Sunflower}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{Sunflower()}{Sunflower()}}
+{\footnotesize\ttfamily \label{class_sunflower_ac6a66a56912919611edcd2f4c8c062c9} 
+Sunflower.\+Sunflower (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Constructor of a plant 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00031}{31}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sunflower_ade0d86ccc52271b9d326d85b77f5437d}\index{Sunflower@{Sunflower}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily \label{class_sunflower_ade0d86ccc52271b9d326d85b77f5437d} 
+void Sunflower.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e}{}\end{DoxyParamCaption})}
+
+Every {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} tick, this function is called. Used for updating position, health, image on screen etc. 
+\begin{DoxyParams}{Parameters}
+{\em e} & tick of {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a7962018da8f6ea320c8f5ac7020744b5}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00073}{73}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_a79f82a0e7f2d37f10efa8cd1bb077294}\index{Sunflower@{Sunflower}!getBounds@{getBounds}}
+\index{getBounds@{getBounds}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{getBounds()}{getBounds()}}
+{\footnotesize\ttfamily \label{class_sunflower_a79f82a0e7f2d37f10efa8cd1bb077294} 
+Rectangle Sunflower.\+get\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the entity\textquotesingle{}s hitbox \begin{DoxyReturn}{Returns}
+entity\textquotesingle{}s hitbox 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a20d631d8c311d7b369dfaeea935b82ad}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00085}{85}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_a7ebb5350c124865f6b68cf60f86ea1ad}\index{Sunflower@{Sunflower}!getCost@{getCost}}
+\index{getCost@{getCost}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily \label{class_sunflower_a7ebb5350c124865f6b68cf60f86ea1ad} 
+static int Sunflower.\+get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns cost of the plant in Sun Points. \begin{DoxyReturn}{Returns}
+cost of the plant in Sun Points 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00067}{67}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_a8432b2f48e1997eb3e6d020acccc3756}\index{Sunflower@{Sunflower}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily \label{class_sunflower_a8432b2f48e1997eb3e6d020acccc3756} 
+int Sunflower.\+get\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the amount of health of an entity. \begin{DoxyReturn}{Returns}
+health amount 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a24a51e28d0405bdefe3fadd82cbdee72}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00060}{60}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_aa1673bc5c9c3bb41a2f7b3d0f847bacf}\index{Sunflower@{Sunflower}!getType@{getType}}
+\index{getType@{getType}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_sunflower_aa1673bc5c9c3bb41a2f7b3d0f847bacf} 
+int Sunflower.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the type value defined by each entity. \begin{DoxyReturn}{Returns}
+type of entity 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a2461649f13a0789e233e55abd5799271}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00044}{44}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_ac2b6409b4879c40cf8aca08a99a7af6a}\index{Sunflower@{Sunflower}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily \label{class_sunflower_ac2b6409b4879c40cf8aca08a99a7af6a} 
+void Sunflower.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Paints the entity on screen. 
+\begin{DoxyParams}{Parameters}
+{\em g} & required to paint on screen \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a629f4e873bef1bb7953457c8a380df2f}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00049}{49}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_aca7d098e93001df17faf34e44d57829d}\index{Sunflower@{Sunflower}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{class_sunflower_aca7d098e93001df17faf34e44d57829d} 
+void Sunflower.\+take\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage}{}\end{DoxyParamCaption})}
+
+Remove a specified amount of health from an entity. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & amount of damage dealt \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a38623c608e6c66da8f9675e290db3eac}{Entity}}.
+
+
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00055}{55}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_sunflower_a4f49e7ec646aa36504df882bd12f39fe}\index{Sunflower@{Sunflower}!alive@{alive}}
+\index{alive@{alive}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{alive}{alive}}
+{\footnotesize\ttfamily \label{class_sunflower_a4f49e7ec646aa36504df882bd12f39fe} 
+boolean Sunflower.\+alive}
+
+Additional check to make sure {\ttfamily \doxylink{class_sunflower}{Sunflower}} is dead or alive. 
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00012}{12}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_ae01fbc487740102ca46a525cdcb367ee}\index{Sunflower@{Sunflower}!produceCycle@{produceCycle}}
+\index{produceCycle@{produceCycle}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{produceCycle}{produceCycle}}
+{\footnotesize\ttfamily \label{class_sunflower_ae01fbc487740102ca46a525cdcb367ee} 
+int Sunflower.\+produce\+Cycle\hspace{0.3cm}{\ttfamily [protected]}}
+
+Amount of ticks to add a certain amount of Sun Points. 
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00021}{21}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+\Hypertarget{class_sunflower_a59d985395986d0c2c17b00e09d901c7b}\index{Sunflower@{Sunflower}!resourceManager@{resourceManager}}
+\index{resourceManager@{resourceManager}!Sunflower@{Sunflower}}
+\doxysubsubsection{\texorpdfstring{resourceManager}{resourceManager}}
+{\footnotesize\ttfamily \label{class_sunflower_a59d985395986d0c2c17b00e09d901c7b} 
+\mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} Sunflower.\+resource\+Manager\hspace{0.3cm}{\ttfamily [static]}}
+
+Copy of {\ttfamily \doxylink{class_panel_a7dd188157b47c089996b769299bdcd37}{Panel\#resource\+Manager}}, used to add Sun Points. 
+
+Definition at line \mbox{\hyperlink{_sunflower_8java_source_l00017}{17}} of file \mbox{\hyperlink{_sunflower_8java_source}{Sunflower.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_sunflower_8java}{Sunflower.\+java}}\end{DoxyCompactItemize}

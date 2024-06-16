@@ -1,0 +1,172 @@
+\doxysection{Projectile Class Reference}
+\hypertarget{class_projectile}{}\label{class_projectile}\index{Projectile@{Projectile}}
+Inheritance diagram for Projectile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_projectile}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projectile_a645ddc1b2e42eee622b3ac5c1dfbbd8a}{Projectile}} (int \mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}}, int \mbox{\hyperlink{class_projectile_aec220e63af7a3aeae4528d17e536ad30}{y}})
+\item 
+void \mbox{\hyperlink{class_projectile_a9b0025a5bd43c78635bf70ba03d0922a}{paint\+Component}} (Graphics g)
+\item 
+int \mbox{\hyperlink{class_projectile_a9a4fcc8412ffc1a866a64d74a22f08be}{get\+Damage}} ()
+\item 
+int \mbox{\hyperlink{class_projectile_a2f3ec9c833fbe91e458c9281e0c90369}{get\+Width}} ()
+\item 
+Rectangle \mbox{\hyperlink{class_projectile_a224aeff9624ea80f5f61038c7a6eb9fa}{get\+Bounds}} ()
+\item 
+void \mbox{\hyperlink{class_projectile_a43a66183a570674c1fb67f89a0b797dd}{action\+Performed}} (Action\+Event e)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}{x}}
+\item 
+int \mbox{\hyperlink{class_projectile_aec220e63af7a3aeae4528d17e536ad30}{y}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Timer \mbox{\hyperlink{class_projectile_a9be7fa3601a13c463658df6d5aadd505}{the\+Timer}} = Panel.\+the\+Timer
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An object created by the {\ttfamily \doxylink{class_peashooter}{Peashooter}}, moves towards zombies and deals damage when it hits one. 
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00009}{9}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_projectile_a645ddc1b2e42eee622b3ac5c1dfbbd8a}\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Projectile()}{Projectile()}}
+{\footnotesize\ttfamily \label{class_projectile_a645ddc1b2e42eee622b3ac5c1dfbbd8a} 
+Projectile.\+Projectile (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00028}{28}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_projectile_a43a66183a570674c1fb67f89a0b797dd}\index{Projectile@{Projectile}!actionPerformed@{actionPerformed}}
+\index{actionPerformed@{actionPerformed}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{actionPerformed()}{actionPerformed()}}
+{\footnotesize\ttfamily \label{class_projectile_a43a66183a570674c1fb67f89a0b797dd} 
+void Projectile.\+action\+Performed (\begin{DoxyParamCaption}\item[{Action\+Event}]{e}{}\end{DoxyParamCaption})}
+
+Every {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} tick, this function is called. Used for updating position of the projectile. 
+\begin{DoxyParams}{Parameters}
+{\em e} & tick of {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00070}{70}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+\Hypertarget{class_projectile_a224aeff9624ea80f5f61038c7a6eb9fa}\index{Projectile@{Projectile}!getBounds@{getBounds}}
+\index{getBounds@{getBounds}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{getBounds()}{getBounds()}}
+{\footnotesize\ttfamily \label{class_projectile_a224aeff9624ea80f5f61038c7a6eb9fa} 
+Rectangle Projectile.\+get\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns a projectile\textquotesingle{}s hitbox \begin{DoxyReturn}{Returns}
+projectile\textquotesingle{}s hitbox 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00062}{62}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+\Hypertarget{class_projectile_a9a4fcc8412ffc1a866a64d74a22f08be}\index{Projectile@{Projectile}!getDamage@{getDamage}}
+\index{getDamage@{getDamage}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{getDamage()}{getDamage()}}
+{\footnotesize\ttfamily \label{class_projectile_a9a4fcc8412ffc1a866a64d74a22f08be} 
+int Projectile.\+get\+Damage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns the damage of a projectile. \begin{DoxyReturn}{Returns}
+damage of a projectile 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00048}{48}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+\Hypertarget{class_projectile_a2f3ec9c833fbe91e458c9281e0c90369}\index{Projectile@{Projectile}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{class_projectile_a2f3ec9c833fbe91e458c9281e0c90369} 
+int Projectile.\+get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Returns a projectile\textquotesingle{}s width \begin{DoxyReturn}{Returns}
+projectile\textquotesingle{}s width 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00055}{55}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+\Hypertarget{class_projectile_a9b0025a5bd43c78635bf70ba03d0922a}\index{Projectile@{Projectile}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
+{\footnotesize\ttfamily \label{class_projectile_a9b0025a5bd43c78635bf70ba03d0922a} 
+void Projectile.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Paints the entity on screen. 
+\begin{DoxyParams}{Parameters}
+{\em g} & required to paint on screen \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00040}{40}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_projectile_a9be7fa3601a13c463658df6d5aadd505}\index{Projectile@{Projectile}!theTimer@{theTimer}}
+\index{theTimer@{theTimer}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{theTimer}{theTimer}}
+{\footnotesize\ttfamily \label{class_projectile_a9be7fa3601a13c463658df6d5aadd505} 
+Timer Projectile.\+the\+Timer = Panel.\+the\+Timer\hspace{0.3cm}{\ttfamily [static]}}
+
+Copy of the base timer, located in {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}}. 
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00013}{13}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+\Hypertarget{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea}\index{Projectile@{Projectile}!x@{x}}
+\index{x@{x}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{class_projectile_a9747d5a21ec823d7b7c298fca2cfb6ea} 
+int Projectile.\+x}
+
+coordinates 
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00017}{17}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+\Hypertarget{class_projectile_aec220e63af7a3aeae4528d17e536ad30}\index{Projectile@{Projectile}!y@{y}}
+\index{y@{y}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{class_projectile_aec220e63af7a3aeae4528d17e536ad30} 
+int Projectile.\+y}
+
+
+
+Definition at line \mbox{\hyperlink{_projectile_8java_source_l00017}{17}} of file \mbox{\hyperlink{_projectile_8java_source}{Projectile.\+java}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/anton/\+Idea\+Projects/prawdziwe/src/main/java/\mbox{\hyperlink{_projectile_8java}{Projectile.\+java}}\end{DoxyCompactItemize}
