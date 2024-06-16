@@ -1,0 +1,469 @@
+\begin{theindex}
+
+  \item {actionPerformed}
+    \subitem {BasicZombie}, \hyperpage{10}
+    \subitem {BucketheadZombie}, \hyperpage{14}
+    \subitem {CherryBomb}, \hyperpage{18}
+    \subitem {Entity}, \hyperpage{22}
+    \subitem {Panel}, \hyperpage{28}
+    \subitem {Peashooter}, \hyperpage{34}
+    \subitem {Projectile}, \hyperpage{39}
+    \subitem {SpawnSelector}, \hyperpage{45}
+    \subitem {Sunflower}, \hyperpage{49}
+    \subitem {Walnut}, \hyperpage{53}
+  \item {addSunPoints}
+    \subitem {ResourceManager}, \hyperpage{40}
+  \item {alive}
+    \subitem {Sunflower}, \hyperpage{51}
+
+  \indexspace
+
+  \item {BASIC\_ZOMBIE\_SPAWN\_CHANCE}
+    \subitem {Panel}, \hyperpage{30}
+    \subitem {SettingsChange}, \hyperpage{42}
+  \item {BasicZombie}, \hyperpage{9}
+    \subitem {actionPerformed}, \hyperpage{10}
+    \subitem {BasicZombie}, \hyperpage{10}
+    \subitem {getAttackDamage}, \hyperpage{10}
+    \subitem {getBounds}, \hyperpage{11}
+    \subitem {getHealth}, \hyperpage{11}
+    \subitem {getSpeed}, \hyperpage{11}
+    \subitem {getType}, \hyperpage{11}
+    \subitem {paintComponent}, \hyperpage{12}
+    \subitem {takeDamage}, \hyperpage{12}
+  \item {Board}, \hyperpage{12}
+    \subitem {Board}, \hyperpage{13}
+  \item {BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}
+    \subitem {Panel}, \hyperpage{30}
+    \subitem {SettingsChange}, \hyperpage{42}
+  \item {BucketheadZombie}, \hyperpage{13}
+    \subitem {actionPerformed}, \hyperpage{14}
+    \subitem {BucketheadZombie}, \hyperpage{14}
+    \subitem {getAttackDamage}, \hyperpage{15}
+    \subitem {getBounds}, \hyperpage{15}
+    \subitem {getHealth}, \hyperpage{15}
+    \subitem {getSpeed}, \hyperpage{15}
+    \subitem {getType}, \hyperpage{15}
+    \subitem {paintComponent}, \hyperpage{16}
+    \subitem {takeDamage}, \hyperpage{16}
+
+  \indexspace
+
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/README.md}, 
+		\hyperpage{59}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/BasicZombie.java}, 
+		\hyperpage{59}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Board.java}, 
+		\hyperpage{59}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/BucketheadZombie.java}, 
+		\hyperpage{59}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/CherryBomb.java}, 
+		\hyperpage{59}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/CollisionManager.java}, 
+		\hyperpage{60}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Entity.java}, 
+		\hyperpage{60}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Explosion.java}, 
+		\hyperpage{60}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Main.java}, 
+		\hyperpage{60}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Panel.java}, 
+		\hyperpage{60}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Peashooter.java}, 
+		\hyperpage{60}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Plant.java}, 
+		\hyperpage{61}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Projectile.java}, 
+		\hyperpage{61}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/ResourceManager.java}, 
+		\hyperpage{61}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/SettingsChange.java}, 
+		\hyperpage{61}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/SpawnSelector.java}, 
+		\hyperpage{61}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Sunflower.java}, 
+		\hyperpage{61}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Walnut.java}, 
+		\hyperpage{62}
+  \item {C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Zombie.java}, 
+		\hyperpage{62}
+  \item {checkAttacks}
+    \subitem {CollisionManager}, \hyperpage{20}
+  \item {checkExplosionDeaths}
+    \subitem {CollisionManager}, \hyperpage{21}
+  \item {checkProjectileHit}
+    \subitem {CollisionManager}, \hyperpage{21}
+  \item {CHERRY\_BOMB\_SPAWN\_CHANCE}
+    \subitem {Panel}, \hyperpage{30}
+    \subitem {SettingsChange}, \hyperpage{43}
+  \item {CherryBomb}, \hyperpage{17}
+    \subitem {actionPerformed}, \hyperpage{18}
+    \subitem {CherryBomb}, \hyperpage{18}
+    \subitem {explode}, \hyperpage{18}
+    \subitem {getBounds}, \hyperpage{18}
+    \subitem {getCost}, \hyperpage{19}
+    \subitem {getHealth}, \hyperpage{19}
+    \subitem {getType}, \hyperpage{19}
+    \subitem {paintComponent}, \hyperpage{19}
+    \subitem {takeDamage}, \hyperpage{20}
+    \subitem {Zombies}, \hyperpage{20}
+  \item {CollisionManager}, \hyperpage{20}
+    \subitem {checkAttacks}, \hyperpage{20}
+    \subitem {checkExplosionDeaths}, \hyperpage{21}
+    \subitem {checkProjectileHit}, \hyperpage{21}
+  \item {COLUMNS}
+    \subitem {Panel}, \hyperpage{30}
+  \item {counterUpdater}
+    \subitem {Panel}, \hyperpage{29}
+
+  \indexspace
+
+  \item {DELAY}
+    \subitem {Panel}, \hyperpage{30}
+    \subitem {SettingsChange}, \hyperpage{43}
+
+  \indexspace
+
+  \item {Entity}, \hyperpage{21}
+    \subitem {actionPerformed}, \hyperpage{22}
+    \subitem {Entity}, \hyperpage{22}
+    \subitem {getBounds}, \hyperpage{23}
+    \subitem {getHealth}, \hyperpage{23}
+    \subitem {getType}, \hyperpage{23}
+    \subitem {health}, \hyperpage{24}
+    \subitem {imageBounds}, \hyperpage{24}
+    \subitem {paintComponent}, \hyperpage{23}
+    \subitem {takeDamage}, \hyperpage{24}
+    \subitem {theTimer}, \hyperpage{24}
+    \subitem {x}, \hyperpage{24}
+    \subitem {y}, \hyperpage{24}
+  \item {explode}
+    \subitem {CherryBomb}, \hyperpage{18}
+  \item {Explosion}, \hyperpage{25}
+    \subitem {Explosion}, \hyperpage{25}
+    \subitem {getBounds}, \hyperpage{26}
+    \subitem {getDamage}, \hyperpage{26}
+    \subitem {paintComponent}, \hyperpage{26}
+    \subitem {x}, \hyperpage{26}
+    \subitem {y}, \hyperpage{26}
+
+  \indexspace
+
+  \item {findArrayIndex}
+    \subitem {SpawnSelector}, \hyperpage{46}
+
+  \indexspace
+
+  \item {gameStart}
+    \subitem {Panel}, \hyperpage{29}
+  \item {getAttackDamage}
+    \subitem {BasicZombie}, \hyperpage{10}
+    \subitem {BucketheadZombie}, \hyperpage{15}
+    \subitem {Zombie}, \hyperpage{57}
+  \item {getBounds}
+    \subitem {BasicZombie}, \hyperpage{11}
+    \subitem {BucketheadZombie}, \hyperpage{15}
+    \subitem {CherryBomb}, \hyperpage{18}
+    \subitem {Entity}, \hyperpage{23}
+    \subitem {Explosion}, \hyperpage{26}
+    \subitem {Peashooter}, \hyperpage{35}
+    \subitem {Projectile}, \hyperpage{39}
+    \subitem {Sunflower}, \hyperpage{49}
+    \subitem {Walnut}, \hyperpage{53}
+  \item {getCost}
+    \subitem {CherryBomb}, \hyperpage{19}
+    \subitem {Peashooter}, \hyperpage{35}
+    \subitem {Sunflower}, \hyperpage{49}
+    \subitem {Walnut}, \hyperpage{53}
+  \item {getDamage}
+    \subitem {Explosion}, \hyperpage{26}
+    \subitem {Projectile}, \hyperpage{39}
+  \item {getHealth}
+    \subitem {BasicZombie}, \hyperpage{11}
+    \subitem {BucketheadZombie}, \hyperpage{15}
+    \subitem {CherryBomb}, \hyperpage{19}
+    \subitem {Entity}, \hyperpage{23}
+    \subitem {Peashooter}, \hyperpage{35}
+    \subitem {Sunflower}, \hyperpage{50}
+    \subitem {Walnut}, \hyperpage{53}
+  \item {getSpeed}
+    \subitem {BasicZombie}, \hyperpage{11}
+    \subitem {BucketheadZombie}, \hyperpage{15}
+    \subitem {Zombie}, \hyperpage{57}
+  \item {getSunPoints}
+    \subitem {ResourceManager}, \hyperpage{41}
+  \item {getType}
+    \subitem {BasicZombie}, \hyperpage{11}
+    \subitem {BucketheadZombie}, \hyperpage{15}
+    \subitem {CherryBomb}, \hyperpage{19}
+    \subitem {Entity}, \hyperpage{23}
+    \subitem {Peashooter}, \hyperpage{35}
+    \subitem {Sunflower}, \hyperpage{50}
+    \subitem {Walnut}, \hyperpage{54}
+    \subitem {Zombie}, \hyperpage{57}
+  \item {getWidth}
+    \subitem {Projectile}, \hyperpage{39}
+
+  \indexspace
+
+  \item {health}
+    \subitem {Entity}, \hyperpage{24}
+
+  \indexspace
+
+  \item {imageBounds}
+    \subitem {Entity}, \hyperpage{24}
+
+  \indexspace
+
+  \item {Main}, \hyperpage{27}
+    \subitem {main}, \hyperpage{27}
+  \item {main}
+    \subitem {Main}, \hyperpage{27}
+  \item {mouseClicked}
+    \subitem {SpawnSelector}, \hyperpage{46}
+  \item {mouseEntered}
+    \subitem {SpawnSelector}, \hyperpage{46}
+  \item {mouseExited}
+    \subitem {SpawnSelector}, \hyperpage{46}
+  \item {mousePressed}
+    \subitem {SpawnSelector}, \hyperpage{46}
+  \item {mouseReleased}
+    \subitem {SpawnSelector}, \hyperpage{46}
+
+  \indexspace
+
+  \item {paint}
+    \subitem {SpawnSelector}, \hyperpage{47}
+  \item {paintComponent}
+    \subitem {BasicZombie}, \hyperpage{12}
+    \subitem {BucketheadZombie}, \hyperpage{16}
+    \subitem {CherryBomb}, \hyperpage{19}
+    \subitem {Entity}, \hyperpage{23}
+    \subitem {Explosion}, \hyperpage{26}
+    \subitem {Panel}, \hyperpage{29}
+    \subitem {Peashooter}, \hyperpage{35}
+    \subitem {Projectile}, \hyperpage{39}
+    \subitem {Sunflower}, \hyperpage{50}
+    \subitem {Walnut}, \hyperpage{54}
+  \item {Panel}, \hyperpage{27}
+    \subitem {actionPerformed}, \hyperpage{28}
+    \subitem {BASIC\_ZOMBIE\_SPAWN\_CHANCE}, \hyperpage{30}
+    \subitem {BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}, \hyperpage{30}
+    \subitem {CHERRY\_BOMB\_SPAWN\_CHANCE}, \hyperpage{30}
+    \subitem {COLUMNS}, \hyperpage{30}
+    \subitem {counterUpdater}, \hyperpage{29}
+    \subitem {DELAY}, \hyperpage{30}
+    \subitem {gameStart}, \hyperpage{29}
+    \subitem {paintComponent}, \hyperpage{29}
+    \subitem {Panel}, \hyperpage{28}
+    \subitem {PEASHOOTER\_SPAWN\_CHANCE}, \hyperpage{30}
+    \subitem {PLANT\_COLUMNS}, \hyperpage{30}
+    \subitem {PLANT\_SPAWN\_INTERVAL}, \hyperpage{31}
+    \subitem {Plants}, \hyperpage{31}
+    \subitem {resourceManager}, \hyperpage{31}
+    \subitem {ROWS}, \hyperpage{31}
+    \subitem {spawnRandomPlant}, \hyperpage{29}
+    \subitem {spawnRandomZombie}, \hyperpage{29}
+    \subitem {SpawnSquares}, \hyperpage{31}
+    \subitem {SQUARE\_SIZE}, \hyperpage{31}
+    \subitem {START\_SUN\_POINTS}, \hyperpage{31}
+    \subitem {START\_ZOMBIE\_AMOUNT}, \hyperpage{31}
+    \subitem {strings}, \hyperpage{32}
+    \subitem {SUNFLOWER\_SPAWN\_CHANCE}, \hyperpage{32}
+    \subitem {theTimer}, \hyperpage{32}
+    \subitem {WALNUT\_SPAWN\_CHANCE}, \hyperpage{32}
+    \subitem {ZOMBIE\_COLUMNS}, \hyperpage{32}
+    \subitem {ZOMBIE\_SPAWN\_INTERVAL}, \hyperpage{32}
+    \subitem {Zombies}, \hyperpage{32}
+  \item {Peashooter}, \hyperpage{33}
+    \subitem {actionPerformed}, \hyperpage{34}
+    \subitem {getBounds}, \hyperpage{35}
+    \subitem {getCost}, \hyperpage{35}
+    \subitem {getHealth}, \hyperpage{35}
+    \subitem {getType}, \hyperpage{35}
+    \subitem {paintComponent}, \hyperpage{35}
+    \subitem {Peashooter}, \hyperpage{34}
+    \subitem {Projectiles}, \hyperpage{36}
+    \subitem {shoot}, \hyperpage{36}
+    \subitem {takeDamage}, \hyperpage{36}
+    \subitem {Zombies}, \hyperpage{36}
+  \item {PEASHOOTER\_SPAWN\_CHANCE}
+    \subitem {Panel}, \hyperpage{30}
+    \subitem {SettingsChange}, \hyperpage{43}
+  \item {Plant}, \hyperpage{37}
+    \subitem {Plant}, \hyperpage{37}
+  \item {PLANT\_COLUMNS}
+    \subitem {Panel}, \hyperpage{30}
+  \item {PLANT\_SPAWN\_INTERVAL}
+    \subitem {Panel}, \hyperpage{31}
+    \subitem {SettingsChange}, \hyperpage{43}
+  \item {Plants}
+    \subitem {Panel}, \hyperpage{31}
+  \item {Plants vs Zombies simulation}, \hyperpage{1}
+  \item {produceCycle}
+    \subitem {Sunflower}, \hyperpage{51}
+  \item {Projectile}, \hyperpage{38}
+    \subitem {actionPerformed}, \hyperpage{39}
+    \subitem {getBounds}, \hyperpage{39}
+    \subitem {getDamage}, \hyperpage{39}
+    \subitem {getWidth}, \hyperpage{39}
+    \subitem {paintComponent}, \hyperpage{39}
+    \subitem {Projectile}, \hyperpage{38}
+    \subitem {theTimer}, \hyperpage{40}
+    \subitem {x}, \hyperpage{40}
+    \subitem {y}, \hyperpage{40}
+  \item {Projectiles}
+    \subitem {Peashooter}, \hyperpage{36}
+
+  \indexspace
+
+  \item {ResourceManager}, \hyperpage{40}
+    \subitem {addSunPoints}, \hyperpage{40}
+    \subitem {getSunPoints}, \hyperpage{41}
+    \subitem {ResourceManager}, \hyperpage{40}
+    \subitem {spendSunPoints}, \hyperpage{41}
+  \item {resourceManager}
+    \subitem {Panel}, \hyperpage{31}
+    \subitem {Sunflower}, \hyperpage{51}
+  \item {ROWS}
+    \subitem {Panel}, \hyperpage{31}
+
+  \indexspace
+
+  \item {SettingsChange}, \hyperpage{41}
+    \subitem {BASIC\_ZOMBIE\_SPAWN\_CHANCE}, \hyperpage{42}
+    \subitem {BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}, \hyperpage{42}
+    \subitem {CHERRY\_BOMB\_SPAWN\_CHANCE}, \hyperpage{43}
+    \subitem {DELAY}, \hyperpage{43}
+    \subitem {PEASHOOTER\_SPAWN\_CHANCE}, \hyperpage{43}
+    \subitem {PLANT\_SPAWN\_INTERVAL}, \hyperpage{43}
+    \subitem {SettingsChange}, \hyperpage{42}
+    \subitem {START\_SUN\_POINTS}, \hyperpage{43}
+    \subitem {START\_ZOMBIE\_AMOUNT}, \hyperpage{43}
+    \subitem {stateChanged}, \hyperpage{42}
+    \subitem {strings}, \hyperpage{43}
+    \subitem {SUNFLOWER\_SPAWN\_CHANCE}, \hyperpage{44}
+    \subitem {values}, \hyperpage{44}
+    \subitem {WALNUT\_SPAWN\_CHANCE}, \hyperpage{44}
+    \subitem {ZOMBIE\_SPAWN\_INTERVAL}, \hyperpage{44}
+  \item {shoot}
+    \subitem {Peashooter}, \hyperpage{36}
+  \item {spawnRandomPlant}
+    \subitem {Panel}, \hyperpage{29}
+  \item {spawnRandomZombie}
+    \subitem {Panel}, \hyperpage{29}
+  \item {SpawnSelector}, \hyperpage{44}
+    \subitem {actionPerformed}, \hyperpage{45}
+    \subitem {findArrayIndex}, \hyperpage{46}
+    \subitem {mouseClicked}, \hyperpage{46}
+    \subitem {mouseEntered}, \hyperpage{46}
+    \subitem {mouseExited}, \hyperpage{46}
+    \subitem {mousePressed}, \hyperpage{46}
+    \subitem {mouseReleased}, \hyperpage{46}
+    \subitem {paint}, \hyperpage{47}
+    \subitem {SpawnSelector}, \hyperpage{45}
+    \subitem {SpawnSquares}, \hyperpage{47}
+    \subitem {theTimer}, \hyperpage{47}
+  \item {SpawnSquares}
+    \subitem {Panel}, \hyperpage{31}
+    \subitem {SpawnSelector}, \hyperpage{47}
+  \item {spendSunPoints}
+    \subitem {ResourceManager}, \hyperpage{41}
+  \item {SQUARE\_SIZE}
+    \subitem {Panel}, \hyperpage{31}
+  \item {START\_SUN\_POINTS}
+    \subitem {Panel}, \hyperpage{31}
+    \subitem {SettingsChange}, \hyperpage{43}
+  \item {START\_ZOMBIE\_AMOUNT}
+    \subitem {Panel}, \hyperpage{31}
+    \subitem {SettingsChange}, \hyperpage{43}
+  \item {stateChanged}
+    \subitem {SettingsChange}, \hyperpage{42}
+  \item {strings}
+    \subitem {Panel}, \hyperpage{32}
+    \subitem {SettingsChange}, \hyperpage{43}
+  \item {Sunflower}, \hyperpage{47}
+    \subitem {actionPerformed}, \hyperpage{49}
+    \subitem {alive}, \hyperpage{51}
+    \subitem {getBounds}, \hyperpage{49}
+    \subitem {getCost}, \hyperpage{49}
+    \subitem {getHealth}, \hyperpage{50}
+    \subitem {getType}, \hyperpage{50}
+    \subitem {paintComponent}, \hyperpage{50}
+    \subitem {produceCycle}, \hyperpage{51}
+    \subitem {resourceManager}, \hyperpage{51}
+    \subitem {Sunflower}, \hyperpage{49}
+    \subitem {takeDamage}, \hyperpage{50}
+  \item {SUNFLOWER\_SPAWN\_CHANCE}
+    \subitem {Panel}, \hyperpage{32}
+    \subitem {SettingsChange}, \hyperpage{44}
+
+  \indexspace
+
+  \item {takeDamage}
+    \subitem {BasicZombie}, \hyperpage{12}
+    \subitem {BucketheadZombie}, \hyperpage{16}
+    \subitem {CherryBomb}, \hyperpage{20}
+    \subitem {Entity}, \hyperpage{24}
+    \subitem {Peashooter}, \hyperpage{36}
+    \subitem {Sunflower}, \hyperpage{50}
+    \subitem {Walnut}, \hyperpage{54}
+  \item {theTimer}
+    \subitem {Entity}, \hyperpage{24}
+    \subitem {Panel}, \hyperpage{32}
+    \subitem {Projectile}, \hyperpage{40}
+    \subitem {SpawnSelector}, \hyperpage{47}
+
+  \indexspace
+
+  \item {values}
+    \subitem {SettingsChange}, \hyperpage{44}
+
+  \indexspace
+
+  \item {Walnut}, \hyperpage{51}
+    \subitem {actionPerformed}, \hyperpage{53}
+    \subitem {getBounds}, \hyperpage{53}
+    \subitem {getCost}, \hyperpage{53}
+    \subitem {getHealth}, \hyperpage{53}
+    \subitem {getType}, \hyperpage{54}
+    \subitem {paintComponent}, \hyperpage{54}
+    \subitem {takeDamage}, \hyperpage{54}
+    \subitem {Walnut}, \hyperpage{52}
+  \item {WALNUT\_SPAWN\_CHANCE}
+    \subitem {Panel}, \hyperpage{32}
+    \subitem {SettingsChange}, \hyperpage{44}
+
+  \indexspace
+
+  \item {x}
+    \subitem {Entity}, \hyperpage{24}
+    \subitem {Explosion}, \hyperpage{26}
+    \subitem {Projectile}, \hyperpage{40}
+
+  \indexspace
+
+  \item {y}
+    \subitem {Entity}, \hyperpage{24}
+    \subitem {Explosion}, \hyperpage{26}
+    \subitem {Projectile}, \hyperpage{40}
+
+  \indexspace
+
+  \item {Zombie}, \hyperpage{55}
+    \subitem {getAttackDamage}, \hyperpage{57}
+    \subitem {getSpeed}, \hyperpage{57}
+    \subitem {getType}, \hyperpage{57}
+    \subitem {Zombie}, \hyperpage{56}
+  \item {ZOMBIE\_COLUMNS}
+    \subitem {Panel}, \hyperpage{32}
+  \item {ZOMBIE\_SPAWN\_INTERVAL}
+    \subitem {Panel}, \hyperpage{32}
+    \subitem {SettingsChange}, \hyperpage{44}
+  \item {Zombies}
+    \subitem {CherryBomb}, \hyperpage{20}
+    \subitem {Panel}, \hyperpage{32}
+    \subitem {Peashooter}, \hyperpage{36}
+
+\end{theindex}

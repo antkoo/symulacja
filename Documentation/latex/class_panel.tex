@@ -75,10 +75,6 @@ static String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_panel_a8a3209cb88a9e5a3
 \doxysubsection{Detailed Description}
 This class controls everything, that is happening within the simulation. As a JPanel, it draws all the buttons, the agents using {\ttfamily \doxylink{class_panel_a1f571ff47ec4c8ed1a889e405db76c8d}{Panel\#paint\+Component(\+Graphics)}} and all the counters {\ttfamily \doxylink{class_panel_afe3092d901bae52808250187ccb570fb}{Panel\#counter\+Updater(int)}}. It also controls the main {\ttfamily \doxylink{class_panel_a7dd188157b47c089996b769299bdcd37}{Panel\#resource\+Manager}} and a Swing timer\+: {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}} by re/starting the simulation using {\ttfamily \doxylink{class_panel_afcc925ac5975efcb4227c10f9932a96e}{Panel\#game\+Start()}} and updates every tick using {\ttfamily \doxylink{class_panel_affb317d6c209fc65598bd2841f3459ee}{Panel\#action\+Performed(\+Action\+Event)}}. It is also responsible for spawning zombies with {\ttfamily \doxylink{class_panel_ac63c9b28d4ccc66ffe26685341483e19}{Panel\#spawn\+Random\+Zombie()}} and plants with {\ttfamily \doxylink{class_panel_a49a142cef05292651f6b2bbb7f255c4c}{Panel\#spawn\+Random\+Plant()}}. 
 
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00016}{16}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-
-
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_panel_a2bb0095860962aa666d96b4a95f8d2e0}\index{Panel@{Panel}!Panel@{Panel}}
 \index{Panel@{Panel}!Panel@{Panel}}
@@ -87,10 +83,6 @@ Definition at line \mbox{\hyperlink{_panel_8java_source_l00016}{16}} of file \mb
 Panel.\+Panel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Creates the main panel of simulation. Adds buttons, introduction and counters. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00144}{144}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_panel_affb317d6c209fc65598bd2841f3459ee}\index{Panel@{Panel}!actionPerformed@{actionPerformed}}
@@ -104,10 +96,6 @@ Checks, whether {\ttfamily \doxylink{a7ee3696234a603de41697e3fa3bfd6cb}{Panel\#t
 {\em e} & the event to be processed \\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00442}{442}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
 \Hypertarget{class_panel_afe3092d901bae52808250187ccb570fb}\index{Panel@{Panel}!counterUpdater@{counterUpdater}}
 \index{counterUpdater@{counterUpdater}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{counterUpdater()}{counterUpdater()}}
@@ -122,21 +110,13 @@ Calculates value of every counter in {\ttfamily \doxylink{class_panel_a8a3209cb8
 \begin{DoxyReturn}{Returns}
 value of updated counter 
 \end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00271}{271}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
 \Hypertarget{class_panel_afcc925ac5975efcb4227c10f9932a96e}\index{Panel@{Panel}!gameStart@{gameStart}}
 \index{gameStart@{gameStart}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{gameStart()}{gameStart()}}
 {\footnotesize\ttfamily \label{class_panel_afcc925ac5975efcb4227c10f9932a96e} 
 void Panel.\+game\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Re/starting the simulation by clearing everything from the previous one, like clearing {\ttfamily \doxylink{class_panel_a55af8e9956951a031959acd27a7c25bf}{Panel\#\+Plants}} and {\ttfamily \doxylink{class_panel_a12df5e54935d92481a37f346847ac169}{Panel\#\+Zombies}} lists, hiding the introduction, spending all Sun Points using {\ttfamily \doxylink{class_resource_manager_a04499e6fdd3acaf1dd878bba5f1bde5d}{Resource\+Manager\#spend\+Sun\+Points(int)}}, resetting {\ttfamily \doxylink{a4db60f191db1b731b236250a5cb700c8}{Panel\#plant\+Spawn\+Cycle}} and {\ttfamily \doxylink{a6c079712aff290816f48e5c432f05b0f}{Panel\#zombie\+Spawn\+Cycle}}, spawning the right amount of {\ttfamily \doxylink{class_plant}{Plant}}s and {\ttfamily \doxylink{class_zombie}{Zombie}}s and starting {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00225}{225}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a1f571ff47ec4c8ed1a889e405db76c8d}\index{Panel@{Panel}!paintComponent@{paintComponent}}
+Re/starting the simulation by clearing everything from the previous one, like clearing {\ttfamily \doxylink{class_panel_a55af8e9956951a031959acd27a7c25bf}{Panel\#\+Plants}} and {\ttfamily \doxylink{class_panel_a12df5e54935d92481a37f346847ac169}{Panel\#\+Zombies}} lists, hiding the introduction, spending all Sun Points using {\ttfamily \doxylink{class_resource_manager_a04499e6fdd3acaf1dd878bba5f1bde5d}{Resource\+Manager\#spend\+Sun\+Points(int)}}, resetting {\ttfamily \doxylink{a4db60f191db1b731b236250a5cb700c8}{Panel\#plant\+Spawn\+Cycle}} and {\ttfamily \doxylink{a6c079712aff290816f48e5c432f05b0f}{Panel\#zombie\+Spawn\+Cycle}}, spawning the right amount of {\ttfamily \doxylink{class_plant}{Plant}}s and {\ttfamily \doxylink{class_zombie}{Zombie}}s and starting {\ttfamily \doxylink{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}{Panel\#the\+Timer}}. \Hypertarget{class_panel_a1f571ff47ec4c8ed1a889e405db76c8d}\index{Panel@{Panel}!paintComponent@{paintComponent}}
 \index{paintComponent@{paintComponent}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{paintComponent()}{paintComponent()}}
 {\footnotesize\ttfamily \label{class_panel_a1f571ff47ec4c8ed1a889e405db76c8d} 
@@ -149,31 +129,19 @@ Paints and removes dead plants/zombies by checking the {\ttfamily \doxylink{clas
 {\em g} & necessary to paint on the JPanel. \\
 \hline
 \end{DoxyParams}
-
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00540}{540}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
 \Hypertarget{class_panel_a49a142cef05292651f6b2bbb7f255c4c}\index{Panel@{Panel}!spawnRandomPlant@{spawnRandomPlant}}
 \index{spawnRandomPlant@{spawnRandomPlant}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{spawnRandomPlant()}{spawnRandomPlant()}}
 {\footnotesize\ttfamily \label{class_panel_a49a142cef05292651f6b2bbb7f255c4c} 
 void Panel.\+spawn\+Random\+Plant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Spawns a random \doxylink{class_plant}{Plant} based on the percentages in {\ttfamily \doxylink{class_panel_a3db9c1efedd563938ae71b61080b8d6a}{Panel\#\+SUNFLOWER\+\_\+\+SPAWN\+\_\+\+CHANCE}}, {\ttfamily \doxylink{class_panel_a6d262833c699f42fb526f0698399f752}{Panel\#\+PEASHOOTER\+\_\+\+SPAWN\+\_\+\+CHANCE}}, {\ttfamily \doxylink{class_panel_a34da3c6eb5103469a06b57e16e9ecd69}{Panel\#\+CHERRY\+\_\+\+BOMB\+\_\+\+SPAWN\+\_\+\+CHANCE}} and {\ttfamily \doxylink{class_panel_a99a4a91616df098809b9f20ef8a1023c}{Panel\#\+WALNUT\+\_\+\+SPAWN\+\_\+\+CHANCE}}. It checks the ability to spawn a \doxylink{class_plant}{Plant} by checking its cost using the \doxylink{class_resource_manager_a04499e6fdd3acaf1dd878bba5f1bde5d}{Resource\+Manager.\+spend\+Sun\+Points(int)}. The location is determined by checking the {\ttfamily \doxylink{class_panel_af8d5a94637971d81301ccea1bc4542dc}{Panel\#\+Spawn\+Squares}} list. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00366}{366}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_ac63c9b28d4ccc66ffe26685341483e19}\index{Panel@{Panel}!spawnRandomZombie@{spawnRandomZombie}}
+Spawns a random \doxylink{class_plant}{Plant} based on the percentages in {\ttfamily \doxylink{class_panel_a3db9c1efedd563938ae71b61080b8d6a}{Panel\#\+SUNFLOWER\+\_\+\+SPAWN\+\_\+\+CHANCE}}, {\ttfamily \doxylink{class_panel_a6d262833c699f42fb526f0698399f752}{Panel\#\+PEASHOOTER\+\_\+\+SPAWN\+\_\+\+CHANCE}}, {\ttfamily \doxylink{class_panel_a34da3c6eb5103469a06b57e16e9ecd69}{Panel\#\+CHERRY\+\_\+\+BOMB\+\_\+\+SPAWN\+\_\+\+CHANCE}} and {\ttfamily \doxylink{class_panel_a99a4a91616df098809b9f20ef8a1023c}{Panel\#\+WALNUT\+\_\+\+SPAWN\+\_\+\+CHANCE}}. It checks the ability to spawn a \doxylink{class_plant}{Plant} by checking its cost using the \doxylink{class_resource_manager_a04499e6fdd3acaf1dd878bba5f1bde5d}{Resource\+Manager.\+spend\+Sun\+Points(int)}. The location is determined by checking the {\ttfamily \doxylink{class_panel_af8d5a94637971d81301ccea1bc4542dc}{Panel\#\+Spawn\+Squares}} list. \Hypertarget{class_panel_ac63c9b28d4ccc66ffe26685341483e19}\index{Panel@{Panel}!spawnRandomZombie@{spawnRandomZombie}}
 \index{spawnRandomZombie@{spawnRandomZombie}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{spawnRandomZombie()}{spawnRandomZombie()}}
 {\footnotesize\ttfamily \label{class_panel_ac63c9b28d4ccc66ffe26685341483e19} 
 void Panel.\+spawn\+Random\+Zombie (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Spawns a random {\ttfamily \doxylink{class_zombie}{Zombie}} based on the percentages in {\ttfamily \doxylink{class_panel_a8eb156b701510bedf6e21a92ec474373}{Panel\#\+BASIC\+\_\+\+ZOMBIE\+\_\+\+SPAWN\+\_\+\+CHANCE}} and {\ttfamily \doxylink{class_panel_a7db2dd259a28051ef146bcd0682f9882}{Panel\#\+BUCKETHEAD\+\_\+\+ZOMBIE\+\_\+\+SPAWN\+\_\+\+CHANCE}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00419}{419}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-
 
 \doxysubsection{Member Data Documentation}
 \Hypertarget{class_panel_a8eb156b701510bedf6e21a92ec474373}\index{Panel@{Panel}!BASIC\_ZOMBIE\_SPAWN\_CHANCE@{BASIC\_ZOMBIE\_SPAWN\_CHANCE}}
@@ -182,151 +150,91 @@ Definition at line \mbox{\hyperlink{_panel_8java_source_l00419}{419}} of file \m
 {\footnotesize\ttfamily \label{class_panel_a8eb156b701510bedf6e21a92ec474373} 
 int Panel.\+BASIC\+\_\+\+ZOMBIE\+\_\+\+SPAWN\+\_\+\+CHANCE = 70\hspace{0.3cm}{\ttfamily [static]}}
 
-Percentage of chance to spawn a {\ttfamily \doxylink{class_basic_zombie}{Basic\+Zombie}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00064}{64}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a7db2dd259a28051ef146bcd0682f9882}\index{Panel@{Panel}!BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE@{BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}}
+Percentage of chance to spawn a {\ttfamily \doxylink{class_basic_zombie}{Basic\+Zombie}}. \Hypertarget{class_panel_a7db2dd259a28051ef146bcd0682f9882}\index{Panel@{Panel}!BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE@{BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}}
 \index{BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE@{BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}{BUCKETHEAD\_ZOMBIE\_SPAWN\_CHANCE}}
 {\footnotesize\ttfamily \label{class_panel_a7db2dd259a28051ef146bcd0682f9882} 
 int Panel.\+BUCKETHEAD\+\_\+\+ZOMBIE\+\_\+\+SPAWN\+\_\+\+CHANCE = 30\hspace{0.3cm}{\ttfamily [static]}}
 
-Percentage of chance to spawn a {\ttfamily \doxylink{class_buckethead_zombie}{Buckethead\+Zombie}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00068}{68}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a34da3c6eb5103469a06b57e16e9ecd69}\index{Panel@{Panel}!CHERRY\_BOMB\_SPAWN\_CHANCE@{CHERRY\_BOMB\_SPAWN\_CHANCE}}
+Percentage of chance to spawn a {\ttfamily \doxylink{class_buckethead_zombie}{Buckethead\+Zombie}}. \Hypertarget{class_panel_a34da3c6eb5103469a06b57e16e9ecd69}\index{Panel@{Panel}!CHERRY\_BOMB\_SPAWN\_CHANCE@{CHERRY\_BOMB\_SPAWN\_CHANCE}}
 \index{CHERRY\_BOMB\_SPAWN\_CHANCE@{CHERRY\_BOMB\_SPAWN\_CHANCE}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{CHERRY\_BOMB\_SPAWN\_CHANCE}{CHERRY\_BOMB\_SPAWN\_CHANCE}}
 {\footnotesize\ttfamily \label{class_panel_a34da3c6eb5103469a06b57e16e9ecd69} 
 int Panel.\+CHERRY\+\_\+\+BOMB\+\_\+\+SPAWN\+\_\+\+CHANCE = 10\hspace{0.3cm}{\ttfamily [static]}}
 
-Percentage of chance to spawn a {\ttfamily \doxylink{class_cherry_bomb}{Cherry\+Bomb}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00080}{80}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a313349b7c6d6cdc601e9091618360386}\index{Panel@{Panel}!COLUMNS@{COLUMNS}}
+Percentage of chance to spawn a {\ttfamily \doxylink{class_cherry_bomb}{Cherry\+Bomb}}. \Hypertarget{class_panel_a313349b7c6d6cdc601e9091618360386}\index{Panel@{Panel}!COLUMNS@{COLUMNS}}
 \index{COLUMNS@{COLUMNS}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{COLUMNS}{COLUMNS}}
 {\footnotesize\ttfamily \label{class_panel_a313349b7c6d6cdc601e9091618360386} 
 final int Panel.\+COLUMNS = \mbox{\hyperlink{class_panel_a68e90036cae6671214a79eb8fd19d3ca}{PLANT\+\_\+\+COLUMNS}} + \mbox{\hyperlink{class_panel_abf9fdbd099584b95b3cb1d9d56d1f7bf}{ZOMBIE\+\_\+\+COLUMNS}}\hspace{0.3cm}{\ttfamily [static]}}
 
-Amount of horizontal squares. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00105}{105}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a0d5f0641fe90cfc3e05aeaf58c8b6e4f}\index{Panel@{Panel}!DELAY@{DELAY}}
+Amount of horizontal squares. \Hypertarget{class_panel_a0d5f0641fe90cfc3e05aeaf58c8b6e4f}\index{Panel@{Panel}!DELAY@{DELAY}}
 \index{DELAY@{DELAY}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{DELAY}{DELAY}}
 {\footnotesize\ttfamily \label{class_panel_a0d5f0641fe90cfc3e05aeaf58c8b6e4f} 
 int Panel.\+DELAY = 50\hspace{0.3cm}{\ttfamily [static]}}
 
-Tick value 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00044}{44}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a6d262833c699f42fb526f0698399f752}\index{Panel@{Panel}!PEASHOOTER\_SPAWN\_CHANCE@{PEASHOOTER\_SPAWN\_CHANCE}}
+Tick value \Hypertarget{class_panel_a6d262833c699f42fb526f0698399f752}\index{Panel@{Panel}!PEASHOOTER\_SPAWN\_CHANCE@{PEASHOOTER\_SPAWN\_CHANCE}}
 \index{PEASHOOTER\_SPAWN\_CHANCE@{PEASHOOTER\_SPAWN\_CHANCE}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{PEASHOOTER\_SPAWN\_CHANCE}{PEASHOOTER\_SPAWN\_CHANCE}}
 {\footnotesize\ttfamily \label{class_panel_a6d262833c699f42fb526f0698399f752} 
 int Panel.\+PEASHOOTER\+\_\+\+SPAWN\+\_\+\+CHANCE = 25\hspace{0.3cm}{\ttfamily [static]}}
 
-Percentage of chance to spawn a {\ttfamily \doxylink{class_peashooter}{Peashooter}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00076}{76}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a68e90036cae6671214a79eb8fd19d3ca}\index{Panel@{Panel}!PLANT\_COLUMNS@{PLANT\_COLUMNS}}
+Percentage of chance to spawn a {\ttfamily \doxylink{class_peashooter}{Peashooter}}. \Hypertarget{class_panel_a68e90036cae6671214a79eb8fd19d3ca}\index{Panel@{Panel}!PLANT\_COLUMNS@{PLANT\_COLUMNS}}
 \index{PLANT\_COLUMNS@{PLANT\_COLUMNS}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{PLANT\_COLUMNS}{PLANT\_COLUMNS}}
 {\footnotesize\ttfamily \label{class_panel_a68e90036cae6671214a79eb8fd19d3ca} 
 final int Panel.\+PLANT\+\_\+\+COLUMNS = 5\hspace{0.3cm}{\ttfamily [static]}}
 
-Amount of horizontal squares for {\ttfamily \doxylink{class_plant}{Plant}} spawning. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00097}{97}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a4646c032ef121a806b2fa4c7ca7a2e24}\index{Panel@{Panel}!PLANT\_SPAWN\_INTERVAL@{PLANT\_SPAWN\_INTERVAL}}
+Amount of horizontal squares for {\ttfamily \doxylink{class_plant}{Plant}} spawning. \Hypertarget{class_panel_a4646c032ef121a806b2fa4c7ca7a2e24}\index{Panel@{Panel}!PLANT\_SPAWN\_INTERVAL@{PLANT\_SPAWN\_INTERVAL}}
 \index{PLANT\_SPAWN\_INTERVAL@{PLANT\_SPAWN\_INTERVAL}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{PLANT\_SPAWN\_INTERVAL}{PLANT\_SPAWN\_INTERVAL}}
 {\footnotesize\ttfamily \label{class_panel_a4646c032ef121a806b2fa4c7ca7a2e24} 
 int Panel.\+PLANT\+\_\+\+SPAWN\+\_\+\+INTERVAL = 2\hspace{0.3cm}{\ttfamily [static]}}
 
-Amount of ticks till {\ttfamily \doxylink{class_plant}{Plant}} spawn. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00052}{52}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a55af8e9956951a031959acd27a7c25bf}\index{Panel@{Panel}!Plants@{Plants}}
+Amount of ticks till {\ttfamily \doxylink{class_plant}{Plant}} spawn. \Hypertarget{class_panel_a55af8e9956951a031959acd27a7c25bf}\index{Panel@{Panel}!Plants@{Plants}}
 \index{Plants@{Plants}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{Plants}{Plants}}
 {\footnotesize\ttfamily \label{class_panel_a55af8e9956951a031959acd27a7c25bf} 
 List$<$\mbox{\hyperlink{class_plant}{Plant}}$>$ Panel.\+Plants = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
 
-List of all alive {\ttfamily \doxylink{class_plant}{Plant}}s. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00021}{21}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a7dd188157b47c089996b769299bdcd37}\index{Panel@{Panel}!resourceManager@{resourceManager}}
+List of all alive {\ttfamily \doxylink{class_plant}{Plant}}s. \Hypertarget{class_panel_a7dd188157b47c089996b769299bdcd37}\index{Panel@{Panel}!resourceManager@{resourceManager}}
 \index{resourceManager@{resourceManager}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{resourceManager}{resourceManager}}
 {\footnotesize\ttfamily \label{class_panel_a7dd188157b47c089996b769299bdcd37} 
 \mbox{\hyperlink{class_resource_manager}{Resource\+Manager}} Panel.\+resource\+Manager\hspace{0.3cm}{\ttfamily [static]}}
 
-\doxylink{class_main}{Main} instance of {\ttfamily \doxylink{class_resource_manager}{Resource\+Manager}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00035}{35}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_ad18631847c113b57b72ededc14a3d416}\index{Panel@{Panel}!ROWS@{ROWS}}
+\doxylink{class_main}{Main} instance of {\ttfamily \doxylink{class_resource_manager}{Resource\+Manager}}. \Hypertarget{class_panel_ad18631847c113b57b72ededc14a3d416}\index{Panel@{Panel}!ROWS@{ROWS}}
 \index{ROWS@{ROWS}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{ROWS}{ROWS}}
 {\footnotesize\ttfamily \label{class_panel_ad18631847c113b57b72ededc14a3d416} 
 final int Panel.\+ROWS = 5\hspace{0.3cm}{\ttfamily [static]}}
 
-Amount of vertical squares. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00093}{93}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_af8d5a94637971d81301ccea1bc4542dc}\index{Panel@{Panel}!SpawnSquares@{SpawnSquares}}
+Amount of vertical squares. \Hypertarget{class_panel_af8d5a94637971d81301ccea1bc4542dc}\index{Panel@{Panel}!SpawnSquares@{SpawnSquares}}
 \index{SpawnSquares@{SpawnSquares}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{SpawnSquares}{SpawnSquares}}
 {\footnotesize\ttfamily \label{class_panel_af8d5a94637971d81301ccea1bc4542dc} 
 List$<$List$<$int\mbox{[}$\,$\mbox{]}$>$ $>$ Panel.\+Spawn\+Squares = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
 
-This is where all possible squares to spawn {\ttfamily \doxylink{class_plant}{Plant}}s are stored. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00031}{31}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_ab7bd7bccf94055cb66e8c63b32e32f3e}\index{Panel@{Panel}!SQUARE\_SIZE@{SQUARE\_SIZE}}
+This is where all possible squares to spawn {\ttfamily \doxylink{class_plant}{Plant}}s are stored. \Hypertarget{class_panel_ab7bd7bccf94055cb66e8c63b32e32f3e}\index{Panel@{Panel}!SQUARE\_SIZE@{SQUARE\_SIZE}}
 \index{SQUARE\_SIZE@{SQUARE\_SIZE}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{SQUARE\_SIZE}{SQUARE\_SIZE}}
 {\footnotesize\ttfamily \label{class_panel_ab7bd7bccf94055cb66e8c63b32e32f3e} 
 final int Panel.\+SQUARE\+\_\+\+SIZE = 100\hspace{0.3cm}{\ttfamily [static]}}
 
-Size of one square. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00089}{89}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_afb295b7453bf54a5ce66ca9f9efb279a}\index{Panel@{Panel}!START\_SUN\_POINTS@{START\_SUN\_POINTS}}
+Size of one square. \Hypertarget{class_panel_afb295b7453bf54a5ce66ca9f9efb279a}\index{Panel@{Panel}!START\_SUN\_POINTS@{START\_SUN\_POINTS}}
 \index{START\_SUN\_POINTS@{START\_SUN\_POINTS}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{START\_SUN\_POINTS}{START\_SUN\_POINTS}}
 {\footnotesize\ttfamily \label{class_panel_afb295b7453bf54a5ce66ca9f9efb279a} 
 int Panel.\+START\+\_\+\+SUN\+\_\+\+POINTS = 900\hspace{0.3cm}{\ttfamily [static]}}
 
-Starting amount of Sun Points in {\ttfamily \doxylink{class_resource_manager}{Resource\+Manager}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00060}{60}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a41a4dd2184c8dc6a67fd0ed58c4d11ab}\index{Panel@{Panel}!START\_ZOMBIE\_AMOUNT@{START\_ZOMBIE\_AMOUNT}}
+Starting amount of Sun Points in {\ttfamily \doxylink{class_resource_manager}{Resource\+Manager}}. \Hypertarget{class_panel_a41a4dd2184c8dc6a67fd0ed58c4d11ab}\index{Panel@{Panel}!START\_ZOMBIE\_AMOUNT@{START\_ZOMBIE\_AMOUNT}}
 \index{START\_ZOMBIE\_AMOUNT@{START\_ZOMBIE\_AMOUNT}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{START\_ZOMBIE\_AMOUNT}{START\_ZOMBIE\_AMOUNT}}
 {\footnotesize\ttfamily \label{class_panel_a41a4dd2184c8dc6a67fd0ed58c4d11ab} 
 int Panel.\+START\+\_\+\+ZOMBIE\+\_\+\+AMOUNT = 10\hspace{0.3cm}{\ttfamily [static]}}
 
-Amount of Zombies in beginning of simulation. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00048}{48}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a8a3209cb88a9e5a3342a4dcdd3b8cbd3}\index{Panel@{Panel}!strings@{strings}}
+Amount of Zombies in beginning of simulation. \Hypertarget{class_panel_a8a3209cb88a9e5a3342a4dcdd3b8cbd3}\index{Panel@{Panel}!strings@{strings}}
 \index{strings@{strings}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{strings}{strings}}
 {\footnotesize\ttfamily \label{class_panel_a8a3209cb88a9e5a3342a4dcdd3b8cbd3} 
@@ -338,71 +246,43 @@ String \mbox{[}$\,$\mbox{]} Panel.\+strings\hspace{0.3cm}{\ttfamily [static]}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Amount\ of\ Walnuts"{}},\ \textcolor{stringliteral}{"{}Amount\ of\ Peas"{}},\ \textcolor{stringliteral}{"{}Amount\ of\ Sun\ Points"{}},\ \textcolor{stringliteral}{"{}Time\ Elapsed"{}}\}}
 
 \end{DoxyCode}
-Keeps the String value of every counter. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00136}{136}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a3db9c1efedd563938ae71b61080b8d6a}\index{Panel@{Panel}!SUNFLOWER\_SPAWN\_CHANCE@{SUNFLOWER\_SPAWN\_CHANCE}}
+Keeps the String value of every counter. \Hypertarget{class_panel_a3db9c1efedd563938ae71b61080b8d6a}\index{Panel@{Panel}!SUNFLOWER\_SPAWN\_CHANCE@{SUNFLOWER\_SPAWN\_CHANCE}}
 \index{SUNFLOWER\_SPAWN\_CHANCE@{SUNFLOWER\_SPAWN\_CHANCE}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{SUNFLOWER\_SPAWN\_CHANCE}{SUNFLOWER\_SPAWN\_CHANCE}}
 {\footnotesize\ttfamily \label{class_panel_a3db9c1efedd563938ae71b61080b8d6a} 
 int Panel.\+SUNFLOWER\+\_\+\+SPAWN\+\_\+\+CHANCE = 45\hspace{0.3cm}{\ttfamily [static]}}
 
-Percentage of chance to spawn a {\ttfamily \doxylink{class_sunflower}{Sunflower}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00072}{72}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}\index{Panel@{Panel}!theTimer@{theTimer}}
+Percentage of chance to spawn a {\ttfamily \doxylink{class_sunflower}{Sunflower}}. \Hypertarget{class_panel_a78613c4bc7adca6d83ebb26241b73ff4}\index{Panel@{Panel}!theTimer@{theTimer}}
 \index{theTimer@{theTimer}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{theTimer}{theTimer}}
 {\footnotesize\ttfamily \label{class_panel_a78613c4bc7adca6d83ebb26241b73ff4} 
 Timer Panel.\+the\+Timer\hspace{0.3cm}{\ttfamily [static]}}
 
-\doxylink{class_main}{Main} instance of {\ttfamily \doxylink{}{Timer}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00039}{39}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a99a4a91616df098809b9f20ef8a1023c}\index{Panel@{Panel}!WALNUT\_SPAWN\_CHANCE@{WALNUT\_SPAWN\_CHANCE}}
+\doxylink{class_main}{Main} instance of {\ttfamily \doxylink{}{Timer}}. \Hypertarget{class_panel_a99a4a91616df098809b9f20ef8a1023c}\index{Panel@{Panel}!WALNUT\_SPAWN\_CHANCE@{WALNUT\_SPAWN\_CHANCE}}
 \index{WALNUT\_SPAWN\_CHANCE@{WALNUT\_SPAWN\_CHANCE}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{WALNUT\_SPAWN\_CHANCE}{WALNUT\_SPAWN\_CHANCE}}
 {\footnotesize\ttfamily \label{class_panel_a99a4a91616df098809b9f20ef8a1023c} 
 int Panel.\+WALNUT\+\_\+\+SPAWN\+\_\+\+CHANCE = 20\hspace{0.3cm}{\ttfamily [static]}}
 
-Percentage of chance to spawn a {\ttfamily \doxylink{class_walnut}{Walnut}}. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00084}{84}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_abf9fdbd099584b95b3cb1d9d56d1f7bf}\index{Panel@{Panel}!ZOMBIE\_COLUMNS@{ZOMBIE\_COLUMNS}}
+Percentage of chance to spawn a {\ttfamily \doxylink{class_walnut}{Walnut}}. \Hypertarget{class_panel_abf9fdbd099584b95b3cb1d9d56d1f7bf}\index{Panel@{Panel}!ZOMBIE\_COLUMNS@{ZOMBIE\_COLUMNS}}
 \index{ZOMBIE\_COLUMNS@{ZOMBIE\_COLUMNS}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{ZOMBIE\_COLUMNS}{ZOMBIE\_COLUMNS}}
 {\footnotesize\ttfamily \label{class_panel_abf9fdbd099584b95b3cb1d9d56d1f7bf} 
 final int Panel.\+ZOMBIE\+\_\+\+COLUMNS = 4\hspace{0.3cm}{\ttfamily [static]}}
 
-Amount of horizontal squares without {\ttfamily \doxylink{class_plant}{Plant}} spawning. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00101}{101}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_ad2532806f1afc88cbe16488f2718f18f}\index{Panel@{Panel}!ZOMBIE\_SPAWN\_INTERVAL@{ZOMBIE\_SPAWN\_INTERVAL}}
+Amount of horizontal squares without {\ttfamily \doxylink{class_plant}{Plant}} spawning. \Hypertarget{class_panel_ad2532806f1afc88cbe16488f2718f18f}\index{Panel@{Panel}!ZOMBIE\_SPAWN\_INTERVAL@{ZOMBIE\_SPAWN\_INTERVAL}}
 \index{ZOMBIE\_SPAWN\_INTERVAL@{ZOMBIE\_SPAWN\_INTERVAL}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{ZOMBIE\_SPAWN\_INTERVAL}{ZOMBIE\_SPAWN\_INTERVAL}}
 {\footnotesize\ttfamily \label{class_panel_ad2532806f1afc88cbe16488f2718f18f} 
 int Panel.\+ZOMBIE\+\_\+\+SPAWN\+\_\+\+INTERVAL = 16\hspace{0.3cm}{\ttfamily [static]}}
 
-Amount of ticks till {\ttfamily \doxylink{class_zombie}{Zombie}} spawn. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00056}{56}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-\Hypertarget{class_panel_a12df5e54935d92481a37f346847ac169}\index{Panel@{Panel}!Zombies@{Zombies}}
+Amount of ticks till {\ttfamily \doxylink{class_zombie}{Zombie}} spawn. \Hypertarget{class_panel_a12df5e54935d92481a37f346847ac169}\index{Panel@{Panel}!Zombies@{Zombies}}
 \index{Zombies@{Zombies}!Panel@{Panel}}
 \doxysubsubsection{\texorpdfstring{Zombies}{Zombies}}
 {\footnotesize\ttfamily \label{class_panel_a12df5e54935d92481a37f346847ac169} 
 List$<$\mbox{\hyperlink{class_zombie}{Zombie}}$>$ Panel.\+Zombies = new Array\+List$<$$>$()\hspace{0.3cm}{\ttfamily [static]}}
 
 List of all alive {\ttfamily \doxylink{class_zombie}{Zombie}}s. 
-
-Definition at line \mbox{\hyperlink{_panel_8java_source_l00025}{25}} of file \mbox{\hyperlink{_panel_8java_source}{Panel.\+java}}.
-
-
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
