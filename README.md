@@ -28,5 +28,5 @@ A user can change different settings, like percentage of certain plants/zombies 
 ![Diagram](ClassDiagram.png)
 ## Documentation
 
-[A javadoc Documentation](Documentation/index.html)
+[A javadoc Documentation](Documentation/latex/refman.pdf)
 
