@@ -2,17 +2,32 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * A plant, that generates Sun Points.
+ */
 public class Sunflower extends Plant {
-    public static Timer theTimer = Panel.theTimer;
+    /**
+     * Additional check to make sure {@link Sunflower} is dead or alive.
+     */
     public boolean alive;
     Image image;
+    /**
+     * Copy of {@link Panel#resourceManager}, used to add Sun Points.
+     */
     public static ResourceManager resourceManager;
+    /**
+     * Amount of ticks to add a certain amount of Sun Points.
+     */
     protected int produceCycle;
     private static final int CYCLE_DURATION = 24;
     private static final int HEALTH = 300;
     private static final int COST = 50;
     private static final int PRODUCE_AMOUNT = 25;
-
+    /**
+     * Constructor of a plant
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public Sunflower(int x, int y) {
         super(x, y);
         theTimer.addActionListener(this); //make this entity listen to the timer
@@ -41,10 +56,14 @@ public class Sunflower extends Plant {
         health -= damage;
     }
 
+    @Override
     public int getHealth() {
         return health;
     }
-
+    /**
+     * Returns cost of the plant in Sun Points.
+     * @return cost of the plant in Sun Points
+     */
     public static int getCost() {
         return COST;
     }

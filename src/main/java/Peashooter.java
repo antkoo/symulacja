@@ -3,17 +3,28 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * A plant, that shoots {@link Projectile}s every certain amount of time, that deal damage on impact.
+ */
 public class Peashooter extends Plant {
+    /**
+     * List of all of this {@link Peashooter}'s {@link Projectile}s.
+     */
     public List<Projectile> Projectiles;
-    public static Timer theTimer = Panel.theTimer;
+    /**
+     * Copy of {@link Panel#Zombies} used in {@link CollisionManager#checkExplosionDeaths}.
+     */
     public List<Zombie> Zombies;
     Image image;
     private int shootCycle;
     private static final int SHOOT_INTERVAL = 15;
     private static final int HEALTH = 200;
     private static final int COST = 100;
-
+    /**
+     * Constructor of a plant
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public Peashooter(int x, int y) {
         super(x, y);
         //set starting values
@@ -64,20 +75,23 @@ public class Peashooter extends Plant {
             shoot();
         }
     }
-
+    /**
+     * Shoot a {@link Projectile} by creating a new instance of it in the {@link Peashooter#Projectiles} list.
+     */
     public void shoot() {
         this.Projectiles.add(new Projectile(x+image.getWidth(null), y));
     }
-
+    @Override
     public int getHealth() {
         return health;
     }
-
+    /**
+     * Returns cost of the plant in Sun Points.
+     * @return cost of the plant in Sun Points
+     */
     public static int getCost() {
         return COST;
     }
-
-
     @Override
     public Rectangle getBounds() {
         return imageBounds;

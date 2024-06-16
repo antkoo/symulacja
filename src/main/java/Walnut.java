@@ -1,13 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-
+/**
+ * A plant, that has a very high health.
+ */
 public class Walnut extends Plant {
-    public static Timer theTimer = Panel.theTimer;
     Image image;
     private static final int HEALTH = 3500;
     private static final int COST = 50;
-
+    /**
+     * Constructor of a plant
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public Walnut(int x, int y) {
         super(x, y);
         //set starting values
@@ -33,14 +38,17 @@ public class Walnut extends Plant {
         health -= damage;
     }
 
+    @Override
     public int getHealth() {
         return health;
     }
-
+    /**
+     * Returns cost of the plant in Sun Points.
+     * @return cost of the plant in Sun Points
+     */
     public static int getCost() {
         return COST;
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {

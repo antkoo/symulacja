@@ -2,13 +2,20 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * A weaker, but faster type of zombie.
+ */
 public class BasicZombie extends Zombie {
-    public static Timer theTimer = Panel.theTimer;
     Image image;
     private static final int HEALTH = 200;
     private static final int SPEED = 2;
     private static final int ATTACK_DAMAGE = 40;
 
+    /**
+     * Constructor of a zombie
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public BasicZombie(int x, int y) {
         super(x, y);
         //set starting values
@@ -23,6 +30,7 @@ public class BasicZombie extends Zombie {
         return health;
     }
 
+    @Override
     public int getSpeed() {
         return SPEED;
     }
@@ -38,10 +46,12 @@ public class BasicZombie extends Zombie {
         g2D.drawImage(image, x, y, null);
     }
 
+    @Override
     public void takeDamage(int damage) {
         health -= damage;
     }
 
+    @Override
     public int getAttackDamage() {
         return ATTACK_DAMAGE;
     }

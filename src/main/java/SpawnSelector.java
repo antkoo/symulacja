@@ -10,8 +10,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * A window, where a user selects the squares, where certain plants can spawn. The coordinate of square clicked is found using SpawnSelector#mouseClicked(java.awt.event.MouseEvent)
- * and the squares are stored in SpawnSelector#SpawnSquares. To choose a different plant, a javax.swing.JRadioButton can be clicked, which is managed by SpawnSelector#actionPerformed(java.awt.event.ActionEvent)
+ * A window, where a user selects the squares, where certain plants can spawn. The coordinate of square clicked is found using {@link SpawnSelector#mouseClicked(java.awt.event.MouseEvent)}
+ * and the squares are stored in {@link SpawnSelector#SpawnSquares}. To choose a different plant, a {@link javax.swing.JRadioButton} can be clicked,
+ * which is managed by {@link SpawnSelector#actionPerformed(java.awt.event.ActionEvent)}.
  */
 public class SpawnSelector extends JFrame implements ActionListener, MouseListener {
     //0 - sunflower
@@ -25,20 +26,21 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
     JRadioButton peashooterButton;
     JRadioButton cherryBombButton;
     JRadioButton walnutButton;
-
-    public List<int[]> SunflowerSpawnSquares = new ArrayList<>();
-    public List<int[]> PeashooterSpawnSquares = new ArrayList<>();
-    public List<int[]> CherryBombSpawnSquares = new ArrayList<>();
-    public List<int[]> WalnutSpawnSquares = new ArrayList<>();
-
+    List<int[]> SunflowerSpawnSquares = new ArrayList<>();
+    List<int[]> PeashooterSpawnSquares = new ArrayList<>();
+    List<int[]> CherryBombSpawnSquares = new ArrayList<>();
+    List<int[]> WalnutSpawnSquares = new ArrayList<>();
+    /**
+     * List of all squares, where spawning {@link Plant}s is possible.
+     */
     public List<List<int[]>> SpawnSquares = Panel.SpawnSquares;
     /**
-     * A copy of the Panel#theTimer
+     * A copy of the {@link Panel#theTimer}.
      */
     public static Timer theTimer = Panel.theTimer;
 
     /**
-     * Creates the window and buttons and puts them in a javax.swing.ButtonGroup.
+     * Creates the window and buttons and puts them in a {@link javax.swing.ButtonGroup}.
      */
     public SpawnSelector() {
         //default configuration
@@ -127,7 +129,8 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
     }
 
     /**
-     * Helper function to find an array within a list of lists. Used to find clicked square and putting them in the correct place in SpawnSelector#mouseClicked(java.awt.event.MouseEvent)
+     * Helper function to find an array within a list of lists. Used to find clicked square and putting them in the correct place in
+     * {@link SpawnSelector#mouseClicked(java.awt.event.MouseEvent)}.
      * @param listOfLists a list of lists
      * @param targetArray array to find
      * @return index of targetArray or int[]{-1, -1} if not found
@@ -146,7 +149,7 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
     }
 
     /**
-     * Function to find the clicked square and put them in the SpawnSelector#SpawnSquares list.
+     * Function to find the clicked square and put them in the {@link SpawnSelector#SpawnSquares} list.
      * @param e the event to be processed
      */
     @Override

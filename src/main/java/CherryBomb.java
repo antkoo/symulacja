@@ -3,17 +3,27 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.util.List;
 
+/**
+ * A plant, that explodes in a 3x3 square radius after death or certain amount of time.
+ */
+
 public class CherryBomb extends Plant {
-    public static Timer theTimer = Panel.theTimer;
     Image image;
     boolean alive;
-    public Explosion explosion;
+    Explosion explosion;
+    /**
+     * Copy of {@link Panel#Zombies} used in {@link CollisionManager#checkExplosionDeaths}.
+     */
     public List<Zombie> Zombies;
     private int explodeCycle;
     private static final int EXPLODE_TIME = 20;
     private static final int HEALTH = 70;
     private static final int COST = 150;
-
+    /**
+     * Constructor of a plant
+     * @param x x coordinate
+     * @param y y coordinate
+     */
     public CherryBomb(int x, int y) {
         super(x, y);
         //set starting values
@@ -52,14 +62,22 @@ public class CherryBomb extends Plant {
         this.health -= damage;
     }
 
+    @Override
     public int getHealth() {
         return health;
     }
 
+    /**
+     * Returns cost of the plant in Sun Points.
+     * @return cost of the plant in Sun Points
+     */
     public static int getCost() {
         return COST;
     }
 
+    /**
+     * Explode by creating an {@link Explosion}.
+     */
     public void explode() {
         this.explosion = new Explosion(x-Panel.SQUARE_SIZE, y-Panel.SQUARE_SIZE);
     }

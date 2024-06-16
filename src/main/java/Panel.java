@@ -9,8 +9,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * This class controls everything, that is happening within the simulation. As a JPanel, it draws all the buttons, the agents using {@link Panel#paintComponent(Graphics)}
- * and all the counters {@link Panel#counterUpdater(int)}. It also controls the main Swing timer: {@link Panel#theTimer} by re/starting the simulation
- * using {@link Panel#gameStart()} and updates every tick using {@link Panel#actionPerformed(ActionEvent)}. It is also responsible for spawning
+ * and all the counters {@link Panel#counterUpdater(int)}. It also controls the main {@link Panel#resourceManager} and a Swing timer: {@link Panel#theTimer} by
+ * re/starting the simulation using {@link Panel#gameStart()} and updates every tick using {@link Panel#actionPerformed(ActionEvent)}. It is also responsible for spawning
  * zombies with {@link Panel#spawnRandomZombie()} and plants with {@link Panel#spawnRandomPlant()}.
  */
 public class Panel extends JPanel implements ActionListener {
@@ -43,7 +43,7 @@ public class Panel extends JPanel implements ActionListener {
      */
     public static int DELAY = 50;
     /**
-     * Amount of zombies in beginning of simulation.
+     * Amount of Zombies in beginning of simulation.
      */
     public static int START_ZOMBIE_AMOUNT = 10;
     /**

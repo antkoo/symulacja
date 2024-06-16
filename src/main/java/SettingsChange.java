@@ -5,29 +5,72 @@ import java.awt.*;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * A window with sliders to change settings specified in SettingsChange#strings.
+ */
 public class SettingsChange extends JFrame implements ChangeListener {
     //take default values from main Panel
+    /**
+     * Tick value
+     */
     public static int DELAY = Panel.DELAY;
+    /**
+     * Amount of Zombies in beginning of simulation.
+     */
     public static int START_ZOMBIE_AMOUNT = Panel.START_ZOMBIE_AMOUNT;
+    /**
+     * Amount of ticks till {@link Plant} spawn.
+     */
     public static int PLANT_SPAWN_INTERVAL = Panel.PLANT_SPAWN_INTERVAL;
+    /**
+     * Amount of ticks till {@link Zombie} spawn.
+     */
     public static int ZOMBIE_SPAWN_INTERVAL = Panel.ZOMBIE_SPAWN_INTERVAL;
+    /**
+     * Starting amount of Sun Points in {@link ResourceManager}.
+     */
     public static int START_SUN_POINTS = Panel.START_SUN_POINTS;
+    /**
+     * Percentage of chance to spawn a {@link BasicZombie}.
+     */
     public static int BASIC_ZOMBIE_SPAWN_CHANCE = Panel.BASIC_ZOMBIE_SPAWN_CHANCE;
+    /**
+     * Percentage of chance to spawn a {@link BucketheadZombie}.
+     */
     public static int BUCKETHEAD_ZOMBIE_SPAWN_CHANCE = Panel.BUCKETHEAD_ZOMBIE_SPAWN_CHANCE;
+    /**
+     * Percentage of chance to spawn a {@link Sunflower}.
+     */
     public static int SUNFLOWER_SPAWN_CHANCE = Panel.SUNFLOWER_SPAWN_CHANCE;
+    /**
+     * Percentage of chance to spawn a {@link Peashooter}.
+     */
     public static int PEASHOOTER_SPAWN_CHANCE = Panel.PEASHOOTER_SPAWN_CHANCE;
+    /**
+     * Percentage of chance to spawn a {@link CherryBomb}.
+     */
     public static int CHERRY_BOMB_SPAWN_CHANCE = Panel.CHERRY_BOMB_SPAWN_CHANCE;
+    /**
+     * Percentage of chance to spawn a {@link Walnut}.
+     */
     public static int WALNUT_SPAWN_CHANCE = Panel.WALNUT_SPAWN_CHANCE;
+    /**
+     * A list of all the settings' values.
+     */
     public static int[] values = {DELAY, START_ZOMBIE_AMOUNT, PLANT_SPAWN_INTERVAL, ZOMBIE_SPAWN_INTERVAL, START_SUN_POINTS, BASIC_ZOMBIE_SPAWN_CHANCE, BUCKETHEAD_ZOMBIE_SPAWN_CHANCE,
             SUNFLOWER_SPAWN_CHANCE, PEASHOOTER_SPAWN_CHANCE, CHERRY_BOMB_SPAWN_CHANCE, WALNUT_SPAWN_CHANCE};//store values in array for smaller loops
+    /**
+     * A list of all the settings' String names.
+     */
     public static String[] strings = {"DELAY", "START_ZOMBIE_AMOUNT", "PLANT_SPAWN_INTERVAL", "ZOMBIE_SPAWN_INTERVAL", "START_SUN_POINTS", "BASIC_ZOMBIE_SPAWN_CHANCE",
             "BUCKETHEAD_ZOMBIE_SPAWN_CHANCE", "SUNFLOWER_SPAWN_CHANCE", "PEASHOOTER_SPAWN_CHANCE", "CHERRY_BOMB_SPAWN_CHANCE", "WALNUT_SPAWN_CHANCE"};//store strings in array for smaller loops
     //define sliders
     List<JSlider> sliders = new ArrayList<>();
     static List<JLabel> labels = new ArrayList<>();
 
-
+    /**
+     * Creates the window and sliders.
+     */
     public SettingsChange() {
         //default configuration
         this.setTitle("Settings Changer");
@@ -62,6 +105,11 @@ public class SettingsChange extends JFrame implements ChangeListener {
             labels.add(label);
         }
     }
+
+    /**
+     * If a slider is moved, this function is called to change the value of the field based on the slider changed.
+     * @param e slider was moved
+     */
     @Override
     public void stateChanged(ChangeEvent e) {
         for (int i = 0; i<11; i++) {
