@@ -1,5 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+
+/**
+ * The window, where the simulation is created. Simple JFrame, that adds the {@link Panel} to the window.
+ */
 public class Board extends JFrame {
     public Board() {
         this.setTitle("Plants vs Zombies simulation");

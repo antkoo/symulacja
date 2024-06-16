@@ -7,32 +7,101 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * This class controls everything, that is happening within the simulation. As a JPanel, it draws all the buttons, the agents using {@link Panel#paintComponent(Graphics)}
+ * and all the counters {@link Panel#counterUpdater(int)}. It also controls the main Swing timer: {@link Panel#theTimer} by re/starting the simulation
+ * using {@link Panel#gameStart()} and updates every tick using {@link Panel#actionPerformed(ActionEvent)}. It is also responsible for spawning
+ * zombies with {@link Panel#spawnRandomZombie()} and plants with {@link Panel#spawnRandomPlant()}.
+ */
 public class Panel extends JPanel implements ActionListener {
 
+    /**
+     * List of all alive {@link Plant}s.
+     */
     public static List<Plant> Plants = new ArrayList<>();
+    /**
+     * List of all alive {@link Zombie}s.
+     */
     public static List<Zombie> Zombies = new ArrayList<>();
     int x, y, plantSpawnCycle, zombieSpawnCycle, sum, timeElapsed;
     double chance;
+    /**
+     * This is where all possible squares to spawn {@link Plant}s are stored.
+     */
     public static List<List<int[]>> SpawnSquares = new ArrayList<>();
+    /**
+     * Main instance of {@link ResourceManager}.
+     */
     public static ResourceManager resourceManager;
+    /**
+     * Main instance of {@link Timer}.
+     */
     public static Timer theTimer;
     //default amounts; can be changed
+    /**
+     * Tick value
+     */
     public static int DELAY = 50;
+    /**
+     * Amount of zombies in beginning of simulation.
+     */
     public static int START_ZOMBIE_AMOUNT = 10;
+    /**
+     * Amount of ticks till {@link Plant} spawn.
+     */
     public static int PLANT_SPAWN_INTERVAL = 2;
+    /**
+     * Amount of ticks till {@link Zombie} spawn.
+     */
     public static int ZOMBIE_SPAWN_INTERVAL = 16;
+    /**
+     * Starting amount of Sun Points in {@link ResourceManager}.
+     */
     public static int START_SUN_POINTS = 900;
+    /**
+     * Percentage of chance to spawn a {@link BasicZombie}.
+     */
     public static int BASIC_ZOMBIE_SPAWN_CHANCE = 70;
+    /**
+     * Percentage of chance to spawn a {@link BucketheadZombie}.
+     */
     public static int BUCKETHEAD_ZOMBIE_SPAWN_CHANCE = 30;
+    /**
+     * Percentage of chance to spawn a {@link Sunflower}.
+     */
     public static int SUNFLOWER_SPAWN_CHANCE = 45;
+    /**
+     * Percentage of chance to spawn a {@link Peashooter}.
+     */
     public static int PEASHOOTER_SPAWN_CHANCE = 25;
+    /**
+     * Percentage of chance to spawn a {@link CherryBomb}.
+     */
     public static int CHERRY_BOMB_SPAWN_CHANCE = 10;
+    /**
+     * Percentage of chance to spawn a {@link Walnut}.
+     */
     public static int WALNUT_SPAWN_CHANCE = 20;
     //default amounts; can NOT be changed;
+    /**
+     * Size of one square.
+     */
     public static final int SQUARE_SIZE = 100;
+    /**
+     * Amount of vertical squares.
+     */
     public static final int ROWS = 5;
+    /**
+     * Amount of horizontal squares for {@link Plant} spawning.
+     */
     public static final int PLANT_COLUMNS = 5;
+    /**
+     * Amount of horizontal squares without {@link Plant} spawning.
+     */
     public static final int ZOMBIE_COLUMNS = 4;
+    /**
+     * Amount of horizontal squares.
+     */
     public static final int COLUMNS = PLANT_COLUMNS + ZOMBIE_COLUMNS;
     //define introduction
     JLabel welcome1 = new JLabel();
@@ -44,15 +113,34 @@ public class Panel extends JPanel implements ActionListener {
     JLabel welcome, label;
     JPanel panel, outsidePanel;
     //define buttons
+    /**
+     * Creates new {@link SpawnSelector} window.
+     */
     JButton toSpawnSelector = new JButton("To Spawn Selector");
+    /**
+     * Starts the simulation by calling {@link Panel#gameStart()}.
+     */
     JButton startSimulation = new JButton("Start Simulation");
+    /**
+     * Handles pausing and resuming the simulation.
+     */
     JButton pauseSimulation = new JButton("Pause Simulation");
+    /**
+     * Creates new {@link SettingsChange} window.
+     */
     JButton toSettingsChange = new JButton("To Settings Change");
     //define counters
+    /**
+     * Keeps the String value of every counter.
+     */
     public static String[] strings = {"Amount of Basic Zombies", "Amount of Buckethead Zombies", "Amount of Sunflowers", "Amount of Peashooters", "Amount of Cherry Bombs",
             "Amount of Walnuts", "Amount of Peas", "Amount of Sun Points", "Time Elapsed"};//storing counters inside array for smaller loops later
     List<JLabel> labels = new ArrayList<>();
     List<JPanel> panels = new ArrayList<>();
+
+    /**
+     * Creates the main panel of simulation. Adds buttons, introduction and counters.
+     */
     public Panel() {
         resourceManager = new ResourceManager();//create resource manager for everyone
         theTimer = new Timer(DELAY, this);//create timer for everyone
@@ -129,6 +217,11 @@ public class Panel extends JPanel implements ActionListener {
         this.add(outsidePanel);
     }
 
+    /**
+     * Re/starting the simulation by clearing everything from the previous one, like clearing {@link Panel#Plants} and {@link Panel#Zombies} lists, hiding the introduction,
+     * spending all Sun Points using {@link ResourceManager#spendSunPoints(int)}, resetting {@link Panel#plantSpawnCycle} and {@link Panel#zombieSpawnCycle}, spawning the right
+     * amount of {@link Plant}s and {@link Zombie}s and starting {@link Panel#theTimer}.
+     */
     public void gameStart() {
         for (JLabel welcome : welcomes) {
             welcome.setVisible(false);//hide the introduction
@@ -169,6 +262,12 @@ public class Panel extends JPanel implements ActionListener {
         startSimulation.setText("Restart Simulation");
         repaint();
     }
+
+    /**
+     * Calculates value of every counter in {@link Panel#strings} array, which is later updated in actionPerformed(ActionEvent).
+     * @param i counter to update
+     * @return value of updated counter
+     */
     public int counterUpdater(int i) {
         sum = 0;
         switch (i) {
@@ -258,7 +357,12 @@ public class Panel extends JPanel implements ActionListener {
         }
         return sum;
     }
-
+    /**
+     * Spawns a random Plant based on the percentages in {@link Panel#SUNFLOWER_SPAWN_CHANCE}, {@link Panel#PEASHOOTER_SPAWN_CHANCE},
+     * {@link Panel#CHERRY_BOMB_SPAWN_CHANCE} and {@link Panel#WALNUT_SPAWN_CHANCE}. It checks the ability to spawn a Plant by checking its cost using the
+     * ResourceManager#spendSunPoints(int). The location is determined by checking the {@link Panel#SpawnSquares} list.
+     *
+     */
     public void spawnRandomPlant() {
         //randomize location and type of plant
         x = ThreadLocalRandom.current().nextInt(0,PLANT_COLUMNS*SQUARE_SIZE);
@@ -309,6 +413,9 @@ public class Panel extends JPanel implements ActionListener {
         }
     }
 
+    /**
+     * Spawns a random {@link Zombie} based on the percentages in {@link Panel#BASIC_ZOMBIE_SPAWN_CHANCE} and {@link Panel#BUCKETHEAD_ZOMBIE_SPAWN_CHANCE}.
+     */
     public void spawnRandomZombie() {
         //randomize location (only on last row) and type of zombie
         x = ThreadLocalRandom.current().nextInt((COLUMNS-1)*SQUARE_SIZE, (COLUMNS) * SQUARE_SIZE);
@@ -323,7 +430,14 @@ public class Panel extends JPanel implements ActionListener {
     }
 
 
-
+    /**
+     * Checks, whether {@link Panel#toSpawnSelector}, {@link Panel#toSettingsChange}, {@link Panel#startSimulation} and {@link Panel#pauseSimulation} buttons are pressed.
+     * When starting the simulation, it checks if {@link Panel#SpawnSquares} is empty. It is also responsible for controlling the simulation logic:
+     * it is calling {@link Panel#spawnRandomPlant()} and {@link Panel#spawnRandomZombie()} every {@link Panel#PLANT_SPAWN_INTERVAL} and {@link Panel#ZOMBIE_SPAWN_INTERVAL} respectively,
+     * it is checking, whether any {@link Zombie} reached the left border or if all {@link Zombie}s are eliminated. It also checks attacking {@link Zombie}s using
+     * {@link CollisionManager#checkAttacks(List, List)}. It is also updating the counters.
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -417,6 +531,11 @@ public class Panel extends JPanel implements ActionListener {
         theTimer.setDelay(DELAY);//change delay (if changed in the SettingsChange window)
     }
 
+    /**
+     * Paints and removes dead plants/zombies by checking the {@link Panel#Plants} and {@link Panel#Zombies} lists.
+     *
+     * @param g necessary to paint on the JPanel.
+     */
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);

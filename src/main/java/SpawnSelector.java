@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,6 +9,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A window, where a user selects the squares, where certain plants can spawn. The coordinate of square clicked is found using SpawnSelector#mouseClicked(java.awt.event.MouseEvent)
+ * and the squares are stored in SpawnSelector#SpawnSquares. To choose a different plant, a javax.swing.JRadioButton can be clicked, which is managed by SpawnSelector#actionPerformed(java.awt.event.ActionEvent)
+ */
 public class SpawnSelector extends JFrame implements ActionListener, MouseListener {
     //0 - sunflower
     //1 - peashooter
@@ -27,9 +32,14 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
     public List<int[]> WalnutSpawnSquares = new ArrayList<>();
 
     public List<List<int[]>> SpawnSquares = Panel.SpawnSquares;
-
+    /**
+     * A copy of the Panel#theTimer
+     */
     public static Timer theTimer = Panel.theTimer;
 
+    /**
+     * Creates the window and buttons and puts them in a javax.swing.ButtonGroup.
+     */
     public SpawnSelector() {
         //default configuration
         this.setTitle("Plants Spawn Squares Selector");
@@ -69,6 +79,10 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         this.addMouseListener(this);//make it possible to find, where user clicked
     }
 
+    /**
+     * Paints all the squares to choose from painted black, and currently chosen ones painted blue
+     * @param g the specified Graphics window
+     */
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D g2D = (Graphics2D) g;
@@ -85,6 +99,10 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         }
     }
 
+    /**
+     * Checks, which button is clicked and chooses the selected button accordingly.
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         //change selectedButton on each button click
@@ -108,7 +126,12 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         repaint();
     }
 
-
+    /**
+     * Helper function to find an array within a list of lists. Used to find clicked square and putting them in the correct place in SpawnSelector#mouseClicked(java.awt.event.MouseEvent)
+     * @param listOfLists a list of lists
+     * @param targetArray array to find
+     * @return index of targetArray or int[]{-1, -1} if not found
+     */
     public static int[] findArrayIndex(List<List<int[]>> listOfLists, int[] targetArray) {
         //a helpful function to find a list in a list of lists
         for (int i = 0; i < listOfLists.size(); i++) {
@@ -122,6 +145,10 @@ public class SpawnSelector extends JFrame implements ActionListener, MouseListen
         return new int[]{-1, -1};
     }
 
+    /**
+     * Function to find the clicked square and put them in the SpawnSelector#SpawnSquares list.
+     * @param e the event to be processed
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         //find where user clicked
