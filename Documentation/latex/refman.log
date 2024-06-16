@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.16)  16 JUN 2024 22:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.16)  16 JUN 2024 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -955,13 +955,13 @@ Underfull \hbox (badness 10000) detected at line 152
  []
 
 [11]) (class_board.tex <./class_board.pdf>
-<class_board.pdf, id=1622, 501.875pt x 637.38126pt>
+<class_board.pdf, id=1621, 501.875pt x 637.38126pt>
 File: class_board.pdf Graphic file (type pdf)
 <use class_board.pdf>
 Package pdftex.def Info: class_board.pdf  used on input line 6.
 (pdftex.def)             Requested size: 44.80687pt x 56.9055pt.
  [12]) (class_buckethead_zombie.tex <./class_buckethead_zombie.pdf>
-<class_buckethead_zombie.pdf, id=1642, 501.875pt x 627.34375pt>
+<class_buckethead_zombie.pdf, id=1640, 501.875pt x 627.34375pt>
 File: class_buckethead_zombie.pdf Graphic file (type pdf)
 <use class_buckethead_zombie.pdf>
 Package pdftex.def Info: class_buckethead_zombie.pdf  used on input line 6.
@@ -992,7 +992,7 @@ Underfull \hbox (badness 10000) detected at line 152
  []
 
 [15]) (class_cherry_bomb.tex <./class_cherry_bomb.pdf>
-<class_cherry_bomb.pdf, id=1720, 501.875pt x 795.97375pt>
+<class_cherry_bomb.pdf, id=1717, 501.875pt x 795.97375pt>
 File: class_cherry_bomb.pdf Graphic file (type pdf)
 <use class_cherry_bomb.pdf>
 Package pdftex.def Info: class_cherry_bomb.pdf  used on input line 6.
@@ -1002,7 +1002,7 @@ Underfull \hbox (badness 10000) detected at line 114
 [][][]
  []
 
-[18]
+
 Underfull \hbox (badness 10000) detected at line 127
 [][][]
  []
@@ -1012,23 +1012,23 @@ Underfull \hbox (badness 10000) detected at line 136
 [][][]
  []
 
-
+[18]
 Underfull \hbox (badness 10000) detected at line 149
 [][][]
  []
 
-[19]) (class_collision_manager.tex [20]
+) (class_collision_manager.tex [19] [20]
 Underfull \hbox (badness 10000) detected at line 57
 [][][]
  []
 
 ) (class_entity.tex <./class_entity.pdf>
-<class_entity.pdf, id=1839, 501.875pt x 105.39375pt>
+<class_entity.pdf, id=1836, 501.875pt x 105.39375pt>
 File: class_entity.pdf Graphic file (type pdf)
 <use class_entity.pdf>
 Package pdftex.def Info: class_entity.pdf  used on input line 6.
 (pdftex.def)             Requested size: 395.1827pt x 82.98734pt.
- [21] [22]
+ [21]
 Underfull \hbox (badness 10000) detected at line 85
 [][][]
  []
@@ -1043,23 +1043,23 @@ Underfull \hbox (badness 10000) detected at line 111
 [][][]
  []
 
-[23]) (class_explosion.tex [24]
+[22] [23]) (class_explosion.tex [24]
 Underfull \hbox (badness 10000) detected at line 49
 [][][]
  []
 
-[25]
+
 Underfull \hbox (badness 10000) detected at line 58
 [][][]
  []
 
-) (class_main.tex [26]) (class_panel.tex <./class_panel.pdf>
-<class_panel.pdf, id=1981, 501.875pt x 199.74625pt>
+) (class_main.tex [25]) (class_panel.tex <./class_panel.pdf>
+<class_panel.pdf, id=1969, 501.875pt x 199.74625pt>
 File: class_panel.pdf Graphic file (type pdf)
 <use class_panel.pdf>
 Package pdftex.def Info: class_panel.pdf  used on input line 6.
 (pdftex.def)             Requested size: 142.9746pt x 56.9055pt.
- [27]
+ [26]
 Overfull \hbox (34.09172pt too wide) in paragraph at lines 76--77
 \T1/phv/m/n/10 sim-u-la-tion us-ing [] and up-dates ev-ery tick us-ing [].
  []
@@ -1090,7 +1090,7 @@ Overfull \hbox (97.75957pt too wide) in paragraph at lines 94--95
 ]s us-ing [].
  []
 
-[28]
+[27]
 Underfull \hbox (badness 10000) detected at line 110
 [][][]
  []
@@ -1106,23 +1106,23 @@ Overfull \hbox (102.28574pt too wide) in paragraph at lines 138--140
 []\T1/phv/m/n/10 Spawns a ran-dom [] based on the per-cent-ages in [], [],
  []
 
-[29] [30] [31]
+[28] [29] [30]
 
 Package hyperref Warning: Suppressing link with empty target on input line 261.
 
 
 ) (class_peashooter.tex <./class_peashooter.pdf>
-<class_peashooter.pdf, id=2151, 501.875pt x 795.97375pt>
+<class_peashooter.pdf, id=2138, 501.875pt x 795.97375pt>
 File: class_peashooter.pdf Graphic file (type pdf)
 <use class_peashooter.pdf>
 Package pdftex.def Info: class_peashooter.pdf  used on input line 6.
 (pdftex.def)             Requested size: 71.75533pt x 113.81102pt.
- [32] [33] [34]
+ [31] [32]
 Underfull \hbox (badness 10000) detected at line 110
 [][][]
  []
 
-
+[33]
 Underfull \hbox (badness 10000) detected at line 123
 [][][]
  []
@@ -1137,19 +1137,19 @@ Underfull \hbox (badness 10000) detected at line 145
 [][][]
  []
 
-[35]) (class_plant.tex <./class_plant.pdf>
-<class_plant.pdf, id=2240, 501.875pt x 199.74625pt>
+[34]) (class_plant.tex <./class_plant.pdf>
+<class_plant.pdf, id=2226, 501.875pt x 199.74625pt>
 File: class_plant.pdf Graphic file (type pdf)
 <use class_plant.pdf>
 Package pdftex.def Info: class_plant.pdf  used on input line 6.
 (pdftex.def)             Requested size: 285.95685pt x 113.81102pt.
- [36] [37]) (class_projectile.tex <./class_projectile.pdf>
-<class_projectile.pdf, id=2283, 501.875pt x 398.48875pt>
+ [35] [36]) (class_projectile.tex <./class_projectile.pdf>
+<class_projectile.pdf, id=2268, 501.875pt x 398.48875pt>
 File: class_projectile.pdf Graphic file (type pdf)
 <use class_projectile.pdf>
 Package pdftex.def Info: class_projectile.pdf  used on input line 6.
 (pdftex.def)             Requested size: 71.66342pt x 56.9055pt.
- [38]
+ [37]
 Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
@@ -1164,7 +1164,7 @@ Underfull \hbox (badness 10000) detected at line 93
 [][][]
  []
 
-[39]) (class_resource_manager.tex [40]
+[38]) (class_resource_manager.tex [39]
 Underfull \hbox (badness 10000) detected at line 46
 [][][]
  []
@@ -1175,19 +1175,19 @@ Underfull \hbox (badness 10000) detected at line 60
  []
 
 ) (class_settings_change.tex <./class_settings_change.pdf>
-<class_settings_change.pdf, id=2346, 501.875pt x 184.69pt>
+<class_settings_change.pdf, id=2329, 501.875pt x 184.69pt>
 File: class_settings_change.pdf Graphic file (type pdf)
 <use class_settings_change.pdf>
 Package pdftex.def Info: class_settings_change.pdf  used on input line 6.
 (pdftex.def)             Requested size: 154.63005pt x 56.9055pt.
- [41] [42] [43])
+ [40] [41] [42])
 (class_spawn_selector.tex <./class_spawn_selector.pdf>
-<class_spawn_selector.pdf, id=2422, 501.875pt x 127.47626pt>
+<class_spawn_selector.pdf, id=2404, 501.875pt x 127.47626pt>
 File: class_spawn_selector.pdf Graphic file (type pdf)
 <use class_spawn_selector.pdf>
 Package pdftex.def Info: class_spawn_selector.pdf  used on input line 6.
 (pdftex.def)             Requested size: 224.04202pt x 56.9055pt.
- [44]
+ [43]
 
 Package hyperref Warning: Suppressing link with empty target on input line 46.
 
@@ -1222,7 +1222,7 @@ Overfull \hbox (179.1474pt too wide) in paragraph at lines 46--47
 
 Package hyperref Warning: Suppressing link with empty target on input line 55.
 
-[45]
+[44]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 73.
 
@@ -1234,13 +1234,13 @@ Underfull \hbox (badness 10000) detected at line 82
 [][][]
  []
 
-[46]) (class_sunflower.tex <./class_sunflower.pdf>
-<class_sunflower.pdf, id=2476, 501.875pt x 795.97375pt>
+[45]) (class_sunflower.tex <./class_sunflower.pdf>
+<class_sunflower.pdf, id=2457, 501.875pt x 795.97375pt>
 File: class_sunflower.pdf Graphic file (type pdf)
 <use class_sunflower.pdf>
 Package pdftex.def Info: class_sunflower.pdf  used on input line 6.
 (pdftex.def)             Requested size: 71.75533pt x 113.81102pt.
- [47] [48]
+ [46] [47]
 Underfull \hbox (badness 10000) detected at line 116
 [][][]
  []
@@ -1250,7 +1250,7 @@ Underfull \hbox (badness 10000) detected at line 129
 [][][]
  []
 
-[49]
+[48]
 Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
@@ -1260,13 +1260,13 @@ Underfull \hbox (badness 10000) detected at line 151
 [][][]
  []
 
-[50]) (class_walnut.tex <./class_walnut.pdf>
-<class_walnut.pdf, id=2561, 501.875pt x 795.97375pt>
+[49]) (class_walnut.tex <./class_walnut.pdf>
+<class_walnut.pdf, id=2541, 501.875pt x 795.97375pt>
 File: class_walnut.pdf Graphic file (type pdf)
 <use class_walnut.pdf>
 Package pdftex.def Info: class_walnut.pdf  used on input line 6.
 (pdftex.def)             Requested size: 71.75533pt x 113.81102pt.
- [51] [52]
+ [50] [51]
 Underfull \hbox (badness 10000) detected at line 101
 [][][]
  []
@@ -1281,18 +1281,18 @@ Underfull \hbox (badness 10000) detected at line 123
 [][][]
  []
 
-[53]
+
 Underfull \hbox (badness 10000) detected at line 136
 [][][]
  []
 
-) (class_zombie.tex <./class_zombie.pdf>
-<class_zombie.pdf, id=2629, 501.875pt x 314.17375pt>
+[52]) (class_zombie.tex <./class_zombie.pdf>
+<class_zombie.pdf, id=2608, 501.875pt x 314.17375pt>
 File: class_zombie.pdf Graphic file (type pdf)
 <use class_zombie.pdf>
 Package pdftex.def Info: class_zombie.pdf  used on input line 6.
 (pdftex.def)             Requested size: 181.80058pt x 113.81102pt.
- [54] [55] [56]
+ [53]
 Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
@@ -1302,153 +1302,42 @@ Underfull \hbox (badness 10000) detected at line 93
 [][][]
  []
 
-
+[54]
 Underfull \hbox (badness 10000) detected at line 106
 [][][]
  []
 
-) [57] [58
+) [55] [56
 
 ]
 Chapter 6.
 (_r_e_a_d_m_e_8md.tex) (_basic_zombie_8java.tex) (_board_8java.tex)
 (_buckethead_zombie_8java.tex) (_cherry_bomb_8java.tex)
-(_collision_manager_8java.tex) (_entity_8java.tex [59]) (_explosion_8java.tex)
-(_main_8java.tex) (_panel_8java.tex) (_peashooter_8java.tex) (_plant_8java.tex)
-(_projectile_8java.tex [60]) (_resource_manager_8java.tex)
-(_settings_change_8java.tex) (_spawn_selector_8java.tex) (_sunflower_8java.tex)
-(_walnut_8java.tex) (_zombie_8java.tex [61]) [62] (refman.ind
+(_collision_manager_8java.tex) (_entity_8java.tex) (_explosion_8java.tex
+[57]) (_main_8java.tex) (_panel_8java.tex) (_peashooter_8java.tex)
+(_plant_8java.tex) (_projectile_8java.tex) (_resource_manager_8java.tex
+[58]) (_settings_change_8java.tex) (_spawn_selector_8java.tex)
+(_sunflower_8java.tex) (_walnut_8java.tex) (_zombie_8java.tex) [59] [60
+
+]
+(refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/README.md,
- []
+ [61
 
 
-Overfull \hbox (65.15668pt too wide) in paragraph at lines 54--56
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/BasicZombi
-e.java,
- []
-
-
-Overfull \hbox (37.29292pt too wide) in paragraph at lines 56--58
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Board.java
-,
- []
-
-
-Overfull \hbox (90.32022pt too wide) in paragraph at lines 58--60
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Buckethead
-Zombie.java,
- []
-
-
-Overfull \hbox (63.69856pt too wide) in paragraph at lines 60--62
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/CherryBomb
-.java,
- []
-
-
-Overfull \hbox (82.34618pt too wide) in paragraph at lines 62--64
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/CollisionM
-anager.java,
- []
-
-
-Overfull \hbox (34.88988pt too wide) in paragraph at lines 64--66
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Entity.jav
-a,
- []
-
-
-Overfull \hbox (52.29575pt too wide) in paragraph at lines 66--68
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Explosion.
-java,
- []
-
-
-Overfull \hbox (32.78406pt too wide) in paragraph at lines 68--70
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Main.java,
-
- []
-
-
-Overfull \hbox (35.93402pt too wide) in paragraph at lines 70--72
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Panel.java
-,
- []
-
-
-Overfull \hbox (58.40648pt too wide) in paragraph at lines 72--74
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Peashooter
-.java,
- []
-
-
-Overfull \hbox (33.79193pt too wide) in paragraph at lines 74--76
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Plant.java
-,
- []
-
-
-Overfull \hbox (50.15373pt too wide) in paragraph at lines 76--78
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Projectile
-.java,
- []
-
-
-Overfull \hbox (86.85516pt too wide) in paragraph at lines 78--80
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/ResourceMa
-nager.java,
- []
-
-
-Overfull \hbox (77.18024pt too wide) in paragraph at lines 80--82
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/SettingsCh
-ange.java,
- []
-
-
-Overfull \hbox (73.1753pt too wide) in paragraph at lines 82--84
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/SpawnSelec
-tor.java,
- []
-
-
-Overfull \hbox (52.6198pt too wide) in paragraph at lines 84--86
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Sunflower.
-java,
- []
-
-
-Overfull \hbox (40.83891pt too wide) in paragraph at lines 86--88
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Walnut.jav
-a,
- []
-
-
-Overfull \hbox (43.152pt too wide) in paragraph at lines 88--90
-[]\T1/phv/m/n/10 C:/Users/anton/IdeaProjects/prawdziwe/src/main/java/Zombie.jav
-a,
- []
-
-[63
-
-
-
-] [64] [65] [66]) (refman.aux)
+] [62] [63] [64]) (refman.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 922581F52FFA8E44605247D2629DA920;58630.
+(rerunfilecheck)             Checksum: 1468FC39DDDE46B6744EDA9251E595CA;53760.
  ) 
 Here is how much of TeX's memory you used:
- 19373 strings out of 474486
- 330457 string characters out of 5743755
- 1951542 words of memory out of 5000000
+ 19371 strings out of 474486
+ 330443 string characters out of 5743755
+ 1952542 words of memory out of 5000000
  40559 multiletter control sequences out of 15000+600000
  607661 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1479,18 +1368,16 @@ ced but does not exist, replaced by a fixed one
 
 <C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 mi10.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/
-fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/anton/AppData/Local/Programs/MiKTe
-X/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/anton/AppData/Local/Programs/Mi
-KTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/anton/AppData/Local/Programs
-/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Users/anton/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/anton/AppData/Local/P
-rograms/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (76 pages, 724539 bytes).
+nts/cm/cmmi8.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
+courier/ucrr8a.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/type1/ur
+w/courier/ucrro8a.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/helvetic/uhvb8a.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/urw/helvetic/uhvb8ac.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/font
+s/type1/urw/helvetic/uhvr8a.pfb><C:/Users/anton/AppData/Local/Programs/MiKTeX/f
+onts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (74 pages, 694271 bytes).
 PDF statistics:
- 3286 PDF objects out of 3580 (max. 8388607)
- 691 named destinations out of 1000 (max. 500000)
+ 3249 PDF objects out of 3580 (max. 8388607)
+ 689 named destinations out of 1000 (max. 500000)
  2183 words of extra memory for PDF output out of 10000 (max. 10000000)
 
